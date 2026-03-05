@@ -111,7 +111,7 @@ function startFollowing() {
 map.on('locationfound', (e) => {
     if (isFollowing) {
         let speedKmH = (e.speed || 0) * 3.6;
-        let targetZoom = 17;
+        let targetZoom = 18;
 
         if (speedKmH > 90) targetZoom = 13;
         else if (speedKmH > 70) targetZoom = 14;
@@ -147,3 +147,4 @@ map.on('dragstart', function() {
 
 
 document.getElementById('locate-me').addEventListener('click', startFollowing);
+
