@@ -108,20 +108,36 @@ function startFollowing() {
     btn.style.backgroundColor = '#e3f2fd';
 }
 
+let lastZoom = 14; // Store the current zoom state
+
 map.on('locationfound', (e) => {
     if (isFollowing) {
-        let speedKmH = (e.speed || 0) * 3.6;
-        let targetZoom = 18;
+        // 1. Convert speed to km/h, defaulting to 0 if null/undefined
+        let speedKmH = (e.speed && e.speed > 0.5) ? e.speed * 3.6 : 0; 
+        
+        // 2. Determine the target zoom based on speed tiers
+        let targetZoom = 18; 
+        if (speedKmH > 90) targetZoom = 13;      // Motorväg
+        else if (speedKmH > 70) targetZoom = 14; // Landsväg
+        else if (speedKmH > 40) targetZoom = 15; // Stadstrafik
+        else if (speedKmH > 5)  targetZoom = 17; // Långsam körning
+        else targetZoom = 18;                    // Stillastående
 
-        if (speedKmH > 90) targetZoom = 13;
-        else if (speedKmH > 70) targetZoom = 14;
-        else if (speedKmH > 40) targetZoom = 15;
-        else if (speedKmH > 15) targetZoom = 16;
-        else targetZoom = 18;
-
-        map.setView(e.latlng, targetZoom, { animate: true });
+        // 3. ONLY change zoom if the target is different from current
+        // This prevents the "in and out" jittering
+        if (targetZoom !== lastZoom) {
+            map.setView(e.latlng, targetZoom, { 
+                animate: true,
+                pan: { duration: 1 } 
+            });
+            lastZoom = targetZoom;
+        } else {
+            // If speed hasn't changed enough to shift tiers, just pan the map
+            map.panTo(e.latlng, { animate: true, duration: 0.5 });
+        }
     }
 
+    // Update markers as usual
     if (userCircle) {
         userCircle.setLatLng(e.latlng).setRadius(e.accuracy);
     } else {
@@ -147,4 +163,5 @@ map.on('dragstart', function() {
 
 
 document.getElementById('locate-me').addEventListener('click', startFollowing);
+
 
