@@ -18,38 +18,6 @@ var mcIcon = L.icon({
 var markers = L.markerClusterGroup();
 map.addLayer(markers);
 
-// // Ladda JSON Goteborg
-// fetch('goteborg_api.json')
-  // .then(res => res.json())
-  // .then(data => {
-    // data.forEach(p => {
-      // L.marker([p.Lat, p.Long], { icon: mcIcon })
-       // .bindPopup(p.name)
-       // .addTo(markers);
-    // });
-  // })
-  // .catch(err => console.error("Failed to load JSON:", err));
-
-// // Ladda JSON Overpass Turbo 
-// fetch('overpass_data.json')
-  // .then(res => res.json())
-  // .then(data => {
-    // // 1. Access the 'elements' array (common in Overpass JSON)
-    // // If your file is a direct array [{},{}], keep it as 'data'
-    // const locations = data.elements || data; 
-
-    // locations.forEach(p => {
-      // // 2. Access lat/lon directly from the object
-      // // 3. Use p.tags to find a name, or fallback to the amenity type
-      // const popupContent = p.tags.name || p.tags.amenity || "Motorcycle Parking";
-
-      // L.marker([p.lat, p.lon], { icon: mcIcon })
-        // .bindPopup(`<b>${popupContent}</b><br>Capacity: ${p.tags.capacity || 'Unknown'}`)
-        // .addTo(markers);
-    // });
-  // })
-  // .catch(err => console.error("Failed to load JSON:", err));
-  
 // Use a Set to track coordinates we've already placed on the map
 const seenCoords = new Set();
 
@@ -65,7 +33,7 @@ Promise.all([
     if (p.Lat !== undefined && p.Long !== undefined) {
         const lat = p.Lat;
         const lon = p.Long;
-        const coordKey = `${lat.toFixed(2)},${lon.toFixed(2)}`;
+        const coordKey = `${lat.toFixed(5)},${lon.toFixed(5)}`;
         
         seenCoords.add(coordKey);
 
@@ -87,7 +55,7 @@ Promise.all([
 			markers.eachLayer(layer => {
 				if (layer instanceof L.Marker) {
 					const distance = currentPos.distanceTo(layer.getLatLng());
-					if (distance < 15) { // 15 meters threshold
+					if (distance < 5) { // 5 meters threshold
 						isDuplicate = true;
 					}
 				}
@@ -117,4 +85,5 @@ map.on('click', function(e) {
         .setLatLng(e.latlng)
         .setContent(`Coordinates: ${lat}, ${lng}`)
         .openOn(map);
+
 });
