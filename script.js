@@ -108,47 +108,43 @@ function startFollowing() {
     btn.style.backgroundColor = '#e3f2fd';
 }
 
-let lastZoom = 14; // Store the current zoom state
+let currentZoomTier = Math.round(map.getZoom()); // Initialize with current map state
 
 map.on('locationfound', (e) => {
-    if (isFollowing) {
-        // 1. Convert speed to km/h, defaulting to 0 if null/undefined
-        let speedKmH = (e.speed && e.speed > 0.5) ? e.speed * 3.6 : 0; 
-        
-        // 2. Determine the target zoom based on speed tiers
-        let targetZoom = 18; 
-        if (speedKmH > 90) targetZoom = 13;      // Motorväg
-        else if (speedKmH > 70) targetZoom = 14; // Landsväg
-        else if (speedKmH > 40) targetZoom = 15; // Stadstrafik
-        else if (speedKmH > 5)  targetZoom = 17; // Långsam körning
-        else targetZoom = 18;                    // Stillastående
+    // 1. Convert speed to km/h, handle nulls
+    let speed = (e.speed && e.speed > 0) ? e.speed * 3.6 : 0;
+    
+    // 2. Determine target zoom using "Hysteresis" (Dead zones)
+    // We only change the tier if the speed change is significant
+    let nextTier = currentZoomTier;
 
-        // 3. ONLY change zoom if the target is different from current
-        // This prevents the "in and out" jittering
-        if (targetZoom !== lastZoom) {
-            map.setView(e.latlng, targetZoom, { 
+    if (speed > 95) nextTier = 13;
+    else if (speed < 85 && speed > 75) nextTier = 14;
+    else if (speed < 65 && speed > 45) nextTier = 15;
+    else if (speed < 35 && speed > 15) nextTier = 16;
+    else if (speed < 10 && speed > 6)  nextTier = 17;
+    else if (speed < 4)               nextTier = 18;
+
+    if (isFollowing) {
+        // ONLY zoom if the tier has actually shifted to a new level
+        if (nextTier !== currentZoomTier) {
+            currentZoomTier = nextTier;
+            map.setView(e.latlng, currentZoomTier, { 
                 animate: true,
-                pan: { duration: 1 } 
+                duration: 1.5 // Slower zoom is less jarring
             });
-            lastZoom = targetZoom;
         } else {
-            // If speed hasn't changed enough to shift tiers, just pan the map
-            map.panTo(e.latlng, { animate: true, duration: 0.5 });
+            // Just move the map without changing zoom
+            map.panTo(e.latlng, { animate: true, duration: 0.8 });
         }
     }
 
-    // Update markers as usual
-    if (userCircle) {
-        userCircle.setLatLng(e.latlng).setRadius(e.accuracy);
-    } else {
-        userCircle = L.circle(e.latlng, { radius: e.accuracy, color: '#4285F4', fillOpacity: 0.1 }).addTo(map);
-    }
+    // Update markers...
+    if (userCircle) userCircle.setLatLng(e.latlng).setRadius(e.accuracy);
+    else userCircle = L.circle(e.latlng, { radius: e.accuracy, color: '#4285F4', fillOpacity: 0.1 }).addTo(map);
 
-    if (userMarker) {
-        userMarker.setLatLng(e.latlng);
-    } else {
-        userMarker = L.marker(e.latlng).addTo(map).bindPopup("Du är här");
-    }
+    if (userMarker) userMarker.setLatLng(e.latlng);
+    else userMarker = L.marker(e.latlng).addTo(map).bindPopup("Du är här");
 });
 
 map.on('dragstart', function() {
@@ -163,5 +159,6 @@ map.on('dragstart', function() {
 
 
 document.getElementById('locate-me').addEventListener('click', startFollowing);
+
 
 
