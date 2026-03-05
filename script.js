@@ -19,7 +19,7 @@ map.addLayer(markers);
 
 // Helper function to create the fancy popup content
 function createPopupContent(name, lat, lon, source) {
-    const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${lat},${lon}`;
+    const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}&travelmode=driving`;
     const sourceText = source === 'gbg' ? 'Göteborg Stad' : 'OpenStreetMap';
     const btnColor = source === 'gbg' ? '#4285F4' : '#34A853';
 
@@ -101,15 +101,53 @@ map.on('click', function(e) {
 });
 
 // Locate Me Button
-document.getElementById('locate-me').addEventListener('click', () => {
-    map.locate({setView: true, maxZoom: 16});
+let isFollowing = false;
+let userMarker = null;
+let userCircle = null;
+
+// 1. The Button Click logic
+document.getElementById('locate-me').addEventListener('click', function() {
+    startFollowing();
 });
 
+function startFollowing() {
+    map.locate({
+        watch: true, 
+        setView: true, 
+        maxZoom: 16,
+        enableHighAccuracy: true 
+    });
+    
+    isFollowing = true;
+    const btn = document.getElementById('locate-me');
+    btn.innerHTML = '<span>📡</span> Följer...';
+    btn.style.backgroundColor = '#e3f2fd'; // Soft blue to show active
+}
+
+// 2. STOP Following when the user pans/drags the map
+map.on('dragstart', function() {
+    if (isFollowing) {
+        map.stopLocate();
+        isFollowing = false;
+        
+        const btn = document.getElementById('locate-me');
+        btn.innerHTML = '<span>📍</span> Hitta min position';
+        btn.style.backgroundColor = 'white';
+        console.log("Auto-follow disabled because user panned the map.");
+    }
+});
+
+// 3. Update the location markers as before
 map.on('locationfound', (e) => {
-    L.circle(e.latlng, e.accuracy, { color: '#4285F4', fillOpacity: 0.1 }).addTo(map);
-    L.marker(e.latlng).addTo(map).bindPopup("Du är här").openPopup();
-});
+    if (userCircle) {
+        userCircle.setLatLng(e.latlng).setRadius(e.accuracy);
+    } else {
+        userCircle = L.circle(e.latlng, { radius: e.accuracy, color: '#4285F4', fillOpacity: 0.1 }).addTo(map);
+    }
 
-map.on('locationerror', () => {
-    alert("Kunde inte hitta din position. Kontrollera behörigheter.");
+    if (userMarker) {
+        userMarker.setLatLng(e.latlng);
+    } else {
+        userMarker = L.marker(e.latlng).addTo(map);
+    }
 });

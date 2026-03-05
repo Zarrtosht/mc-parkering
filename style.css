@@ -25,3 +25,8 @@ width:100%;
 .location-btn:hover {
   background-color: #f4f4f4;
 }
+
+.location-btn {
+  /* ... existing styles ... */
+  transition: all 0.3s ease-in-out;
+}
