@@ -1,0 +1,3765 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.10 2d4cfc48",
+  "osm3s": {
+    "timestamp_osm_base": "2026-03-05T19:03:30Z",
+    "timestamp_areas_base": "2026-01-23T01:22:35Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "node",
+      "id": 971756743,
+      "lat": 56.7426957,
+      "lon": 15.9076494,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1021143599,
+      "lat": 57.708808,
+      "lon": 11.9671134,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "10",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "note": "Length: 12 m",
+        "operator": "Göteborgs Stad",
+        "parking": "lane"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1021144050,
+      "lat": 57.7073583,
+      "lon": 11.9734078,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "note": "Width: 6 m",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1712017066,
+      "lat": 59.3713156,
+      "lon": 16.512967,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1867296739,
+      "lat": 58.6645784,
+      "lon": 16.3759548,
+      "tags": {
+        "amenity": "motorcycle_parking"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2399193725,
+      "lat": 55.5997898,
+      "lon": 13.0323528,
+      "tags": {
+        "access": "destination",
+        "amenity": "motorcycle_parking",
+        "bicycle": "no",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2401192062,
+      "lat": 60.4845588,
+      "lon": 15.4362686,
+      "tags": {
+        "access": "yes",
+        "amenity": "motorcycle_parking",
+        "capacity": "2",
+        "covered": "no",
+        "fee": "yes",
+        "source": "survey"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3526001598,
+      "lat": 57.7313633,
+      "lon": 12.0115842,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "5",
+        "covered": "no",
+        "fee": "no",
+        "parking": "surface",
+        "surface": "paved"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3593077169,
+      "lat": 57.6609531,
+      "lon": 11.8432984,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "18",
+        "covered": "no",
+        "fee": "no",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3593077170,
+      "lat": 57.7083568,
+      "lon": 11.9914646,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "fee": "no",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3743215298,
+      "lat": 57.7076101,
+      "lon": 11.9444492,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "fee": "no",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3844759106,
+      "lat": 56.0427136,
+      "lon": 12.7444708,
+      "tags": {
+        "amenity": "motorcycle_parking"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4069258950,
+      "lat": 57.7194404,
+      "lon": 11.9512569,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "note": "Length: 6 m",
+        "operator": "Göteborgs Stad",
+        "parking": "lane"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4070317181,
+      "lat": 57.6486911,
+      "lon": 11.9335756,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "fee": "no",
+        "maxstay": "24 hours",
+        "operator": "Göteborgs Stad"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4070317182,
+      "lat": 57.6822265,
+      "lon": 11.9448134,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "fee": "no",
+        "maxstay": "24 hours",
+        "note": "Width: 10 m",
+        "operator": "Göteborgs Stad"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4070317183,
+      "lat": 57.6834646,
+      "lon": 11.950335,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "fee": "no",
+        "maxstay": "24 hours",
+        "operator": "Göteborgs Stad"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4070317184,
+      "lat": 57.6869694,
+      "lon": 11.9140392,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "operator": "Göteborgs Stad",
+        "parking": "lane"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4070317185,
+      "lat": 57.6899005,
+      "lon": 11.9474245,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "operator": "Göteborgs Stad"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4070317186,
+      "lat": 57.691636,
+      "lon": 11.9501803,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "6",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "note": "Length: 6 m",
+        "operator": "Göteborgs Stad",
+        "parking": "lane"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4070317188,
+      "lat": 57.6919522,
+      "lon": 11.9279593,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "description:en": "Length: 5 m",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "operator": "Göteborgs Stad",
+        "parking": "lane"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4070317389,
+      "lat": 57.6929462,
+      "lon": 11.9417112,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "5",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "note": "Length: 5 m",
+        "operator": "Göteborgs Stad",
+        "parking": "lane"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4070317390,
+      "lat": 57.6942225,
+      "lon": 11.9189521,
+      "tags": {
+        "access": "yes",
+        "amenity": "motorcycle_parking",
+        "capacity": "4",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "operator": "Göteborgs Stad"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4122079212,
+      "lat": 57.6969819,
+      "lon": 11.9482008,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4122079213,
+      "lat": 57.6981269,
+      "lon": 11.9496951,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "4",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "note": "Length: 5 m",
+        "operator": "Göteborgs Stad",
+        "parking": "lane"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4122079214,
+      "lat": 57.6986937,
+      "lon": 11.9433571,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "6",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "note": "Width: 10 m",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4122079217,
+      "lat": 57.6990703,
+      "lon": 11.9313623,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4122079218,
+      "lat": 57.6994394,
+      "lon": 11.9342752,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "note": "Length: 6 m",
+        "operator": "Göteborgs Stad",
+        "parking": "lane"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4122079219,
+      "lat": 57.6994829,
+      "lon": 11.953589,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "note": "Length: 10 m",
+        "operator": "Göteborgs Stad",
+        "parking": "lane"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4122079220,
+      "lat": 57.6995195,
+      "lon": 11.9524055,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "4",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "note": "Width: 5 m",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4124588601,
+      "lat": 57.7016257,
+      "lon": 11.9578306,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "2",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4124588602,
+      "lat": 57.7016325,
+      "lon": 11.95911,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "2",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4124588604,
+      "lat": 57.7026746,
+      "lon": 11.9655266,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4124588605,
+      "lat": 57.703117,
+      "lon": 11.9693413,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4124588611,
+      "lat": 57.704324,
+      "lon": 11.969161,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "note": "Length: 18 m",
+        "operator": "Göteborgs Stad",
+        "parking": "lane"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4124588612,
+      "lat": 57.7043536,
+      "lon": 11.9572958,
+      "tags": {
+        "access": "yes",
+        "amenity": "motorcycle_parking",
+        "capacity": "3",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4124588613,
+      "lat": 57.7046871,
+      "lon": 11.9645546,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "note": "Length: 10 m",
+        "operator": "Göteborgs Stad",
+        "parking": "lane"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4124588614,
+      "lat": 57.7048849,
+      "lon": 11.9658779,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "note": "Length: 10 m",
+        "operator": "Göteborgs Stad",
+        "parking": "lane"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4124588615,
+      "lat": 57.7060504,
+      "lon": 11.9698151,
+      "tags": {
+        "access": "yes",
+        "amenity": "motorcycle_parking",
+        "capacity": "6",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "operator": "Göteborgs Stad",
+        "parking": "lane"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4124588616,
+      "lat": 57.7061646,
+      "lon": 11.9666014,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "note": "Length: 10 m",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4124588617,
+      "lat": 57.707258,
+      "lon": 11.9657226,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4124590489,
+      "lat": 57.7093982,
+      "lon": 11.968058,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "yes",
+        "level": "0",
+        "operator": "Nordstan"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4124590490,
+      "lat": 57.7102308,
+      "lon": 11.9616753,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "10",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4124590491,
+      "lat": 57.7135208,
+      "lon": 11.9677546,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "8",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "note": "Width: 8 m",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4126852166,
+      "lat": 57.6994534,
+      "lon": 11.9764708,
+      "tags": {
+        "access:conditional": "no @ Sa-Su",
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "fee": "no",
+        "maxstay": "24 hours",
+        "note": "Width: 7 m",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4126852167,
+      "lat": 57.7004599,
+      "lon": 11.9701126,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "note": "Width: 5 m",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4126852168,
+      "lat": 57.7004853,
+      "lon": 11.9733286,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "note": "Length: 10 m",
+        "operator": "Göteborgs Stad",
+        "parking": "lane"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4126852169,
+      "lat": 57.7011379,
+      "lon": 11.9736944,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "note": "Width: 10 m",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4126852170,
+      "lat": 57.7011566,
+      "lon": 11.974031,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "note": "Width: 10 m",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4126852171,
+      "lat": 57.7015218,
+      "lon": 11.9731405,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "4",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "note": "Width: 6 m",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4126852173,
+      "lat": 57.7017087,
+      "lon": 11.9838223,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "fee": "no",
+        "maxstay": "2 hours",
+        "note": "Length: 5 m",
+        "opening_hours": "Mo-Fr 08:00-18:00",
+        "operator": "Göteborgs Stad",
+        "parking": "lane"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4126852174,
+      "lat": 57.7023574,
+      "lon": 11.9715024,
+      "tags": {
+        "access": "yes",
+        "amenity": "motorcycle_parking",
+        "capacity": "10",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4126852175,
+      "lat": 57.7045395,
+      "lon": 11.9807832,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4126852180,
+      "lat": 57.7076905,
+      "lon": 11.9861343,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "4",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "note": "Length: 6 m",
+        "operator": "Göteborgs Stad",
+        "parking": "lane"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4126852183,
+      "lat": 57.7100033,
+      "lon": 11.9845813,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "operator": "Göteborgs Stad",
+        "parking": "lane"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4126853752,
+      "lat": 57.6954626,
+      "lon": 11.9970979,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "note": "Width: 5 m",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4126853753,
+      "lat": 57.6962646,
+      "lon": 11.9782976,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "3",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4126853754,
+      "lat": 57.6969369,
+      "lon": 11.9955435,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "note": "Under the bridge",
+        "operator": "P-bolaget",
+        "parking": "lane"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4126853755,
+      "lat": 57.697599,
+      "lon": 11.9916979,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "10",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "note": "Length: 10 m",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4126853756,
+      "lat": 57.6978252,
+      "lon": 11.9931763,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "note": "Length: 9 m",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4126853757,
+      "lat": 57.6978562,
+      "lon": 11.9783905,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "4",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4126853758,
+      "lat": 57.6984426,
+      "lon": 11.9868082,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "note": "Length: 10 m",
+        "operator": "Göteborgs Stad",
+        "parking": "lane"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4126853759,
+      "lat": 57.6989102,
+      "lon": 11.9768901,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "16",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "note": "Width: 16 m",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4126853760,
+      "lat": 57.6993128,
+      "lon": 11.9763228,
+      "tags": {
+        "access:conditional": "no @ Sa-Su",
+        "amenity": "motorcycle_parking",
+        "capacity": "4",
+        "covered": "no",
+        "fee": "no",
+        "maxstay": "24 hours",
+        "note": "Width: 4 m",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4126853764,
+      "lat": 57.7120197,
+      "lon": 11.9901254,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4128363407,
+      "lat": 57.6914731,
+      "lon": 12.0341391,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "description:en": "Length: 12 m",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "operator": "Göteborgs Stad",
+        "parking": "lane"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4128363408,
+      "lat": 57.693793,
+      "lon": 11.9680048,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "note": "Length: 6 m",
+        "operator": "Göteborgs Stad",
+        "parking": "lane"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4128363409,
+      "lat": 57.6940575,
+      "lon": 11.97246,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4128363410,
+      "lat": 57.7005565,
+      "lon": 11.9572797,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4128363411,
+      "lat": 57.7040946,
+      "lon": 12.0347192,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "4",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4128363412,
+      "lat": 57.7054743,
+      "lon": 11.991785,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "note": "Length: 15 m",
+        "operator": "Göteborgs Stad",
+        "parking": "lane"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4128363413,
+      "lat": 57.7076895,
+      "lon": 11.9970321,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "note": "Width: 3 m",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4128363414,
+      "lat": 57.7095283,
+      "lon": 11.994115,
+      "tags": {
+        "access": "yes",
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "note": "Width: 6 m",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4128363415,
+      "lat": 57.7119036,
+      "lon": 11.9986213,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "note": "Width: 13 m",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4128363416,
+      "lat": 57.7136211,
+      "lon": 12.00462,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "note": "Length: 8 m",
+        "operator": "Göteborgs Stad",
+        "parking": "lane"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4128363726,
+      "lat": 57.7185827,
+      "lon": 12.0257347,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "note": "Length: 6 m",
+        "operator": "Göteborgs Stad",
+        "parking": "lane"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4134076693,
+      "lat": 57.6995702,
+      "lon": 11.9677072,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "note": "Length: 8 m",
+        "operator": "Göteborgs Stad",
+        "parking": "lane"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4134087262,
+      "lat": 57.6922465,
+      "lon": 11.9523706,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "note": "Length: 20 m",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4134087263,
+      "lat": 57.6931704,
+      "lon": 11.9557294,
+      "tags": {
+        "access": "yes",
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4134087264,
+      "lat": 57.6948934,
+      "lon": 11.9496391,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4134087265,
+      "lat": 57.6950726,
+      "lon": 11.9517835,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "note": "Length: 5 m",
+        "operator": "Göteborgs Stad",
+        "parking": "lane"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4134087266,
+      "lat": 57.6959931,
+      "lon": 11.9584615,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "note": "Width: 8 m",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4134087267,
+      "lat": 57.6964936,
+      "lon": 11.9519666,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "4",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "note": "Width: 7 m",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4134087269,
+      "lat": 57.698302,
+      "lon": 11.9627541,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "2",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4134087270,
+      "lat": 57.6988282,
+      "lon": 11.966873,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "note": "Width: 5 m",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4134087271,
+      "lat": 57.6991283,
+      "lon": 11.9632315,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "note": "Width: 7 m",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4143397594,
+      "lat": 57.5624872,
+      "lon": 11.9286614,
+      "tags": {
+        "access": "yes",
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "note": "Width: 10 m",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4143397595,
+      "lat": 57.7280796,
+      "lon": 11.7520612,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4143397596,
+      "lat": 57.7375647,
+      "lon": 11.7992753,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4143397598,
+      "lat": 57.7440523,
+      "lon": 11.7576691,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4221018767,
+      "lat": 57.7213633,
+      "lon": 11.944417,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "fee": "no",
+        "maxstay": "2 hours",
+        "note": "Width: 5 m",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4418564905,
+      "lat": 59.3417568,
+      "lon": 18.0626196,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "10",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5054241923,
+      "lat": 56.2675898,
+      "lon": 15.7816116,
+      "tags": {
+        "amenity": "motorcycle_parking"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5203143760,
+      "lat": 55.6559195,
+      "lon": 14.2680152,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5647465034,
+      "lat": 59.3123911,
+      "lon": 18.1057435,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "4",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5861445873,
+      "lat": 57.6578114,
+      "lon": 12.0129812,
+      "tags": {
+        "access": "yes",
+        "amenity": "motorcycle_parking",
+        "capacity": "8",
+        "covered": "no",
+        "fee": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6022529357,
+      "lat": 59.3486749,
+      "lon": 18.1092775,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "3",
+        "parking": "surface",
+        "ref": "Hangövägen, Stockholm"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6022529358,
+      "lat": 59.348599,
+      "lon": 18.1132539,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "3",
+        "parking": "surface",
+        "ref": "Hangövägen 35, Stockholm"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6022529359,
+      "lat": 59.3485074,
+      "lon": 18.1118149,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "parking": "surface",
+        "ref": "Hangövägen 20, Stockholm"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6022529360,
+      "lat": 59.3485423,
+      "lon": 18.1106333,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "parking": "surface",
+        "ref": "Hangövägen 18, Stockholm"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6022529361,
+      "lat": 59.3362188,
+      "lon": 18.0616254,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "10",
+        "check_date": "2020-08-17",
+        "covered": "no",
+        "parking": "surface",
+        "ref": "Olof Palmes Gata, Stockholm"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6022529362,
+      "lat": 59.3153037,
+      "lon": 18.0335842,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "parking": "surface",
+        "ref": "Hornsgatan, Stockholm"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6022529363,
+      "lat": 59.3263348,
+      "lon": 18.0745925,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "10",
+        "covered": "no",
+        "parking": "surface",
+        "ref": "Skeppsbron, Stockholm"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6022529364,
+      "lat": 59.3294556,
+      "lon": 18.0653587,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "10",
+        "covered": "no",
+        "parking": "surface",
+        "ref": "Jakobsgatan, Stockholm"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7099653814,
+      "lat": 57.8534756,
+      "lon": 11.7011192,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7239683561,
+      "lat": 59.3471812,
+      "lon": 18.1155226,
+      "tags": {
+        "amenity": "motorcycle_parking"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7239683562,
+      "lat": 59.3476356,
+      "lon": 18.1147815,
+      "tags": {
+        "amenity": "motorcycle_parking"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7239683563,
+      "lat": 59.3490373,
+      "lon": 18.1143727,
+      "tags": {
+        "amenity": "motorcycle_parking"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7410481079,
+      "lat": 59.3026613,
+      "lon": 18.0885361,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "5",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7562033246,
+      "lat": 63.1764307,
+      "lon": 14.6393826,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7562033247,
+      "lat": 63.1775294,
+      "lon": 14.6391128,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "4",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7868740026,
+      "lat": 63.8246595,
+      "lon": 20.2655893,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "20",
+        "covered": "no",
+        "moped": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7900466885,
+      "lat": 59.1082689,
+      "lon": 17.3792557,
+      "tags": {
+        "amenity": "motorcycle_parking"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7984061472,
+      "lat": 57.875181,
+      "lon": 11.9787184,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "opening_hours": "24/7"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8514723050,
+      "lat": 60.6072633,
+      "lon": 15.6276554,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "2",
+        "check_date:capacity": "2024-03-28",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8712146673,
+      "lat": 57.6914939,
+      "lon": 11.9629805,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "1",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8791262985,
+      "lat": 60.6048515,
+      "lon": 15.6328537,
+      "tags": {
+        "access": "yes",
+        "amenity": "motorcycle_parking",
+        "capacity": "5",
+        "check_date:capacity": "2024-09-06",
+        "covered": "no",
+        "fee": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8828291017,
+      "lat": 58.672152,
+      "lon": 16.3281203,
+      "tags": {
+        "amenity": "motorcycle_parking"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8844471000,
+      "lat": 60.6054744,
+      "lon": 15.6286269,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "2",
+        "check_date:capacity": "2025-09-13",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8929161275,
+      "lat": 59.3722587,
+      "lon": 16.5118326,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9041848287,
+      "lat": 57.6700802,
+      "lon": 12.010446,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9041848369,
+      "lat": 57.6700378,
+      "lon": 12.0071924,
+      "tags": {
+        "amenity": "motorcycle_parking"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9041848536,
+      "lat": 57.6708784,
+      "lon": 12.0095558,
+      "tags": {
+        "amenity": "motorcycle_parking"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9041848882,
+      "lat": 57.6708606,
+      "lon": 12.0077264,
+      "tags": {
+        "amenity": "motorcycle_parking"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9161953447,
+      "lat": 59.1480169,
+      "lon": 18.1116517,
+      "tags": {
+        "access": "private",
+        "amenity": "motorcycle_parking",
+        "capacity": "10",
+        "covered": "yes",
+        "operator": "Aggressive Motorcycle Club"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9551689740,
+      "lat": 59.3357678,
+      "lon": 18.0553267,
+      "tags": {
+        "access": "yes",
+        "amenity": "motorcycle_parking",
+        "capacity": "3",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9551689741,
+      "lat": 59.3346392,
+      "lon": 18.0551027,
+      "tags": {
+        "access": "yes",
+        "amenity": "motorcycle_parking",
+        "capacity": "12",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9958497424,
+      "lat": 59.2735714,
+      "lon": 14.0531312,
+      "tags": {
+        "access": "yes",
+        "amenity": "motorcycle_parking"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10039070032,
+      "lat": 58.3880229,
+      "lon": 13.8392385,
+      "tags": {
+        "amenity": "motorcycle_parking"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10130186247,
+      "lat": 57.6091724,
+      "lon": 12.0440975,
+      "tags": {
+        "amenity": "motorcycle_parking"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10821411852,
+      "lat": 58.0381255,
+      "lon": 12.797712,
+      "tags": {
+        "amenity": "motorcycle_parking"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11219703059,
+      "lat": 63.8169285,
+      "lon": 20.3034915,
+      "tags": {
+        "amenity": "motorcycle_parking"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11867012833,
+      "lat": 59.3078358,
+      "lon": 18.0852876,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "fee:conditional": "yes @ (Mo-Fr 07:00-19:00; Sa,PH -1 day 11:00-17:00)",
+        "fee:zone": "Taxa 14",
+        "restriction:conditional": "no_parking @ (Fr 09:00-14:00)",
+        "restriction:reason:conditional": "street_cleaning @ (Fr 09:00-14:00)",
+        "zone": "Sö"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11869387174,
+      "lat": 59.307049,
+      "lon": 18.0821409,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12015147135,
+      "lat": 59.3686827,
+      "lon": 18.0033262,
+      "tags": {
+        "access": "yes",
+        "amenity": "motorcycle_parking",
+        "capacity": "8",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12015217305,
+      "lat": 59.3669648,
+      "lon": 17.9848781,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12133500057,
+      "lat": 59.3657073,
+      "lon": 17.9917715,
+      "tags": {
+        "access": "yes",
+        "amenity": "motorcycle_parking",
+        "capacity": "4",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12139208379,
+      "lat": 59.3386801,
+      "lon": 18.0069421,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12157795475,
+      "lat": 59.3328213,
+      "lon": 18.0170874,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "5",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12164879161,
+      "lat": 59.3395348,
+      "lon": 18.0137269,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "5",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12165548852,
+      "lat": 59.3389878,
+      "lon": 18.0107627,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "5",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12193831747,
+      "lat": 59.3393173,
+      "lon": 18.0047226,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12273105553,
+      "lat": 59.3325107,
+      "lon": 18.0186603,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12299691792,
+      "lat": 59.334862,
+      "lon": 18.0135101,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12617704018,
+      "lat": 57.6974303,
+      "lon": 11.9834677,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12673176656,
+      "lat": 59.3381257,
+      "lon": 18.0125298,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "5",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12724332202,
+      "lat": 59.4115272,
+      "lon": 17.8370643,
+      "tags": {
+        "amenity": "motorcycle_parking"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12809299285,
+      "lat": 59.3716217,
+      "lon": 18.0146034,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "6",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12865317739,
+      "lat": 59.3357692,
+      "lon": 18.0311596,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "7",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12898131491,
+      "lat": 59.3349629,
+      "lon": 18.0139171,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12899381298,
+      "lat": 60.6090491,
+      "lon": 15.6447405,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13037792508,
+      "lat": 59.8806299,
+      "lon": 12.2882445,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13404321758,
+      "lat": 59.3665754,
+      "lon": 17.9885248,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13615202704,
+      "lat": 59.3674369,
+      "lon": 17.9658095,
+      "tags": {
+        "access": "yes",
+        "amenity": "motorcycle_parking",
+        "capacity": "2",
+        "covered": "yes",
+        "fee": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 196780671,
+      "center": {
+        "lat": 55.605835,
+        "lon": 12.9997955
+      },
+      "nodes": [
+        2070743731,
+        2070743733,
+        2070743729,
+        2070743726,
+        2070743731
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "5",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 207630256,
+      "center": {
+        "lat": 62.3904225,
+        "lon": 17.3086721
+      },
+      "nodes": [
+        1354055660,
+        2178806398,
+        2178806397,
+        2178806399,
+        1354055660
+      ],
+      "tags": {
+        "access": "no",
+        "amenity": "motorcycle_parking",
+        "motorcycle": "yes",
+        "name": "Esplanaden",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "way",
+      "id": 385984961,
+      "center": {
+        "lat": 59.436195,
+        "lon": 18.0769194
+      },
+      "nodes": [
+        3893271361,
+        3893271362,
+        3893271363,
+        3893271364,
+        3893271361
+      ],
+      "tags": {
+        "access": "private",
+        "amenity": "motorcycle_parking"
+      }
+    },
+    {
+      "type": "way",
+      "id": 399012414,
+      "center": {
+        "lat": 57.7304137,
+        "lon": 11.8525603
+      },
+      "nodes": [
+        4017503944,
+        4017503939,
+        4017503940,
+        4017503945,
+        4017503944
+      ],
+      "tags": {
+        "access": "yes",
+        "amenity": "motorcycle_parking"
+      }
+    },
+    {
+      "type": "way",
+      "id": 399012415,
+      "center": {
+        "lat": 57.7294606,
+        "lon": 11.8547022
+      },
+      "nodes": [
+        4017503936,
+        4017503937,
+        4017503934,
+        8834943586,
+        4017503936
+      ],
+      "tags": {
+        "access": "yes",
+        "amenity": "motorcycle_parking",
+        "capacity": "20",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "way",
+      "id": 410659998,
+      "center": {
+        "lat": 57.7033088,
+        "lon": 11.9687864
+      },
+      "nodes": [
+        4124588607,
+        4124588609,
+        4124588608,
+        873866476,
+        4124588607
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "note": "Length: 13 m",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "way",
+      "id": 410938128,
+      "center": {
+        "lat": 57.7052877,
+        "lon": 11.9851753
+      },
+      "nodes": [
+        4126852176,
+        4126852178,
+        4126852179,
+        4126852177,
+        4126852176
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "note": "Length: 25 m",
+        "operator": "Göteborgs Stad",
+        "parking": "lane"
+      }
+    },
+    {
+      "type": "way",
+      "id": 421529058,
+      "center": {
+        "lat": 56.5241637,
+        "lon": 14.9781419
+      },
+      "nodes": [
+        4212906530,
+        4440742337,
+        4212906525,
+        4212906519,
+        4212906517,
+        7205924715,
+        4212906523,
+        7205924709,
+        4212906526,
+        7205924710,
+        4212906531,
+        4212906533,
+        10052674578,
+        4212906535,
+        7205924714,
+        4440742339,
+        4212906527,
+        4212906524,
+        4212906522,
+        4212906530
+      ],
+      "tags": {
+        "access": "customers",
+        "amenity": "motorcycle_parking",
+        "fee": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 422022554,
+      "center": {
+        "lat": 56.8374652,
+        "lon": 13.9380504
+      },
+      "nodes": [
+        12650302540,
+        12650302536,
+        4217429448,
+        12650302534,
+        12650302538,
+        12650302540
+      ],
+      "tags": {
+        "access": "private",
+        "amenity": "motorcycle_parking",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 427226323,
+      "center": {
+        "lat": 63.8490981,
+        "lon": 20.3169387
+      },
+      "nodes": [
+        4095740428,
+        4264666172,
+        4264666171,
+        4095740429,
+        4095740428
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "4",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 520428963,
+      "center": {
+        "lat": 59.8413099,
+        "lon": 17.6481866
+      },
+      "nodes": [
+        5072502706,
+        5072502708,
+        5072502709,
+        5072502707,
+        5072502706
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking"
+      }
+    },
+    {
+      "type": "way",
+      "id": 520428967,
+      "center": {
+        "lat": 59.8403695,
+        "lon": 17.6486452
+      },
+      "nodes": [
+        5072503223,
+        5072503225,
+        5072503226,
+        5072503224,
+        5072503223
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking"
+      }
+    },
+    {
+      "type": "way",
+      "id": 642945384,
+      "center": {
+        "lat": 57.6816093,
+        "lon": 12.0007999
+      },
+      "nodes": [
+        6051663892,
+        6051663891,
+        6051663890,
+        6051663889,
+        6051663892
+      ],
+      "tags": {
+        "access": "yes",
+        "amenity": "motorcycle_parking",
+        "covered": "yes",
+        "fee": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 687179650,
+      "center": {
+        "lat": 58.3923945,
+        "lon": 15.5580817
+      },
+      "nodes": [
+        6441019525,
+        6441019524,
+        6441019523,
+        6441019526,
+        6441019525
+      ],
+      "tags": {
+        "access": "private",
+        "amenity": "motorcycle_parking",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "way",
+      "id": 703371403,
+      "center": {
+        "lat": 63.8184292,
+        "lon": 20.3108167
+      },
+      "nodes": [
+        6605274426,
+        6605274421,
+        6605274425,
+        6605274424,
+        6605274422,
+        6605274423,
+        6605274426
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "2",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "way",
+      "id": 724751605,
+      "center": {
+        "lat": 56.0119502,
+        "lon": 12.7168958
+      },
+      "nodes": [
+        6797097260,
+        6797097254,
+        6797097253,
+        6797097255,
+        6797097259,
+        6797097260
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "16"
+      }
+    },
+    {
+      "type": "way",
+      "id": 734522176,
+      "center": {
+        "lat": 63.8085553,
+        "lon": 20.2519404
+      },
+      "nodes": [
+        6878977601,
+        6878977592,
+        6878977590,
+        6878977588,
+        6878977586,
+        6878977600,
+        6878977599,
+        6878977585,
+        6878977587,
+        6878977589,
+        6878977591,
+        6878977598,
+        6878977601
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking"
+      }
+    },
+    {
+      "type": "way",
+      "id": 734522208,
+      "center": {
+        "lat": 63.8077644,
+        "lon": 20.2536272
+      },
+      "nodes": [
+        6878977731,
+        6878977700,
+        6878977698,
+        6878977696,
+        6878977694,
+        6878977692,
+        4163125622,
+        6878977699,
+        6878977691,
+        6878977693,
+        6878977695,
+        6878977697,
+        6878977731
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "6",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 759633548,
+      "center": {
+        "lat": 58.3246369,
+        "lon": 15.125514
+      },
+      "nodes": [
+        7096077468,
+        7096077458,
+        7096077457,
+        7096077456,
+        7096077468
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "way",
+      "id": 794904146,
+      "center": {
+        "lat": 61.8051855,
+        "lon": 16.5503622
+      },
+      "nodes": [
+        7434896369,
+        7434896370,
+        7434896371,
+        7434896372,
+        7434896369
+      ],
+      "tags": {
+        "access": "customers",
+        "amenity": "motorcycle_parking",
+        "covered": "yes",
+        "operator": "Ede Skola"
+      }
+    },
+    {
+      "type": "way",
+      "id": 839719637,
+      "center": {
+        "lat": 56.2028423,
+        "lon": 15.5284709
+      },
+      "nodes": [
+        7835854213,
+        7835854214,
+        7856501046,
+        7856501047,
+        7835854213
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking"
+      }
+    },
+    {
+      "type": "way",
+      "id": 857860378,
+      "center": {
+        "lat": 59.654106,
+        "lon": 12.591178
+      },
+      "nodes": [
+        7997670921,
+        7997670929,
+        7997670930,
+        7997670924,
+        7997670921
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "3",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 868454472,
+      "center": {
+        "lat": 59.6535319,
+        "lon": 12.5941805
+      },
+      "nodes": [
+        8094953249,
+        8094953248,
+        8094953234,
+        8094953233,
+        8094953249
+      ],
+      "tags": {
+        "access": "yes",
+        "amenity": "motorcycle_parking",
+        "capacity": "1",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 885205667,
+      "center": {
+        "lat": 59.7852999,
+        "lon": 14.5209214
+      },
+      "nodes": [
+        12250687153,
+        12250687151,
+        8231823268,
+        12250687152,
+        12250687153
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking"
+      }
+    },
+    {
+      "type": "way",
+      "id": 893397053,
+      "center": {
+        "lat": 59.3050154,
+        "lon": 15.2641837
+      },
+      "nodes": [
+        8303455768,
+        8303455769,
+        8303455751,
+        8303455761,
+        8303455768
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking"
+      }
+    },
+    {
+      "type": "way",
+      "id": 901767014,
+      "center": {
+        "lat": 59.4402581,
+        "lon": 17.9593796
+      },
+      "nodes": [
+        8376725676,
+        8376725677,
+        8376725678,
+        2139907851,
+        8376725676
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking"
+      }
+    },
+    {
+      "type": "way",
+      "id": 915943852,
+      "center": {
+        "lat": 55.590813,
+        "lon": 12.9620631
+      },
+      "nodes": [
+        8507777474,
+        8507777482,
+        8507777485,
+        8507777475,
+        8507777474
+      ],
+      "tags": {
+        "access": "permit",
+        "amenity": "motorcycle_parking",
+        "capacity": "1",
+        "covered": "no",
+        "operator": "Q-Park AB"
+      }
+    },
+    {
+      "type": "way",
+      "id": 915943853,
+      "center": {
+        "lat": 55.590785,
+        "lon": 12.9620266
+      },
+      "nodes": [
+        8507777479,
+        8507777476,
+        8507777477,
+        8507777480,
+        8507777479
+      ],
+      "tags": {
+        "access": "permit",
+        "amenity": "motorcycle_parking",
+        "capacity": "1",
+        "covered": "no",
+        "operator": "Q-Park AB"
+      }
+    },
+    {
+      "type": "way",
+      "id": 915943877,
+      "center": {
+        "lat": 55.5925347,
+        "lon": 12.9643317
+      },
+      "nodes": [
+        8507777545,
+        8507777541,
+        8507777544,
+        8507777546,
+        8507777545
+      ],
+      "tags": {
+        "access": "permit",
+        "amenity": "motorcycle_parking",
+        "capacity": "1",
+        "covered": "no",
+        "operator": "Q-Park AB"
+      }
+    },
+    {
+      "type": "way",
+      "id": 915943878,
+      "center": {
+        "lat": 55.5925067,
+        "lon": 12.9642952
+      },
+      "nodes": [
+        8507777547,
+        8507777548,
+        8507777549,
+        8507777550,
+        8507777547
+      ],
+      "tags": {
+        "access": "permit",
+        "amenity": "motorcycle_parking",
+        "capacity": "1",
+        "covered": "no",
+        "operator": "Q-Park AB"
+      }
+    },
+    {
+      "type": "way",
+      "id": 931802024,
+      "center": {
+        "lat": 56.502148,
+        "lon": 13.0007361
+      },
+      "nodes": [
+        12621574253,
+        8638423859,
+        8638423856,
+        8638423855,
+        8638423854,
+        12621574254,
+        12621574253
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "way",
+      "id": 935106102,
+      "center": {
+        "lat": 57.6823,
+        "lon": 11.9628764
+      },
+      "nodes": [
+        8665478391,
+        8665478392,
+        8665478393,
+        8380933014,
+        8665478391
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 935106103,
+      "center": {
+        "lat": 57.6838416,
+        "lon": 11.9638772
+      },
+      "nodes": [
+        8665478395,
+        8665478396,
+        8665478397,
+        8665478398,
+        8665478395
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 955208541,
+      "center": {
+        "lat": 57.7262571,
+        "lon": 11.9625383
+      },
+      "nodes": [
+        8840974310,
+        8840974309,
+        8840974308,
+        8840974307,
+        8840974310
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 956872750,
+      "center": {
+        "lat": 58.3831361,
+        "lon": 13.8402905
+      },
+      "nodes": [
+        8854792476,
+        8854792475,
+        8854792474,
+        8854792473,
+        8854792476
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking"
+      }
+    },
+    {
+      "type": "way",
+      "id": 962408655,
+      "center": {
+        "lat": 59.3532987,
+        "lon": 17.9817299
+      },
+      "nodes": [
+        8902338772,
+        8902338769,
+        8902338763,
+        8902338765,
+        8902338767,
+        8902338770,
+        8902338771,
+        8902338768,
+        8902338766,
+        8902338764,
+        8902338772
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking"
+      }
+    },
+    {
+      "type": "way",
+      "id": 963236901,
+      "center": {
+        "lat": 57.3210375,
+        "lon": 13.5473939
+      },
+      "nodes": [
+        8910057641,
+        8910057636,
+        8910057637,
+        8910057638,
+        8910057641
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "parking": "surface",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 967091557,
+      "center": {
+        "lat": 57.1822505,
+        "lon": 14.0447188
+      },
+      "nodes": [
+        8947249746,
+        8947249747,
+        8947249748,
+        8947249749,
+        8947249746
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 971706032,
+      "center": {
+        "lat": 58.4489863,
+        "lon": 14.8903536
+      },
+      "nodes": [
+        2719534689,
+        2719534688,
+        8993693228,
+        2719534689
+      ],
+      "tags": {
+        "access": "yes",
+        "amenity": "motorcycle_parking",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 973177121,
+      "center": {
+        "lat": 57.1865942,
+        "lon": 14.0521983
+      },
+      "nodes": [
+        9007317511,
+        9007317512,
+        9007317513,
+        9024974695,
+        9024974696,
+        9007317511
+      ],
+      "tags": {
+        "access": "customers",
+        "amenity": "motorcycle_parking",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 981045969,
+      "center": {
+        "lat": 59.3016463,
+        "lon": 18.0534142
+      },
+      "nodes": [
+        9074828378,
+        9074828377,
+        9074828376,
+        9074828375,
+        9074828378
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "5"
+      }
+    },
+    {
+      "type": "way",
+      "id": 996849568,
+      "center": {
+        "lat": 57.7801362,
+        "lon": 14.1669766
+      },
+      "nodes": [
+        9204548962,
+        9204548963,
+        9204548964,
+        9204548965,
+        9204548962
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 997590797,
+      "center": {
+        "lat": 57.7401651,
+        "lon": 12.1199614
+      },
+      "nodes": [
+        9211233891,
+        9211233892,
+        9211233893,
+        9211233894,
+        9211233891
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1007375918,
+      "center": {
+        "lat": 56.1755137,
+        "lon": 14.8594914
+      },
+      "nodes": [
+        9293644530,
+        9293644521,
+        9293644520,
+        9293644519,
+        9293644530
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1022900443,
+      "center": {
+        "lat": 57.1860703,
+        "lon": 14.0230412
+      },
+      "nodes": [
+        9433819034,
+        9433818987,
+        9433818986,
+        9433819033,
+        9433819034
+      ],
+      "tags": {
+        "access": "private",
+        "amenity": "motorcycle_parking"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1022900474,
+      "center": {
+        "lat": 57.1859646,
+        "lon": 14.0230683
+      },
+      "nodes": [
+        9433819053,
+        9433819052,
+        9433819051,
+        9433819097,
+        9433819053
+      ],
+      "tags": {
+        "access": "private",
+        "amenity": "motorcycle_parking"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1028118357,
+      "center": {
+        "lat": 57.1853206,
+        "lon": 14.0421095
+      },
+      "nodes": [
+        9476472476,
+        9476472475,
+        9476472474,
+        9476472473,
+        9476472476
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1077269791,
+      "center": {
+        "lat": 57.6915523,
+        "lon": 11.9840466
+      },
+      "nodes": [
+        1657604633,
+        1657604635,
+        9877599507,
+        9877599508,
+        1657604633
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "5",
+        "covered": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1077269792,
+      "center": {
+        "lat": 57.6916294,
+        "lon": 11.9834504
+      },
+      "nodes": [
+        1657604659,
+        9877599511,
+        9877599510,
+        1657604655,
+        1657604659
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "5",
+        "covered": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1084092930,
+      "center": {
+        "lat": 55.3391662,
+        "lon": 13.3592332
+      },
+      "nodes": [
+        9934376707,
+        9934376704,
+        9934376706,
+        9934376705,
+        9934376707
+      ],
+      "tags": {
+        "access": "yes",
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "fee": "no",
+        "parking": "surface",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1085796214,
+      "center": {
+        "lat": 57.6502757,
+        "lon": 11.9125942
+      },
+      "nodes": [
+        9949126429,
+        9949126426,
+        9949126427,
+        9949126428,
+        9949126429
+      ],
+      "tags": {
+        "access": "yes",
+        "amenity": "motorcycle_parking",
+        "fee": "no",
+        "parking": "street_side",
+        "smoothness": "excellent",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1086188858,
+      "center": {
+        "lat": 58.3913295,
+        "lon": 13.8477388
+      },
+      "nodes": [
+        9952596960,
+        9952596959,
+        9952596958,
+        9952596957,
+        9952596960
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1093068706,
+      "center": {
+        "lat": 57.7308179,
+        "lon": 11.7816479
+      },
+      "nodes": [
+        9955446582,
+        10010720817,
+        10010720818,
+        10010720819,
+        9955446582
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1101184037,
+      "center": {
+        "lat": 57.5061107,
+        "lon": 12.6899705
+      },
+      "nodes": [
+        10077470520,
+        10077470519,
+        10077470518,
+        10077470517,
+        10077470520
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1125853975,
+      "center": {
+        "lat": 59.3493062,
+        "lon": 18.0746397
+      },
+      "nodes": [
+        10295227101,
+        10295227100,
+        10295227099,
+        10295227098,
+        10295227101
+      ],
+      "tags": {
+        "access": "yes",
+        "amenity": "motorcycle_parking",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1163996601,
+      "center": {
+        "lat": 57.769823,
+        "lon": 12.2679727
+      },
+      "nodes": [
+        10825282879,
+        10825282876,
+        10825282877,
+        10825282878,
+        10825282879
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1163996602,
+      "center": {
+        "lat": 57.7696706,
+        "lon": 12.2681038
+      },
+      "nodes": [
+        10825282883,
+        10825282882,
+        10825282881,
+        10825282880,
+        10825282883
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1181016934,
+      "center": {
+        "lat": 59.5989212,
+        "lon": 16.5333189
+      },
+      "nodes": [
+        10968151002,
+        10968150999,
+        10968151000,
+        10968151001,
+        10968151002
+      ],
+      "tags": {
+        "access": "yes",
+        "amenity": "motorcycle_parking",
+        "capacity": "6",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1189992363,
+      "center": {
+        "lat": 58.4855829,
+        "lon": 15.5299281
+      },
+      "nodes": [
+        11049471960,
+        11049471959,
+        11049471958,
+        11049471957,
+        11049471960
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1198251267,
+      "center": {
+        "lat": 59.1812965,
+        "lon": 18.1358933
+      },
+      "nodes": [
+        11116118579,
+        11116118580,
+        11116118581,
+        11116118582,
+        11116118579
+      ],
+      "tags": {
+        "access": "yes",
+        "amenity": "motorcycle_parking",
+        "capacity": "2",
+        "covered": "no",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1216864993,
+      "center": {
+        "lat": 57.8871473,
+        "lon": 11.5889187
+      },
+      "nodes": [
+        11275472982,
+        11275472983,
+        11275472984,
+        11275472981,
+        11275472982
+      ],
+      "tags": {
+        "access": "yes",
+        "amenity": "motorcycle_parking",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1217235671,
+      "center": {
+        "lat": 57.1041297,
+        "lon": 12.2420365
+      },
+      "nodes": [
+        11278673009,
+        11278673008,
+        11278673007,
+        11278673006,
+        11278673009
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1218247757,
+      "center": {
+        "lat": 56.0382252,
+        "lon": 12.697209
+      },
+      "nodes": [
+        11288529489,
+        11288529490,
+        11288529491,
+        11288529492,
+        11288529489
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1235473384,
+      "center": {
+        "lat": 56.2008009,
+        "lon": 12.558511
+      },
+      "nodes": [
+        11468826250,
+        11468826253,
+        11468826254,
+        11468826255,
+        11468826251,
+        11468826250
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "motorcycle": "designated",
+        "motorcycle_parking": "street_side"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1250333740,
+      "center": {
+        "lat": 55.707881,
+        "lon": 13.2191518
+      },
+      "nodes": [
+        11622682807,
+        11622189033,
+        11622682808,
+        11622682809,
+        11622682807
+      ],
+      "tags": {
+        "access": "private",
+        "amenity": "motorcycle_parking"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1278635623,
+      "center": {
+        "lat": 59.3305456,
+        "lon": 18.0782232
+      },
+      "nodes": [
+        11870095564,
+        11870095563,
+        11870095562,
+        11870095561,
+        11870095564
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "source": "survey"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1283217985,
+      "center": {
+        "lat": 57.9199339,
+        "lon": 12.4972442
+      },
+      "nodes": [
+        11906760717,
+        11906760720,
+        11906760721,
+        11906760718,
+        11906760717
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "2",
+        "covered": "no",
+        "parking": "street_side"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1288125317,
+      "center": {
+        "lat": 57.7014095,
+        "lon": 11.961227
+      },
+      "nodes": [
+        11945688884,
+        4124588600,
+        11945688883,
+        11945688882,
+        11945688884
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "note": "Width: 6 m",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1289149043,
+      "center": {
+        "lat": 57.7422344,
+        "lon": 11.7363476
+      },
+      "nodes": [
+        4143397597,
+        1325041941,
+        11953997057,
+        11953997058,
+        4143397597
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "fee": "no",
+        "maxstay:conditional": "24 hours @ Mo-Fr",
+        "operator": "Göteborgs Stad",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1313806163,
+      "center": {
+        "lat": 55.7948748,
+        "lon": 13.1118115
+      },
+      "nodes": [
+        10178630220,
+        12160371552,
+        12160371553,
+        12160371554,
+        10178630220
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "6",
+        "covered": "no",
+        "parking": "on_kerb",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1315342541,
+      "center": {
+        "lat": 55.7956597,
+        "lon": 13.1104426
+      },
+      "nodes": [
+        12175007418,
+        12175007419,
+        12175007420,
+        12175007421,
+        12175007418
+      ],
+      "tags": {
+        "access": "yes",
+        "amenity": "motorcycle_parking",
+        "capacity": "15",
+        "covered": "no",
+        "parking": "surface"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1346097307,
+      "center": {
+        "lat": 55.6160181,
+        "lon": 12.9866681
+      },
+      "nodes": [
+        12450431557,
+        12450431558,
+        12450431559,
+        12450431560,
+        12450431557
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1348857326,
+      "center": {
+        "lat": 59.380954,
+        "lon": 18.0281816
+      },
+      "nodes": [
+        12477168108,
+        12477168109,
+        12477168110,
+        12477168111,
+        12477168108
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1349363644,
+      "center": {
+        "lat": 55.6884217,
+        "lon": 13.2180365
+      },
+      "nodes": [
+        12482383250,
+        12482383251,
+        12482383252,
+        12482383253,
+        12482383250
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "operator": "Biltema"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1350383452,
+      "center": {
+        "lat": 57.6986226,
+        "lon": 11.6646266
+      },
+      "nodes": [
+        12492472891,
+        12492472892,
+        12492472893,
+        12492472894,
+        12492472891
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1359685766,
+      "center": {
+        "lat": 55.7185794,
+        "lon": 13.1897896
+      },
+      "nodes": [
+        12585851556,
+        12585851557,
+        12585851558,
+        12585851559,
+        12585851556
+      ],
+      "tags": {
+        "access": "customers",
+        "amenity": "motorcycle_parking",
+        "capacity": "6",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1364137160,
+      "center": {
+        "lat": 56.8319822,
+        "lon": 13.934954
+      },
+      "nodes": [
+        12631476190,
+        12631476189,
+        12631476188,
+        12631789726,
+        12631476190
+      ],
+      "tags": {
+        "access": "yes",
+        "amenity": "motorcycle_parking",
+        "capacity": "5",
+        "covered": "no",
+        "fee": "no",
+        "lit": "yes",
+        "opening_hours": "24/7",
+        "orientation": "parallel",
+        "parking": "surface",
+        "smoothness": "excellent",
+        "supervised": "no",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1366021495,
+      "center": {
+        "lat": 56.8376327,
+        "lon": 13.9382393
+      },
+      "nodes": [
+        12650302533,
+        12650302535,
+        12650302537,
+        12650302539,
+        12650302533
+      ],
+      "tags": {
+        "access": "private",
+        "amenity": "motorcycle_parking",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1377746720,
+      "center": {
+        "lat": 59.3305025,
+        "lon": 13.4722502
+      },
+      "nodes": [
+        12757134329,
+        12757187069,
+        12757187070,
+        12757187072,
+        12757134330,
+        12757134331,
+        12757187073,
+        12757134332,
+        12757134329
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "36",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1383615552,
+      "center": {
+        "lat": 55.7943118,
+        "lon": 13.1117896
+      },
+      "nodes": [
+        12810166316,
+        12810166317,
+        2367185469,
+        12810166318,
+        12810166316
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "capacity": "8",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1393536047,
+      "center": {
+        "lat": 56.6903865,
+        "lon": 12.9033076
+      },
+      "nodes": [
+        12899350132,
+        12899350133,
+        12899350134,
+        12899350135,
+        12899350132
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1394157949,
+      "center": {
+        "lat": 56.6673158,
+        "lon": 12.8491666
+      },
+      "nodes": [
+        12905835506,
+        12905835507,
+        12905835508,
+        12905835509,
+        12905835506
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1417229335,
+      "center": {
+        "lat": 58.0250446,
+        "lon": 11.8522147
+      },
+      "nodes": [
+        13023029224,
+        13023029223,
+        13023029225,
+        13023029226,
+        13023029224
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1444466271,
+      "center": {
+        "lat": 57.7587118,
+        "lon": 11.8322183
+      },
+      "nodes": [
+        13253796154,
+        13253796155,
+        13253796156,
+        13253796157,
+        13253796154
+      ],
+      "tags": {
+        "access": "yes",
+        "amenity": "motorcycle_parking",
+        "covered": "no",
+        "fixme": "Osäker på om taggarna används rätt. Detta är en mopedparkering.",
+        "motorcycle:conditional": "no @ (displacement < 50 cc)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1463221172,
+      "center": {
+        "lat": 57.5754958,
+        "lon": 12.0793898
+      },
+      "nodes": [
+        13421963558,
+        13421963559,
+        13421963560,
+        13421963561,
+        13421963558
+      ],
+      "tags": {
+        "access": "yes",
+        "amenity": "motorcycle_parking",
+        "covered": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1463221179,
+      "center": {
+        "lat": 57.5753673,
+        "lon": 12.078632
+      },
+      "nodes": [
+        13421963579,
+        13421963580,
+        13421963581,
+        13421963582,
+        13421963579
+      ],
+      "tags": {
+        "access": "yes",
+        "amenity": "motorcycle_parking",
+        "covered": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1466238277,
+      "center": {
+        "lat": 57.6079473,
+        "lon": 12.0752136
+      },
+      "nodes": [
+        13448258841,
+        13448258842,
+        13448258843,
+        13448258844,
+        13448258841
+      ],
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no"
+      }
+    }
+  ]
+}
