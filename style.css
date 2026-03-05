@@ -1,0 +1,22 @@
+body {
+margin:0;
+font-family:Arial;
+}
+
+#map {
+height:100vh;
+width:100%;
+}
+
+#topbar {
+position:absolute;
+top:10px;
+left:50%;
+transform:translateX(-50%);
+background:white;
+padding:10px 20px;
+border-radius:8px;
+box-shadow:0 2px 6px rgba(0,0,0,0.2);
+z-index:1000;
+font-weight:bold;
+}

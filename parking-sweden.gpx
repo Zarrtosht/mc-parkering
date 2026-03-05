@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="overpass-turbo"><metadata><desc>Filtered OSM data converted to GPX by overpass turbo</desc><copyright author="The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."/><time>2026-03-05T17:53:01Z</time></metadata><wpt lat="56.7426957" lon="15.9076494"><name>node/971756743</name><desc>amenity=motorcycle_parking
+covered=no</desc><link href="http://osm.org/browse/node/971756743"/></wpt><wpt lat="57.708808" lon="11.9671134"><name>node/1021143599</name><desc>amenity=motorcycle_parking
+capacity=10
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+note=Length: 12 m
+operator=Göteborgs Stad
+parking=lane</desc><link href="http://osm.org/browse/node/1021143599"/></wpt><wpt lat="57.7073583" lon="11.9734078"><name>node/1021144050</name><desc>amenity=motorcycle_parking
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+note=Width: 6 m
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/1021144050"/></wpt><wpt lat="59.3713156" lon="16.512967"><name>node/1712017066</name><desc>amenity=motorcycle_parking
+parking=surface</desc><link href="http://osm.org/browse/node/1712017066"/></wpt><wpt lat="58.6645784" lon="16.3759548"><name>node/1867296739</name><desc>amenity=motorcycle_parking</desc><link href="http://osm.org/browse/node/1867296739"/></wpt><wpt lat="55.5997898" lon="13.0323528"><name>node/2399193725</name><desc>access=destination
+amenity=motorcycle_parking
+bicycle=no
+covered=no</desc><link href="http://osm.org/browse/node/2399193725"/></wpt><wpt lat="60.4845588" lon="15.4362686"><name>node/2401192062</name><desc>access=yes
+amenity=motorcycle_parking
+capacity=2
+covered=no
+fee=yes
+source=survey</desc><link href="http://osm.org/browse/node/2401192062"/></wpt><wpt lat="57.7313633" lon="12.0115842"><name>node/3526001598</name><desc>amenity=motorcycle_parking
+capacity=5
+covered=no
+fee=no
+parking=surface
+surface=paved</desc><link href="http://osm.org/browse/node/3526001598"/></wpt><wpt lat="57.6609531" lon="11.8432984"><name>node/3593077169</name><desc>amenity=motorcycle_parking
+capacity=18
+covered=no
+fee=no
+parking=surface</desc><link href="http://osm.org/browse/node/3593077169"/></wpt><wpt lat="57.7083568" lon="11.9914646"><name>node/3593077170</name><desc>amenity=motorcycle_parking
+covered=no
+fee=no
+parking=surface</desc><link href="http://osm.org/browse/node/3593077170"/></wpt><wpt lat="57.7076101" lon="11.9444492"><name>node/3743215298</name><desc>amenity=motorcycle_parking
+covered=no
+fee=no
+parking=surface</desc><link href="http://osm.org/browse/node/3743215298"/></wpt><wpt lat="56.0427136" lon="12.7444708"><name>node/3844759106</name><desc>amenity=motorcycle_parking</desc><link href="http://osm.org/browse/node/3844759106"/></wpt><wpt lat="57.7194404" lon="11.9512569"><name>node/4069258950</name><desc>amenity=motorcycle_parking
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+note=Length: 6 m
+operator=Göteborgs Stad
+parking=lane</desc><link href="http://osm.org/browse/node/4069258950"/></wpt><wpt lat="57.6486911" lon="11.9335756"><name>node/4070317181</name><desc>amenity=motorcycle_parking
+covered=no
+fee=no
+maxstay=24 hours
+operator=Göteborgs Stad</desc><link href="http://osm.org/browse/node/4070317181"/></wpt><wpt lat="57.6822265" lon="11.9448134"><name>node/4070317182</name><desc>amenity=motorcycle_parking
+covered=no
+fee=no
+maxstay=24 hours
+note=Width: 10 m
+operator=Göteborgs Stad</desc><link href="http://osm.org/browse/node/4070317182"/></wpt><wpt lat="57.6834646" lon="11.950335"><name>node/4070317183</name><desc>amenity=motorcycle_parking
+covered=no
+fee=no
+maxstay=24 hours
+operator=Göteborgs Stad</desc><link href="http://osm.org/browse/node/4070317183"/></wpt><wpt lat="57.6869694" lon="11.9140392"><name>node/4070317184</name><desc>amenity=motorcycle_parking
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+operator=Göteborgs Stad
+parking=lane</desc><link href="http://osm.org/browse/node/4070317184"/></wpt><wpt lat="57.6899005" lon="11.9474245"><name>node/4070317185</name><desc>amenity=motorcycle_parking
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+operator=Göteborgs Stad</desc><link href="http://osm.org/browse/node/4070317185"/></wpt><wpt lat="57.691636" lon="11.9501803"><name>node/4070317186</name><desc>amenity=motorcycle_parking
+capacity=6
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+note=Length: 6 m
+operator=Göteborgs Stad
+parking=lane</desc><link href="http://osm.org/browse/node/4070317186"/></wpt><wpt lat="57.6919522" lon="11.9279593"><name>node/4070317188</name><desc>amenity=motorcycle_parking
+description:en=Length: 5 m
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+operator=Göteborgs Stad
+parking=lane</desc><link href="http://osm.org/browse/node/4070317188"/></wpt><wpt lat="57.6929462" lon="11.9417112"><name>node/4070317389</name><desc>amenity=motorcycle_parking
+capacity=5
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+note=Length: 5 m
+operator=Göteborgs Stad
+parking=lane</desc><link href="http://osm.org/browse/node/4070317389"/></wpt><wpt lat="57.6942225" lon="11.9189521"><name>node/4070317390</name><desc>access=yes
+amenity=motorcycle_parking
+capacity=4
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+operator=Göteborgs Stad</desc><link href="http://osm.org/browse/node/4070317390"/></wpt><wpt lat="57.6969819" lon="11.9482008"><name>node/4122079212</name><desc>amenity=motorcycle_parking
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4122079212"/></wpt><wpt lat="57.6981269" lon="11.9496951"><name>node/4122079213</name><desc>amenity=motorcycle_parking
+capacity=4
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+note=Length: 5 m
+operator=Göteborgs Stad
+parking=lane</desc><link href="http://osm.org/browse/node/4122079213"/></wpt><wpt lat="57.6986937" lon="11.9433571"><name>node/4122079214</name><desc>amenity=motorcycle_parking
+capacity=6
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+note=Width: 10 m
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4122079214"/></wpt><wpt lat="57.6990703" lon="11.9313623"><name>node/4122079217</name><desc>amenity=motorcycle_parking
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4122079217"/></wpt><wpt lat="57.6994394" lon="11.9342752"><name>node/4122079218</name><desc>amenity=motorcycle_parking
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+note=Length: 6 m
+operator=Göteborgs Stad
+parking=lane</desc><link href="http://osm.org/browse/node/4122079218"/></wpt><wpt lat="57.6994829" lon="11.953589"><name>node/4122079219</name><desc>amenity=motorcycle_parking
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+note=Length: 10 m
+operator=Göteborgs Stad
+parking=lane</desc><link href="http://osm.org/browse/node/4122079219"/></wpt><wpt lat="57.6995195" lon="11.9524055"><name>node/4122079220</name><desc>amenity=motorcycle_parking
+capacity=4
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+note=Width: 5 m
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4122079220"/></wpt><wpt lat="57.7016257" lon="11.9578306"><name>node/4124588601</name><desc>amenity=motorcycle_parking
+capacity=2
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4124588601"/></wpt><wpt lat="57.7016325" lon="11.95911"><name>node/4124588602</name><desc>amenity=motorcycle_parking
+capacity=2
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4124588602"/></wpt><wpt lat="57.7026746" lon="11.9655266"><name>node/4124588604</name><desc>amenity=motorcycle_parking
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4124588604"/></wpt><wpt lat="57.703117" lon="11.9693413"><name>node/4124588605</name><desc>amenity=motorcycle_parking
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4124588605"/></wpt><wpt lat="57.704324" lon="11.969161"><name>node/4124588611</name><desc>amenity=motorcycle_parking
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+note=Length: 18 m
+operator=Göteborgs Stad
+parking=lane</desc><link href="http://osm.org/browse/node/4124588611"/></wpt><wpt lat="57.7043536" lon="11.9572958"><name>node/4124588612</name><desc>access=yes
+amenity=motorcycle_parking
+capacity=3
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4124588612"/></wpt><wpt lat="57.7046871" lon="11.9645546"><name>node/4124588613</name><desc>amenity=motorcycle_parking
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+note=Length: 10 m
+operator=Göteborgs Stad
+parking=lane</desc><link href="http://osm.org/browse/node/4124588613"/></wpt><wpt lat="57.7048849" lon="11.9658779"><name>node/4124588614</name><desc>amenity=motorcycle_parking
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+note=Length: 10 m
+operator=Göteborgs Stad
+parking=lane</desc><link href="http://osm.org/browse/node/4124588614"/></wpt><wpt lat="57.7060504" lon="11.9698151"><name>node/4124588615</name><desc>access=yes
+amenity=motorcycle_parking
+capacity=6
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+operator=Göteborgs Stad
+parking=lane</desc><link href="http://osm.org/browse/node/4124588615"/></wpt><wpt lat="57.7061646" lon="11.9666014"><name>node/4124588616</name><desc>amenity=motorcycle_parking
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+note=Length: 10 m
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4124588616"/></wpt><wpt lat="57.707258" lon="11.9657226"><name>node/4124588617</name><desc>amenity=motorcycle_parking
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4124588617"/></wpt><wpt lat="57.7093982" lon="11.968058"><name>node/4124590489</name><desc>amenity=motorcycle_parking
+covered=yes
+level=0
+operator=Nordstan</desc><link href="http://osm.org/browse/node/4124590489"/></wpt><wpt lat="57.7102308" lon="11.9616753"><name>node/4124590490</name><desc>amenity=motorcycle_parking
+capacity=10
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4124590490"/></wpt><wpt lat="57.7135208" lon="11.9677546"><name>node/4124590491</name><desc>amenity=motorcycle_parking
+capacity=8
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+note=Width: 8 m
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4124590491"/></wpt><wpt lat="57.6994534" lon="11.9764708"><name>node/4126852166</name><desc>access:conditional=no @ Sa-Su
+amenity=motorcycle_parking
+covered=no
+fee=no
+maxstay=24 hours
+note=Width: 7 m
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4126852166"/></wpt><wpt lat="57.7004599" lon="11.9701126"><name>node/4126852167</name><desc>amenity=motorcycle_parking
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+note=Width: 5 m
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4126852167"/></wpt><wpt lat="57.7004853" lon="11.9733286"><name>node/4126852168</name><desc>amenity=motorcycle_parking
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+note=Length: 10 m
+operator=Göteborgs Stad
+parking=lane</desc><link href="http://osm.org/browse/node/4126852168"/></wpt><wpt lat="57.7011379" lon="11.9736944"><name>node/4126852169</name><desc>amenity=motorcycle_parking
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+note=Width: 10 m
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4126852169"/></wpt><wpt lat="57.7011566" lon="11.974031"><name>node/4126852170</name><desc>amenity=motorcycle_parking
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+note=Width: 10 m
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4126852170"/></wpt><wpt lat="57.7015218" lon="11.9731405"><name>node/4126852171</name><desc>amenity=motorcycle_parking
+capacity=4
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+note=Width: 6 m
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4126852171"/></wpt><wpt lat="57.7017087" lon="11.9838223"><name>node/4126852173</name><desc>amenity=motorcycle_parking
+fee=no
+maxstay=2 hours
+note=Length: 5 m
+opening_hours=Mo-Fr 08:00-18:00
+operator=Göteborgs Stad
+parking=lane</desc><link href="http://osm.org/browse/node/4126852173"/></wpt><wpt lat="57.7023574" lon="11.9715024"><name>node/4126852174</name><desc>access=yes
+amenity=motorcycle_parking
+capacity=10
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4126852174"/></wpt><wpt lat="57.7045395" lon="11.9807832"><name>node/4126852175</name><desc>amenity=motorcycle_parking
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4126852175"/></wpt><wpt lat="57.7076905" lon="11.9861343"><name>node/4126852180</name><desc>amenity=motorcycle_parking
+capacity=4
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+note=Length: 6 m
+operator=Göteborgs Stad
+parking=lane</desc><link href="http://osm.org/browse/node/4126852180"/></wpt><wpt lat="57.7100033" lon="11.9845813"><name>node/4126852183</name><desc>amenity=motorcycle_parking
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+operator=Göteborgs Stad
+parking=lane</desc><link href="http://osm.org/browse/node/4126852183"/></wpt><wpt lat="57.6954626" lon="11.9970979"><name>node/4126853752</name><desc>amenity=motorcycle_parking
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+note=Width: 5 m
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4126853752"/></wpt><wpt lat="57.6962646" lon="11.9782976"><name>node/4126853753</name><desc>amenity=motorcycle_parking
+capacity=3
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4126853753"/></wpt><wpt lat="57.6969369" lon="11.9955435"><name>node/4126853754</name><desc>amenity=motorcycle_parking
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+note=Under the bridge
+operator=P-bolaget
+parking=lane</desc><link href="http://osm.org/browse/node/4126853754"/></wpt><wpt lat="57.697599" lon="11.9916979"><name>node/4126853755</name><desc>amenity=motorcycle_parking
+capacity=10
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+note=Length: 10 m
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4126853755"/></wpt><wpt lat="57.6978252" lon="11.9931763"><name>node/4126853756</name><desc>amenity=motorcycle_parking
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+note=Length: 9 m
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4126853756"/></wpt><wpt lat="57.6978562" lon="11.9783905"><name>node/4126853757</name><desc>amenity=motorcycle_parking
+capacity=4
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4126853757"/></wpt><wpt lat="57.6984426" lon="11.9868082"><name>node/4126853758</name><desc>amenity=motorcycle_parking
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+note=Length: 10 m
+operator=Göteborgs Stad
+parking=lane</desc><link href="http://osm.org/browse/node/4126853758"/></wpt><wpt lat="57.6989102" lon="11.9768901"><name>node/4126853759</name><desc>amenity=motorcycle_parking
+capacity=16
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+note=Width: 16 m
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4126853759"/></wpt><wpt lat="57.6993128" lon="11.9763228"><name>node/4126853760</name><desc>access:conditional=no @ Sa-Su
+amenity=motorcycle_parking
+capacity=4
+covered=no
+fee=no
+maxstay=24 hours
+note=Width: 4 m
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4126853760"/></wpt><wpt lat="57.7120197" lon="11.9901254"><name>node/4126853764</name><desc>amenity=motorcycle_parking
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4126853764"/></wpt><wpt lat="57.6914731" lon="12.0341391"><name>node/4128363407</name><desc>amenity=motorcycle_parking
+covered=no
+description:en=Length: 12 m
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+operator=Göteborgs Stad
+parking=lane</desc><link href="http://osm.org/browse/node/4128363407"/></wpt><wpt lat="57.693793" lon="11.9680048"><name>node/4128363408</name><desc>amenity=motorcycle_parking
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+note=Length: 6 m
+operator=Göteborgs Stad
+parking=lane</desc><link href="http://osm.org/browse/node/4128363408"/></wpt><wpt lat="57.6940575" lon="11.97246"><name>node/4128363409</name><desc>amenity=motorcycle_parking
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4128363409"/></wpt><wpt lat="57.7005565" lon="11.9572797"><name>node/4128363410</name><desc>amenity=motorcycle_parking
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4128363410"/></wpt><wpt lat="57.7040946" lon="12.0347192"><name>node/4128363411</name><desc>amenity=motorcycle_parking
+capacity=4
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4128363411"/></wpt><wpt lat="57.7054743" lon="11.991785"><name>node/4128363412</name><desc>amenity=motorcycle_parking
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+note=Length: 15 m
+operator=Göteborgs Stad
+parking=lane</desc><link href="http://osm.org/browse/node/4128363412"/></wpt><wpt lat="57.7076895" lon="11.9970321"><name>node/4128363413</name><desc>amenity=motorcycle_parking
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+note=Width: 3 m
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4128363413"/></wpt><wpt lat="57.7095283" lon="11.994115"><name>node/4128363414</name><desc>access=yes
+amenity=motorcycle_parking
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+note=Width: 6 m
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4128363414"/></wpt><wpt lat="57.7119036" lon="11.9986213"><name>node/4128363415</name><desc>amenity=motorcycle_parking
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+note=Width: 13 m
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4128363415"/></wpt><wpt lat="57.7136211" lon="12.00462"><name>node/4128363416</name><desc>amenity=motorcycle_parking
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+note=Length: 8 m
+operator=Göteborgs Stad
+parking=lane</desc><link href="http://osm.org/browse/node/4128363416"/></wpt><wpt lat="57.7185827" lon="12.0257347"><name>node/4128363726</name><desc>amenity=motorcycle_parking
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+note=Length: 6 m
+operator=Göteborgs Stad
+parking=lane</desc><link href="http://osm.org/browse/node/4128363726"/></wpt><wpt lat="57.6995702" lon="11.9677072"><name>node/4134076693</name><desc>amenity=motorcycle_parking
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+note=Length: 8 m
+operator=Göteborgs Stad
+parking=lane</desc><link href="http://osm.org/browse/node/4134076693"/></wpt><wpt lat="57.6922465" lon="11.9523706"><name>node/4134087262</name><desc>amenity=motorcycle_parking
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+note=Length: 20 m
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4134087262"/></wpt><wpt lat="57.6931704" lon="11.9557294"><name>node/4134087263</name><desc>access=yes
+amenity=motorcycle_parking
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4134087263"/></wpt><wpt lat="57.6948934" lon="11.9496391"><name>node/4134087264</name><desc>amenity=motorcycle_parking
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4134087264"/></wpt><wpt lat="57.6950726" lon="11.9517835"><name>node/4134087265</name><desc>amenity=motorcycle_parking
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+note=Length: 5 m
+operator=Göteborgs Stad
+parking=lane</desc><link href="http://osm.org/browse/node/4134087265"/></wpt><wpt lat="57.6959931" lon="11.9584615"><name>node/4134087266</name><desc>amenity=motorcycle_parking
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+note=Width: 8 m
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4134087266"/></wpt><wpt lat="57.6964936" lon="11.9519666"><name>node/4134087267</name><desc>amenity=motorcycle_parking
+capacity=4
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+note=Width: 7 m
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4134087267"/></wpt><wpt lat="57.698302" lon="11.9627541"><name>node/4134087269</name><desc>amenity=motorcycle_parking
+capacity=2
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4134087269"/></wpt><wpt lat="57.6988282" lon="11.966873"><name>node/4134087270</name><desc>amenity=motorcycle_parking
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+note=Width: 5 m
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4134087270"/></wpt><wpt lat="57.6991283" lon="11.9632315"><name>node/4134087271</name><desc>amenity=motorcycle_parking
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+note=Width: 7 m
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4134087271"/></wpt><wpt lat="57.5624872" lon="11.9286614"><name>node/4143397594</name><desc>access=yes
+amenity=motorcycle_parking
+covered=no
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+note=Width: 10 m
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4143397594"/></wpt><wpt lat="57.7280796" lon="11.7520612"><name>node/4143397595</name><desc>amenity=motorcycle_parking
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4143397595"/></wpt><wpt lat="57.7375647" lon="11.7992753"><name>node/4143397596</name><desc>amenity=motorcycle_parking
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4143397596"/></wpt><wpt lat="57.7440523" lon="11.7576691"><name>node/4143397598</name><desc>amenity=motorcycle_parking
+fee=no
+maxstay:conditional=24 hours @ Mo-Fr
+parking=surface</desc><link href="http://osm.org/browse/node/4143397598"/></wpt><wpt lat="57.7213633" lon="11.944417"><name>node/4221018767</name><desc>amenity=motorcycle_parking
+fee=no
+maxstay=2 hours
+note=Width: 5 m
+operator=Göteborgs Stad
+parking=surface</desc><link href="http://osm.org/browse/node/4221018767"/></wpt><wpt lat="59.3417568" lon="18.0626196"><name>node/4418564905</name><desc>amenity=motorcycle_parking
+capacity=10
+covered=no</desc><link href="http://osm.org/browse/node/4418564905"/></wpt><wpt lat="56.2675898" lon="15.7816116"><name>node/5054241923</name><desc>amenity=motorcycle_parking</desc><link href="http://osm.org/browse/node/5054241923"/></wpt><wpt lat="55.6559195" lon="14.2680152"><name>node/5203143760</name><desc>amenity=motorcycle_parking
+covered=no</desc><link href="http://osm.org/browse/node/5203143760"/></wpt><wpt lat="59.3123911" lon="18.1057435"><name>node/5647465034</name><desc>amenity=motorcycle_parking
+capacity=4
+covered=no</desc><link href="http://osm.org/browse/node/5647465034"/></wpt><wpt lat="57.6578114" lon="12.0129812"><name>node/5861445873</name><desc>access=yes
+amenity=motorcycle_parking
+capacity=8
+covered=no
+fee=no</desc><link href="http://osm.org/browse/node/5861445873"/></wpt><wpt lat="59.3486749" lon="18.1092775"><name>Hangövägen, Stockholm</name><desc>amenity=motorcycle_parking
+capacity=3
+parking=surface
+ref=Hangövägen, Stockholm</desc><link href="http://osm.org/browse/node/6022529357"/></wpt><wpt lat="59.348599" lon="18.1132539"><name>Hangövägen 35, Stockholm</name><desc>amenity=motorcycle_parking
+capacity=3
+parking=surface
+ref=Hangövägen 35, Stockholm</desc><link href="http://osm.org/browse/node/6022529358"/></wpt><wpt lat="59.3485074" lon="18.1118149"><name>Hangövägen 20, Stockholm</name><desc>amenity=motorcycle_parking
+parking=surface
+ref=Hangövägen 20, Stockholm</desc><link href="http://osm.org/browse/node/6022529359"/></wpt><wpt lat="59.3485423" lon="18.1106333"><name>Hangövägen 18, Stockholm</name><desc>amenity=motorcycle_parking
+parking=surface
+ref=Hangövägen 18, Stockholm</desc><link href="http://osm.org/browse/node/6022529360"/></wpt><wpt lat="59.3362188" lon="18.0616254"><name>Olof Palmes Gata, Stockholm</name><desc>amenity=motorcycle_parking
+capacity=10
+check_date=2020-08-17
+covered=no
+parking=surface
+ref=Olof Palmes Gata, Stockholm</desc><link href="http://osm.org/browse/node/6022529361"/></wpt><wpt lat="59.3153037" lon="18.0335842"><name>Hornsgatan, Stockholm</name><desc>amenity=motorcycle_parking
+covered=no
+parking=surface
+ref=Hornsgatan, Stockholm</desc><link href="http://osm.org/browse/node/6022529362"/></wpt><wpt lat="59.3263348" lon="18.0745925"><name>Skeppsbron, Stockholm</name><desc>amenity=motorcycle_parking
+capacity=10
+covered=no
+parking=surface
+ref=Skeppsbron, Stockholm</desc><link href="http://osm.org/browse/node/6022529363"/></wpt><wpt lat="59.3294556" lon="18.0653587"><name>Jakobsgatan, Stockholm</name><desc>amenity=motorcycle_parking
+capacity=10
+covered=no
+parking=surface
+ref=Jakobsgatan, Stockholm</desc><link href="http://osm.org/browse/node/6022529364"/></wpt><wpt lat="57.8534756" lon="11.7011192"><name>node/7099653814</name><desc>amenity=motorcycle_parking
+covered=no</desc><link href="http://osm.org/browse/node/7099653814"/></wpt><wpt lat="59.3471812" lon="18.1155226"><name>node/7239683561</name><desc>amenity=motorcycle_parking</desc><link href="http://osm.org/browse/node/7239683561"/></wpt><wpt lat="59.3476356" lon="18.1147815"><name>node/7239683562</name><desc>amenity=motorcycle_parking</desc><link href="http://osm.org/browse/node/7239683562"/></wpt><wpt lat="59.3490373" lon="18.1143727"><name>node/7239683563</name><desc>amenity=motorcycle_parking</desc><link href="http://osm.org/browse/node/7239683563"/></wpt><wpt lat="59.3026613" lon="18.0885361"><name>node/7410481079</name><desc>amenity=motorcycle_parking
+capacity=5
+covered=no</desc><link href="http://osm.org/browse/node/7410481079"/></wpt><wpt lat="63.1764307" lon="14.6393826"><name>node/7562033246</name><desc>amenity=motorcycle_parking
+covered=no</desc><link href="http://osm.org/browse/node/7562033246"/></wpt><wpt lat="63.1775294" lon="14.6391128"><name>node/7562033247</name><desc>amenity=motorcycle_parking
+capacity=4
+covered=no</desc><link href="http://osm.org/browse/node/7562033247"/></wpt><wpt lat="63.8246595" lon="20.2655893"><name>node/7868740026</name><desc>amenity=motorcycle_parking
+capacity=20
+covered=no
+moped=yes</desc><link href="http://osm.org/browse/node/7868740026"/></wpt><wpt lat="59.1082689" lon="17.3792557"><name>node/7900466885</name><desc>amenity=motorcycle_parking</desc><link href="http://osm.org/browse/node/7900466885"/></wpt><wpt lat="57.875181" lon="11.9787184"><name>node/7984061472</name><desc>amenity=motorcycle_parking
+opening_hours=24/7</desc><link href="http://osm.org/browse/node/7984061472"/></wpt><wpt lat="60.6072633" lon="15.6276554"><name>node/8514723050</name><desc>amenity=motorcycle_parking
+capacity=2
+check_date:capacity=2024-03-28
+covered=no</desc><link href="http://osm.org/browse/node/8514723050"/></wpt><wpt lat="57.6914939" lon="11.9629805"><name>node/8712146673</name><desc>amenity=motorcycle_parking
+capacity=1
+covered=no</desc><link href="http://osm.org/browse/node/8712146673"/></wpt><wpt lat="60.6048515" lon="15.6328537"><name>node/8791262985</name><desc>access=yes
+amenity=motorcycle_parking
+capacity=5
+check_date:capacity=2024-09-06
+covered=no
+fee=yes</desc><link href="http://osm.org/browse/node/8791262985"/></wpt><wpt lat="58.672152" lon="16.3281203"><name>node/8828291017</name><desc>amenity=motorcycle_parking</desc><link href="http://osm.org/browse/node/8828291017"/></wpt><wpt lat="60.6054744" lon="15.6286269"><name>node/8844471000</name><desc>amenity=motorcycle_parking
+capacity=2
+check_date:capacity=2025-09-13
+covered=no</desc><link href="http://osm.org/browse/node/8844471000"/></wpt><wpt lat="59.3722587" lon="16.5118326"><name>node/8929161275</name><desc>amenity=motorcycle_parking
+covered=no</desc><link href="http://osm.org/browse/node/8929161275"/></wpt><wpt lat="57.6700802" lon="12.010446"><name>node/9041848287</name><desc>amenity=motorcycle_parking
+covered=no</desc><link href="http://osm.org/browse/node/9041848287"/></wpt><wpt lat="57.6700378" lon="12.0071924"><name>node/9041848369</name><desc>amenity=motorcycle_parking</desc><link href="http://osm.org/browse/node/9041848369"/></wpt><wpt lat="57.6708784" lon="12.0095558"><name>node/9041848536</name><desc>amenity=motorcycle_parking</desc><link href="http://osm.org/browse/node/9041848536"/></wpt><wpt lat="57.6708606" lon="12.0077264"><name>node/9041848882</name><desc>amenity=motorcycle_parking</desc><link href="http://osm.org/browse/node/9041848882"/></wpt><wpt lat="59.1480169" lon="18.1116517"><name>node/9161953447</name><desc>access=private
+amenity=motorcycle_parking
+capacity=10
+covered=yes
+operator=Aggressive Motorcycle Club</desc><link href="http://osm.org/browse/node/9161953447"/></wpt><wpt lat="59.3357678" lon="18.0553267"><name>node/9551689740</name><desc>access=yes
+amenity=motorcycle_parking
+capacity=3
+covered=no</desc><link href="http://osm.org/browse/node/9551689740"/></wpt><wpt lat="59.3346392" lon="18.0551027"><name>node/9551689741</name><desc>access=yes
+amenity=motorcycle_parking
+capacity=12
+covered=no</desc><link href="http://osm.org/browse/node/9551689741"/></wpt><wpt lat="59.2735714" lon="14.0531312"><name>node/9958497424</name><desc>access=yes
+amenity=motorcycle_parking</desc><link href="http://osm.org/browse/node/9958497424"/></wpt><wpt lat="58.3880229" lon="13.8392385"><name>node/10039070032</name><desc>amenity=motorcycle_parking</desc><link href="http://osm.org/browse/node/10039070032"/></wpt><wpt lat="57.6091724" lon="12.0440975"><name>node/10130186247</name><desc>amenity=motorcycle_parking</desc><link href="http://osm.org/browse/node/10130186247"/></wpt><wpt lat="58.0381255" lon="12.797712"><name>node/10821411852</name><desc>amenity=motorcycle_parking</desc><link href="http://osm.org/browse/node/10821411852"/></wpt><wpt lat="63.8169285" lon="20.3034915"><name>node/11219703059</name><desc>amenity=motorcycle_parking</desc><link href="http://osm.org/browse/node/11219703059"/></wpt><wpt lat="59.3078358" lon="18.0852876"><name>node/11867012833</name><desc>amenity=motorcycle_parking
+covered=no
+fee:conditional=yes @ (Mo-Fr 07:00-19:00; Sa,PH -1 day 11:00-17:00)
+fee:zone=Taxa 14
+restriction:conditional=no_parking @ (Fr 09:00-14:00)
+restriction:reason:conditional=street_cleaning @ (Fr 09:00-14:00)
+zone=Sö</desc><link href="http://osm.org/browse/node/11867012833"/></wpt><wpt lat="59.307049" lon="18.0821409"><name>node/11869387174</name><desc>amenity=motorcycle_parking
+covered=no</desc><link href="http://osm.org/browse/node/11869387174"/></wpt><wpt lat="59.3686827" lon="18.0033262"><name>node/12015147135</name><desc>access=yes
+amenity=motorcycle_parking
+capacity=8
+covered=no</desc><link href="http://osm.org/browse/node/12015147135"/></wpt><wpt lat="59.3669648" lon="17.9848781"><name>node/12015217305</name><desc>amenity=motorcycle_parking
+covered=no</desc><link href="http://osm.org/browse/node/12015217305"/></wpt><wpt lat="59.3657073" lon="17.9917715"><name>node/12133500057</name><desc>access=yes
+amenity=motorcycle_parking
+capacity=4
+covered=no</desc><link href="http://osm.org/browse/node/12133500057"/></wpt><wpt lat="59.3386801" lon="18.0069421"><name>node/12139208379</name><desc>amenity=motorcycle_parking
+covered=no</desc><link href="http://osm.org/browse/node/12139208379"/></wpt><wpt lat="59.3328213" lon="18.0170874"><name>node/12157795475</name><desc>amenity=motorcycle_parking
+capacity=5
+covered=no</desc><link href="http://osm.org/browse/node/12157795475"/></wpt><wpt lat="59.3395348" lon="18.0137269"><name>node/12164879161</name><desc>amenity=motorcycle_parking
+capacity=5
+covered=no</desc><link href="http://osm.org/browse/node/12164879161"/></wpt><wpt lat="59.3389878" lon="18.0107627"><name>node/12165548852</name><desc>amenity=motorcycle_parking
+capacity=5
+covered=no</desc><link href="http://osm.org/browse/node/12165548852"/></wpt><wpt lat="59.3393173" lon="18.0047226"><name>node/12193831747</name><desc>amenity=motorcycle_parking
+covered=no</desc><link href="http://osm.org/browse/node/12193831747"/></wpt><wpt lat="59.3325107" lon="18.0186603"><name>node/12273105553</name><desc>amenity=motorcycle_parking
+covered=no</desc><link href="http://osm.org/browse/node/12273105553"/></wpt><wpt lat="59.334862" lon="18.0135101"><name>node/12299691792</name><desc>amenity=motorcycle_parking
+covered=no</desc><link href="http://osm.org/browse/node/12299691792"/></wpt><wpt lat="57.6974303" lon="11.9834677"><name>node/12617704018</name><desc>amenity=motorcycle_parking
+covered=no</desc><link href="http://osm.org/browse/node/12617704018"/></wpt><wpt lat="59.3381257" lon="18.0125298"><name>node/12673176656</name><desc>amenity=motorcycle_parking
+capacity=5
+covered=no</desc><link href="http://osm.org/browse/node/12673176656"/></wpt><wpt lat="59.4115272" lon="17.8370643"><name>node/12724332202</name><desc>amenity=motorcycle_parking</desc><link href="http://osm.org/browse/node/12724332202"/></wpt><wpt lat="59.3716217" lon="18.0146034"><name>node/12809299285</name><desc>amenity=motorcycle_parking
+capacity=6
+covered=no</desc><link href="http://osm.org/browse/node/12809299285"/></wpt><wpt lat="59.3357692" lon="18.0311596"><name>node/12865317739</name><desc>amenity=motorcycle_parking
+capacity=7
+covered=no</desc><link href="http://osm.org/browse/node/12865317739"/></wpt><wpt lat="59.3349629" lon="18.0139171"><name>node/12898131491</name><desc>amenity=motorcycle_parking
+covered=no</desc><link href="http://osm.org/browse/node/12898131491"/></wpt><wpt lat="60.6090491" lon="15.6447405"><name>node/12899381298</name><desc>amenity=motorcycle_parking
+covered=yes</desc><link href="http://osm.org/browse/node/12899381298"/></wpt><wpt lat="59.8806299" lon="12.2882445"><name>node/13037792508</name><desc>amenity=motorcycle_parking
+parking=surface</desc><link href="http://osm.org/browse/node/13037792508"/></wpt><wpt lat="59.3665754" lon="17.9885248"><name>node/13404321758</name><desc>amenity=motorcycle_parking
+covered=no</desc><link href="http://osm.org/browse/node/13404321758"/></wpt><wpt lat="59.3674369" lon="17.9658095"><name>node/13615202704</name><desc>access=yes
+amenity=motorcycle_parking
+capacity=2
+covered=yes
+fee=no</desc><link href="http://osm.org/browse/node/13615202704"/></wpt></gpx>
