@@ -24,7 +24,7 @@ map.addLayer(markers);
 
 // FIXED: This function now correctly handles the variables passed to it
 function createPopupContent(name, lat, lon, source) {
-    const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=$${lat},${lon}&travelmode=driving`;
+    const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}&travelmode=driving`;
     const sourceText = source === 'gbg' ? 'Göteborg Stad' : 'OpenStreetMap';
     const btnColor = source === 'gbg' ? '#4285F4' : '#34A853';
 
@@ -144,5 +144,6 @@ map.on('dragstart', function() {
         btn.style.backgroundColor = 'white';
     }
 });
+
 
 document.getElementById('locate-me').addEventListener('click', startFollowing);
