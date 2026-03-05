@@ -30,3 +30,34 @@ width:100%;
   /* ... existing styles ... */
   transition: all 0.3s ease-in-out;
 }
+
+/* Target the zoom container specifically */
+.leaflet-control-zoom {
+    position: fixed !important;
+    left: 10px !important; /* Distance from right edge */
+    top: 50% !important;   /* Move to middle of screen */
+    transform: translateY(-50%); /* Perfectly center it */
+    margin: 0 !important;
+    border: none !important;
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Adds space between + and - */
+}
+
+/* Style the individual + and - buttons */
+.leaflet-control-zoom-in, 
+.leaflet-control-zoom-out {
+    width: 44px !important;  /* Bigger for easier tapping with gloves */
+    height: 44px !important;
+    line-height: 44px !important;
+    background-color: white !important;
+    color: #333 !important;
+    border-radius: 50% !important; /* Makes them perfectly round like Google Maps */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2) !important;
+    border: none !important;
+    font-size: 20px !important;
+    font-weight: bold !important;
+}
+
+/* Hide the ugly default border between buttons */
+.leaflet-bar a:first-child { border-bottom: none !important; }

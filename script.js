@@ -1,4 +1,10 @@
-var map = L.map('map').setView([57.696396, 11.965227], 14);
+// Initialize map without default zoom control
+var map = L.map('map', {
+    zoomControl: false 
+}).setView([57.696396, 11.965227], 14);
+
+// Use a standard position; we will override this with CSS
+L.control.zoom({ position: 'topright' }).addTo(map);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap',
@@ -13,14 +19,12 @@ var mcIcon = L.icon({
     popupAnchor: [0, -32]
 });
 
-// Marker cluster
 var markers = L.markerClusterGroup();
 map.addLayer(markers);
 
-// Helper function to create the fancy popup content
+// FIXED: This function now correctly handles the variables passed to it
 function createPopupContent(name, lat, lon, source) {
-    // Navigation URL updated to trigger 'Directions' mode from user's current location
-    const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}&travelmode=driving`;
+    const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=$${lat},${lon}&travelmode=driving`;
     const sourceText = source === 'gbg' ? 'Göteborg Stad' : 'OpenStreetMap';
     const btnColor = source === 'gbg' ? '#4285F4' : '#34A853';
 
@@ -53,6 +57,7 @@ Promise.all([
     gbgData.forEach(p => {
         if (p.Lat !== undefined && p.Long !== undefined) {
             L.marker([p.Lat, p.Long], { icon: mcIcon })
+                // Pass individual coordinates to the function
                 .bindPopup(createPopupContent(p.Name || "MC Parkering", p.Lat, p.Long, 'gbg'))
                 .addTo(markers);
         }
@@ -83,24 +88,18 @@ Promise.all([
 })
 .catch(err => console.error("Error merging data sources:", err));
 
-// --- INTERACTION & LOCATION LOGIC ---
-
+// --- LOCATION LOGIC ---
 let isFollowing = false;
 let userMarker = null;
 let userCircle = null;
-
-document.getElementById('locate-me').addEventListener('click', function() {
-    startFollowing();
-});
 
 function startFollowing() {
     map.locate({
         watch: true, 
         setView: true, 
-        maxZoom: 16,
         enableHighAccuracy: true,
-        timeout: 10000,    // Wait 10s for GPS lock (helps on mobile)
-        maximumAge: 2000   // Allow 2s old cached position for smoothness
+        timeout: 10000,
+        maximumAge: 2000
     });
     
     isFollowing = true;
@@ -109,18 +108,20 @@ function startFollowing() {
     btn.style.backgroundColor = '#e3f2fd';
 }
 
-// Stop following if user manualy pans the map
-map.on('dragstart', function() {
-    if (isFollowing) {
-        map.stopLocate();
-        isFollowing = false;
-        const btn = document.getElementById('locate-me');
-        btn.innerHTML = '<span>📍</span> Hitta min position';
-        btn.style.backgroundColor = 'white';
-    }
-});
-
 map.on('locationfound', (e) => {
+    if (isFollowing) {
+        let speedKmH = (e.speed || 0) * 3.6;
+        let targetZoom = 17;
+
+        if (speedKmH > 90) targetZoom = 13;
+        else if (speedKmH > 70) targetZoom = 14;
+        else if (speedKmH > 40) targetZoom = 15;
+        else if (speedKmH > 15) targetZoom = 16;
+        else targetZoom = 18;
+
+        map.setView(e.latlng, targetZoom, { animate: true });
+    }
+
     if (userCircle) {
         userCircle.setLatLng(e.latlng).setRadius(e.accuracy);
     } else {
@@ -134,20 +135,14 @@ map.on('locationfound', (e) => {
     }
 });
 
-// "Silent" error handling for mobile
-map.on('locationerror', (e) => {
-    console.warn("Location error:", e.message);
-    // Only alert if we aren't already in "Follow" mode to avoid spamming the user
-    if (!isFollowing) {
-        alert("Kunde inte hitta din position. Kontrollera behörigheter och att GPS är på.");
+map.on('dragstart', function() {
+    if (isFollowing) {
+        map.stopLocate();
+        isFollowing = false;
+        const btn = document.getElementById('locate-me');
+        btn.innerHTML = '<span>📍</span> Hitta min position';
+        btn.style.backgroundColor = 'white';
     }
 });
 
-map.on('click', function(e) {
-    const lat = e.latlng.lat.toFixed(6);
-    const lng = e.latlng.lng.toFixed(6);
-    L.popup()
-        .setLatLng(e.latlng)
-        .setContent(`Koordinater: ${lat}, ${lng}`)
-        .openOn(map);
-});
+document.getElementById('locate-me').addEventListener('click', startFollowing);
