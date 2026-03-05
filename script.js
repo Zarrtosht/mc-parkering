@@ -1,7 +1,7 @@
 var map = L.map('map').setView([57.696396, 11.965227], 14);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap',
+    attribution: '© OpenStreetMap',
     maxZoom: 19
 }).addTo(map);
 
@@ -19,6 +19,7 @@ map.addLayer(markers);
 
 // Helper function to create the fancy popup content
 function createPopupContent(name, lat, lon, source) {
+    // Navigation URL updated to trigger 'Directions' mode from user's current location
     const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}&travelmode=driving`;
     const sourceText = source === 'gbg' ? 'Göteborg Stad' : 'OpenStreetMap';
     const btnColor = source === 'gbg' ? '#4285F4' : '#34A853';
@@ -31,14 +32,14 @@ function createPopupContent(name, lat, lon, source) {
             <hr style="margin: 8px 0; border: 0; border-top: 1px solid #eee;">
             <a href="${googleMapsUrl}" target="_blank" style="
                 display: inline-block;
-                padding: 8px 12px;
+                padding: 10px 16px;
                 background-color: ${btnColor};
                 color: white;
                 text-decoration: none;
                 border-radius: 4px;
                 font-weight: bold;
                 font-size: 0.9em;
-            ">Vägbeskrivning ↗</a>
+            ">Starta navigering ↗</a>
         </div>
     `;
 }
@@ -49,8 +50,6 @@ Promise.all([
     fetch('overpass_data.json').then(res => res.json())
 ])
 .then(([gbgData, ovpData]) => {
-
-    // 1. Process Gothenburg Data (Primary Source)
     gbgData.forEach(p => {
         if (p.Lat !== undefined && p.Long !== undefined) {
             L.marker([p.Lat, p.Long], { icon: mcIcon })
@@ -59,19 +58,15 @@ Promise.all([
         }
     });
 
-    // 2. Process Overpass Turbo Data
     const ovpLocations = ovpData.elements || ovpData;
-
     ovpLocations.forEach(p => {
         if (p.lat && p.lon) {
             const currentPos = L.latLng(p.lat, p.lon);
-            
-            // Deduplication: Check if this point is within 15 meters of any Gothenburg marker
             let isDuplicate = false;
             markers.eachLayer(layer => {
                 if (layer instanceof L.Marker) {
                     const distance = currentPos.distanceTo(layer.getLatLng());
-                    if (distance < 15) { // Increased to 15m for better "fuzzy" matching
+                    if (distance < 15) { 
                         isDuplicate = true;
                     }
                 }
@@ -88,24 +83,12 @@ Promise.all([
 })
 .catch(err => console.error("Error merging data sources:", err));
 
-// --- INTERACTION LOGIC ---
+// --- INTERACTION & LOCATION LOGIC ---
 
-// Click anywhere on map to see coordinates
-map.on('click', function(e) {
-    const lat = e.latlng.lat.toFixed(6);
-    const lng = e.latlng.lng.toFixed(6);
-    L.popup()
-        .setLatLng(e.latlng)
-        .setContent(`Koordinater: ${lat}, ${lng}`)
-        .openOn(map);
-});
-
-// Locate Me Button
 let isFollowing = false;
 let userMarker = null;
 let userCircle = null;
 
-// 1. The Button Click logic
 document.getElementById('locate-me').addEventListener('click', function() {
     startFollowing();
 });
@@ -115,29 +98,28 @@ function startFollowing() {
         watch: true, 
         setView: true, 
         maxZoom: 16,
-        enableHighAccuracy: true 
+        enableHighAccuracy: true,
+        timeout: 10000,    // Wait 10s for GPS lock (helps on mobile)
+        maximumAge: 2000   // Allow 2s old cached position for smoothness
     });
     
     isFollowing = true;
     const btn = document.getElementById('locate-me');
     btn.innerHTML = '<span>📡</span> Följer...';
-    btn.style.backgroundColor = '#e3f2fd'; // Soft blue to show active
+    btn.style.backgroundColor = '#e3f2fd';
 }
 
-// 2. STOP Following when the user pans/drags the map
+// Stop following if user manualy pans the map
 map.on('dragstart', function() {
     if (isFollowing) {
         map.stopLocate();
         isFollowing = false;
-        
         const btn = document.getElementById('locate-me');
         btn.innerHTML = '<span>📍</span> Hitta min position';
         btn.style.backgroundColor = 'white';
-        console.log("Auto-follow disabled because user panned the map.");
     }
 });
 
-// 3. Update the location markers as before
 map.on('locationfound', (e) => {
     if (userCircle) {
         userCircle.setLatLng(e.latlng).setRadius(e.accuracy);
@@ -148,6 +130,24 @@ map.on('locationfound', (e) => {
     if (userMarker) {
         userMarker.setLatLng(e.latlng);
     } else {
-        userMarker = L.marker(e.latlng).addTo(map);
+        userMarker = L.marker(e.latlng).addTo(map).bindPopup("Du är här");
     }
+});
+
+// "Silent" error handling for mobile
+map.on('locationerror', (e) => {
+    console.warn("Location error:", e.message);
+    // Only alert if we aren't already in "Follow" mode to avoid spamming the user
+    if (!isFollowing) {
+        alert("Kunde inte hitta din position. Kontrollera behörigheter och att GPS är på.");
+    }
+});
+
+map.on('click', function(e) {
+    const lat = e.latlng.lat.toFixed(6);
+    const lng = e.latlng.lng.toFixed(6);
+    L.popup()
+        .setLatLng(e.latlng)
+        .setContent(`Koordinater: ${lat}, ${lng}`)
+        .openOn(map);
 });
