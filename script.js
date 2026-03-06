@@ -111,38 +111,46 @@ function startFollowing() {
 let currentZoomTier = Math.round(map.getZoom());
 
 let targetZoom = Math.round(map.getZoom());
-let zoomLock = false; // Prevents multiple zoom commands at once
+let zoomLock = false;
 
 map.on('locationfound', (e) => {
     // 1. Convert speed to km/h
     let speed = (e.speed && e.speed > 0.5) ? e.speed * 3.6 : 0;
     
-    // 2. Continuous Speed Mapping (No gaps)
+    // 2. Determine Tier based on speed
+    // We use a "Greater Than" check only to prevent the immediate "snap back"
     let newTier = targetZoom;
-    if (speed > 80) newTier = 13;
-    else if (speed > 60) newTier = 14;
-    else if (speed > 40) newTier = 15;
-    else if (speed > 20) newTier = 16;
-    else if (speed > 7)  newTier = 17;
-    else newTier = 18;
+
+    if (speed > 90) {
+        newTier = 13; // Motorväg
+    } else if (speed > 70) {
+        newTier = 14; // Landsväg
+    } else if (speed > 45) {
+        newTier = 15; // Stadstrafik
+    } else if (speed > 25) {
+        newTier = 16; // Bostadsområde
+    } else if (speed > 10) {
+        newTier = 17; // Krypkörning
+    } else if (speed < 5) {
+        newTier = 18; // Stillastående
+    }
 
     if (isFollowing) {
-        // 3. Only zoom if the tier changed AND we aren't currently animating
+        // 3. Zoom logic with a "Lock" to prevent jitter
         if (newTier !== targetZoom && !zoomLock) {
             zoomLock = true;
             targetZoom = newTier;
             
             map.flyTo(e.latlng, targetZoom, {
                 animate: true,
-                duration: 2.0, // Slow, smooth transition
-                easeLinearity: 0.25
+                duration: 2.0
             });
 
-            // Unlock after animation finishes to prevent jitter
-            setTimeout(() => { zoomLock = false; }, 2500);
+            // Keep the lock on for a few seconds to let the speed stabilize
+            setTimeout(() => { zoomLock = false; }, 3000);
         } else if (!zoomLock) {
-            // Smoothly follow without zooming
-            map.panTo(e.latlng, { animate: true, duration: 0.5 });
+            // Smoothly pan to keep user centered
+            map.panTo(e.latlng, { animate: true, duration: 0.6 });
         }
     }
 
@@ -153,8 +161,7 @@ map.on('locationfound', (e) => {
     if (userMarker) userMarker.setLatLng(e.latlng);
     else userMarker = L.marker(e.latlng).addTo(map).bindPopup("Du är här");
 });
-
-
+
 map.on('dragstart', function() {
     if (isFollowing) {
         map.stopLocate();
