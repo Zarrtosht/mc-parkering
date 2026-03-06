@@ -108,34 +108,41 @@ function startFollowing() {
     btn.style.backgroundColor = '#e3f2fd';
 }
 
-let currentZoomTier = Math.round(map.getZoom()); // Initialize with current map state
+let currentZoomTier = Math.round(map.getZoom());
+
+let targetZoom = Math.round(map.getZoom());
+let zoomLock = false; // Prevents multiple zoom commands at once
 
 map.on('locationfound', (e) => {
-    // 1. Convert speed to km/h, handle nulls
-    let speed = (e.speed && e.speed > 0) ? e.speed * 3.6 : 0;
+    // 1. Convert speed to km/h
+    let speed = (e.speed && e.speed > 0.5) ? e.speed * 3.6 : 0;
     
-    // 2. Determine target zoom using "Hysteresis" (Dead zones)
-    // We only change the tier if the speed change is significant
-    let nextTier = currentZoomTier;
-
-    if (speed > 95) nextTier = 13;
-    else if (speed < 85 && speed > 75) nextTier = 14;
-    else if (speed < 65 && speed > 45) nextTier = 15;
-    else if (speed < 35 && speed > 15) nextTier = 16;
-    else if (speed < 10 && speed > 6)  nextTier = 17;
-    else if (speed < 4)               nextTier = 18;
+    // 2. Continuous Speed Mapping (No gaps)
+    let newTier = targetZoom;
+    if (speed > 80) newTier = 13;
+    else if (speed > 60) newTier = 14;
+    else if (speed > 40) newTier = 15;
+    else if (speed > 20) newTier = 16;
+    else if (speed > 7)  newTier = 17;
+    else newTier = 18;
 
     if (isFollowing) {
-        // ONLY zoom if the tier has actually shifted to a new level
-        if (nextTier !== currentZoomTier) {
-            currentZoomTier = nextTier;
-            map.setView(e.latlng, currentZoomTier, { 
+        // 3. Only zoom if the tier changed AND we aren't currently animating
+        if (newTier !== targetZoom && !zoomLock) {
+            zoomLock = true;
+            targetZoom = newTier;
+            
+            map.flyTo(e.latlng, targetZoom, {
                 animate: true,
-                duration: 1.5 // Slower zoom is less jarring
+                duration: 2.0, // Slow, smooth transition
+                easeLinearity: 0.25
             });
-        } else {
-            // Just move the map without changing zoom
-            map.panTo(e.latlng, { animate: true, duration: 0.8 });
+
+            // Unlock after animation finishes to prevent jitter
+            setTimeout(() => { zoomLock = false; }, 2500);
+        } else if (!zoomLock) {
+            // Smoothly follow without zooming
+            map.panTo(e.latlng, { animate: true, duration: 0.5 });
         }
     }
 
@@ -146,6 +153,7 @@ map.on('locationfound', (e) => {
     if (userMarker) userMarker.setLatLng(e.latlng);
     else userMarker = L.marker(e.latlng).addTo(map).bindPopup("Du är här");
 });
+
 
 map.on('dragstart', function() {
     if (isFollowing) {
