@@ -108,8 +108,6 @@ function startFollowing() {
     btn.style.backgroundColor = '#e3f2fd';
 }
 
-let currentZoomTier = Math.round(map.getZoom());
-
 let targetZoom = Math.round(map.getZoom());
 let zoomLock = false;
 
