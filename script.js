@@ -110,55 +110,71 @@ function startFollowing() {
 
 let targetZoom = Math.round(map.getZoom());
 let zoomLock = false;
+let speedHistory = []; // To smooth out erratic GPS readings
 
 map.on('locationfound', (e) => {
-    // 1. Convert speed to km/h
-    let speed = (e.speed && e.speed > 0.5) ? e.speed * 3.6 : 0;
+    // 1. Smooth the speed: Average the last 3 readings
+    let currentSpeed = (e.speed && e.speed > 0.5) ? e.speed * 3.6 : 0;
+    speedHistory.push(currentSpeed);
+    if (speedHistory.length > 3) speedHistory.shift();
     
-    // 2. Determine Tier based on speed
-    // We use a "Greater Than" check only to prevent the immediate "snap back"
+    // Calculate average speed
+    let avgSpeed = speedHistory.reduce((a, b) => a + b, 0) / speedHistory.length;
+    
+    // 2. Determine Tier with a "Stay-Put" logic
     let newTier = targetZoom;
 
-    if (speed > 90) {
-        newTier = 13; // Motorväg
-    } else if (speed > 70) {
-        newTier = 14; // Landsväg
-    } else if (speed > 45) {
-        newTier = 15; // Stadstrafik
-    } else if (speed > 25) {
-        newTier = 16; // Bostadsområde
-    } else if (speed > 10) {
-        newTier = 17; // Krypkörning
-    } else if (speed < 5) {
-        newTier = 18; // Stillastående
+    // We use "Hysteresis" (overlapping ranges) to prevent flipping
+    if (avgSpeed > 85) {
+        newTier = 13;
+    } else if (avgSpeed > 65 && avgSpeed <= 85) {
+        newTier = 14;
+    } else if (avgSpeed > 40 && avgSpeed <= 65) {
+        newTier = 15;
+    } else if (avgSpeed > 20 && avgSpeed <= 40) {
+        newTier = 16;
+    } else if (avgSpeed > 8 && avgSpeed <= 20) {
+        newTier = 17;
+    } else if (avgSpeed < 4) {
+        // Only zoom back to 18 if we are basically stopped
+        newTier = 18;
     }
 
     if (isFollowing) {
-        // 3. Zoom logic with a "Lock" to prevent jitter
+        // 3. Execution with a longer cooldown
         if (newTier !== targetZoom && !zoomLock) {
             zoomLock = true;
             targetZoom = newTier;
             
+            console.log(`Zooming to ${targetZoom} because avg speed is ${avgSpeed.toFixed(1)} km/h`);
+            
             map.flyTo(e.latlng, targetZoom, {
                 animate: true,
-                duration: 2.0
+                duration: 2.5 // Very slow, graceful transition
             });
 
-            // Keep the lock on for a few seconds to let the speed stabilize
-            setTimeout(() => { zoomLock = false; }, 3000);
+            // Lock for 5 seconds to let the driver settle into the new speed
+            setTimeout(() => { zoomLock = false; }, 5000);
         } else if (!zoomLock) {
-            // Smoothly pan to keep user centered
+            // Keep the marker centered without touching zoom
             map.panTo(e.latlng, { animate: true, duration: 0.6 });
         }
     }
 
-    // Update markers...
-    if (userCircle) userCircle.setLatLng(e.latlng).setRadius(e.accuracy);
-    else userCircle = L.circle(e.latlng, { radius: e.accuracy, color: '#4285F4', fillOpacity: 0.1 }).addTo(map);
+    // --- Marker Updates ---
+    if (userCircle) {
+        userCircle.setLatLng(e.latlng).setRadius(e.accuracy);
+    } else {
+        userCircle = L.circle(e.latlng, { radius: e.accuracy, color: '#4285F4', fillOpacity: 0.1 }).addTo(map);
+    }
 
-    if (userMarker) userMarker.setLatLng(e.latlng);
-    else userMarker = L.marker(e.latlng).addTo(map).bindPopup("Du är här");
+    if (userMarker) {
+        userMarker.setLatLng(e.latlng);
+    } else {
+        userMarker = L.marker(e.latlng).addTo(map).bindPopup("Du är här");
+    }
 });
+
 
 map.on('dragstart', function() {
     if (isFollowing) {
