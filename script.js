@@ -94,20 +94,60 @@ Promise.all([
 let isFollowing = false;
 let userMarker = null;
 let userCircle = null;
+let wakeLock = null;
+
+// Function to keep the screen on
+async function requestWakeLock() {
+    try {
+        if ('wakeLock' in navigator) {
+            wakeLock = await navigator.wakeLock.request('screen');
+            console.log('Wake Lock is active - Screen will stay on');
+            
+            // Re-request if the tab is hidden and then shown again
+            wakeLock.addEventListener('release', () => {
+                console.log('Wake Lock was released');
+            });
+        }
+    } catch (err) {
+        console.error(`${err.name}, ${err.message}`);
+    }
+}
+
+// Function to let the screen sleep again
+function releaseWakeLock() {
+    if (wakeLock !== null) {
+        wakeLock.release();
+        wakeLock = null;
+    }
+}
 
 function startFollowing() {
     map.locate({
         watch: true, 
-        setView: false, 
+        setView: false, // Keep this false as we discussed!
         enableHighAccuracy: true,
         timeout: 10000,
         maximumAge: 2000
     });
     
     isFollowing = true;
+    requestWakeLock(); // <--- ADD THIS
+    
     const btn = document.getElementById('locate-me');
     btn.innerHTML = '<span>📡</span> Följer...';
     btn.style.backgroundColor = '#e3f2fd';
+}
+
+function stopFollowing() {
+    if (isFollowing) {
+        map.stopLocate();
+        isFollowing = false;
+        releaseWakeLock(); // <--- ADD THIS
+        
+        const btn = document.getElementById('locate-me');
+        btn.innerHTML = '<span>📍</span> Hitta min position';
+        btn.style.backgroundColor = 'white';
+    }
 }
 
 map.on('locationfound', (e) => {
@@ -130,16 +170,6 @@ map.on('locationfound', (e) => {
         userMarker = L.marker(e.latlng).addTo(map).bindPopup("Du är här");
     }
 });
-
-function stopFollowing() {
-    if (isFollowing) {
-        map.stopLocate();
-        isFollowing = false;
-        const btn = document.getElementById('locate-me');
-        btn.innerHTML = '<span>📍</span> Hitta min position';
-        btn.style.backgroundColor = 'white';
-    }
-}
 
 map.on('dragstart', stopFollowing);
 document.getElementById('locate-me').addEventListener('click', startFollowing);
@@ -259,4 +289,5 @@ function renderResults(results) {
     });
 
 }
+
 
