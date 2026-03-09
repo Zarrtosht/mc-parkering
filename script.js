@@ -247,7 +247,7 @@ function renderResults(results) {
             stopFollowing();
             
             const latlng = [result.lat, result.lon];
-            map.flyTo(latlng, 17);
+            map.flyTo(latlng, 14);
             
             if (result.isMarker) {
                 result.layer.openPopup();
@@ -257,4 +257,5 @@ function renderResults(results) {
         };
         searchResults.appendChild(div);
     });
+
 }
