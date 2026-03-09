@@ -98,7 +98,7 @@ let userCircle = null;
 function startFollowing() {
     map.locate({
         watch: true, 
-        setView: true, 
+        setView: false, 
         enableHighAccuracy: true,
         timeout: 10000,
         maximumAge: 2000
@@ -259,3 +259,4 @@ function renderResults(results) {
     });
 
 }
+
