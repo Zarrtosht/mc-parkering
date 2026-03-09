@@ -108,57 +108,11 @@ function startFollowing() {
     btn.style.backgroundColor = '#e3f2fd';
 }
 
-let targetZoom = Math.round(map.getZoom());
-let zoomLock = false;
-let speedHistory = []; // To smooth out erratic GPS readings
-
 map.on('locationfound', (e) => {
-    // 1. Smooth the speed: Average the last 3 readings
-    let currentSpeed = (e.speed && e.speed > 0.5) ? e.speed * 3.6 : 0;
-    speedHistory.push(currentSpeed);
-    if (speedHistory.length > 3) speedHistory.shift();
-    
-    // Calculate average speed
-    let avgSpeed = speedHistory.reduce((a, b) => a + b, 0) / speedHistory.length;
-    
-    // 2. Determine Tier with a "Stay-Put" logic
-    let newTier = targetZoom;
-
-    // We use "Hysteresis" (overlapping ranges) to prevent flipping
-    if (avgSpeed > 85) {
-        newTier = 13;
-    } else if (avgSpeed > 65 && avgSpeed <= 85) {
-        newTier = 14;
-    } else if (avgSpeed > 40 && avgSpeed <= 65) {
-        newTier = 15;
-    } else if (avgSpeed > 20 && avgSpeed <= 40) {
-        newTier = 16;
-    } else if (avgSpeed > 8 && avgSpeed <= 20) {
-        newTier = 17;
-    } else if (avgSpeed < 4) {
-        // Only zoom back to 18 if we are basically stopped
-        newTier = 18;
-    }
-
     if (isFollowing) {
-        // 3. Execution with a longer cooldown
-        if (newTier !== targetZoom && !zoomLock) {
-            zoomLock = true;
-            targetZoom = newTier;
-            
-            console.log(`Zooming to ${targetZoom} because avg speed is ${avgSpeed.toFixed(1)} km/h`);
-            
-            map.flyTo(e.latlng, targetZoom, {
-                animate: true,
-                duration: 2.5 // Very slow, graceful transition
-            });
-
-            // Lock for 5 seconds to let the driver settle into the new speed
-            setTimeout(() => { zoomLock = false; }, 5000);
-        } else if (!zoomLock) {
-            // Keep the marker centered without touching zoom
-            map.panTo(e.latlng, { animate: true, duration: 0.6 });
-        }
+        // Use panTo instead of setView/flyTo. 
+        // This keeps you centered but doesn't force a zoom level.
+        map.panTo(e.latlng, { animate: true, duration: 0.8 });
     }
 
     // --- Marker Updates ---
@@ -175,7 +129,7 @@ map.on('locationfound', (e) => {
     }
 });
 
-
+// Disable follow if user manually drags the map
 map.on('dragstart', function() {
     if (isFollowing) {
         map.stopLocate();
@@ -186,8 +140,4 @@ map.on('dragstart', function() {
     }
 });
 
-
 document.getElementById('locate-me').addEventListener('click', startFollowing);
-
-
-
