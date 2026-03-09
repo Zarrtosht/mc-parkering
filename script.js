@@ -22,7 +22,6 @@ var mcIcon = L.icon({
 var markers = L.markerClusterGroup();
 map.addLayer(markers);
 
-// FIXED: This function now correctly handles the variables passed to it
 function createPopupContent(name, lat, lon, source) {
     const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}&travelmode=driving`;
     const sourceText = source === 'gbg' ? 'Göteborg Stad' : 'OpenStreetMap';
@@ -54,12 +53,14 @@ Promise.all([
     fetch('overpass_data.json').then(res => res.json())
 ])
 .then(([gbgData, ovpData]) => {
-    gbgData.forEach(p => {
+	gbgData.forEach(p => {
         if (p.Lat !== undefined && p.Long !== undefined) {
-            L.marker([p.Lat, p.Long], { icon: mcIcon })
-                // Pass individual coordinates to the function
-                .bindPopup(createPopupContent(p.Name || "MC Parkering", p.Lat, p.Long, 'gbg'))
-                .addTo(markers);
+            const name = p.Name || "MC Parkering";
+            // 1. Create the marker and add a 'searchName' property to it
+            const marker = L.marker([p.Lat, p.Long], { icon: mcIcon, searchName: name })
+                .bindPopup(createPopupContent(name, p.Lat, p.Long, 'gbg'));
+            
+            marker.addTo(markers);
         }
     });
 
@@ -77,18 +78,19 @@ Promise.all([
                 }
             });
 
-            if (!isDuplicate) {
-                const name = p.tags?.name || p.tags?.amenity || "MC Parkering";
-                L.marker([p.lat, p.lon], { icon: mcIcon })
-                    .bindPopup(createPopupContent(name, p.lat, p.lon, 'osm'))
-                    .addTo(markers);
-            }
+			if (!isDuplicate) {
+				const name = p.tags?.name || p.tags?.amenity || "MC Parkering";
+				const marker = L.marker([p.lat, p.lon], { icon: mcIcon, searchName: name })
+					.bindPopup(createPopupContent(name, p.lat, p.lon, 'osm'));
+				
+				marker.addTo(markers);
+			}
         }
     });
 })
 .catch(err => console.error("Error merging data sources:", err));
 
-// --- LOCATION LOGIC ---
+// Locate me
 let isFollowing = false;
 let userMarker = null;
 let userCircle = null;
@@ -129,8 +131,7 @@ map.on('locationfound', (e) => {
     }
 });
 
-// Disable follow if user manually drags the map
-map.on('dragstart', function() {
+function stopFollowing() {
     if (isFollowing) {
         map.stopLocate();
         isFollowing = false;
@@ -138,6 +139,122 @@ map.on('dragstart', function() {
         btn.innerHTML = '<span>📍</span> Hitta min position';
         btn.style.backgroundColor = 'white';
     }
+}
+
+map.on('dragstart', stopFollowing);
+document.getElementById('locate-me').addEventListener('click', startFollowing);
+
+// Search Bar Functionality
+// --- SEARCH UI LOGIC ---
+const searchWrapper = document.getElementById('search-wrapper');
+const searchToggleBtn = document.getElementById('search-toggle-btn');
+const searchInput = document.getElementById('map-search');
+const searchResults = document.getElementById('search-results');
+let searchTimeout;
+
+// Toggle search bar expansion
+searchToggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isActive = searchWrapper.classList.toggle('active');
+    if (isActive) {
+        searchInput.focus();
+    } else {
+        closeSearch();
+    }
 });
 
-document.getElementById('locate-me').addEventListener('click', startFollowing);
+// Close search when clicking anywhere on the map
+map.on('click', closeSearch);
+
+function closeSearch() {
+    searchWrapper.classList.remove('active');
+    searchResults.style.display = 'none';
+    searchInput.value = '';
+    searchInput.blur();
+}
+
+searchInput.addEventListener('input', function(e) {
+    const query = e.target.value.trim();
+    clearTimeout(searchTimeout);
+
+    if (query.length < 3) {
+        searchResults.style.display = 'none';
+        return;
+    }
+
+    searchTimeout = setTimeout(() => {
+        performUniversalSearch(query);
+    }, 300);
+});
+
+async function performUniversalSearch(query) {
+    let resultsFound = [];
+
+    // 1. Search Local Markers
+    markers.eachLayer(function(layer) {
+        const popupContent = layer.getPopup().getContent();
+        const nameMatch = popupContent.match(/<strong>(.*?)<\/strong>/);
+        const name = nameMatch ? nameMatch[1] : "MC Parkering";
+
+        if (name.toLowerCase().includes(query.toLowerCase())) {
+            resultsFound.push({ 
+                display_name: `🅿️ ${name}`, 
+                lat: layer.getLatLng().lat, 
+                lon: layer.getLatLng().lng,
+                isMarker: true,
+                layer: layer 
+            });
+        }
+    });
+
+    // 2. Global Nominatim Search
+    const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}&viewbox=11.75,57.85,12.15,57.55&bounded=0&limit=6`;
+
+    try {
+        const response = await fetch(url, { headers: { 'Accept-Language': 'sv' } });
+        const osmData = await response.json();
+        
+        osmData.forEach(item => {
+            resultsFound.push({
+                display_name: `📍 ${item.display_name.split(',')[0]}`,
+                lat: parseFloat(item.lat),
+                lon: parseFloat(item.lon),
+                isMarker: false
+            });
+        });
+    } catch (err) {
+        console.error("Geocoding error:", err);
+    }
+
+    renderResults(resultsFound);
+}
+
+function renderResults(results) {
+    if (results.length === 0) {
+        searchResults.style.display = 'none';
+        return;
+    }
+
+    searchResults.innerHTML = '';
+    searchResults.style.display = 'block';
+
+    results.forEach(result => {
+        const div = document.createElement('div');
+        div.className = 'search-item';
+        div.innerText = result.display_name;
+        
+        div.onclick = function() {
+            stopFollowing();
+            
+            const latlng = [result.lat, result.lon];
+            map.flyTo(latlng, 17);
+            
+            if (result.isMarker) {
+                result.layer.openPopup();
+            }
+
+            closeSearch();
+        };
+        searchResults.appendChild(div);
+    });
+}

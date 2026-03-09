@@ -26,11 +26,6 @@ width:100%;
   background-color: #f4f4f4;
 }
 
-.location-btn {
-  /* ... existing styles ... */
-  transition: all 0.3s ease-in-out;
-}
-
 /* Target the zoom container specifically */
 .leaflet-control-zoom {
     position: fixed !important;
@@ -59,5 +54,85 @@ width:100%;
     font-weight: bold !important;
 }
 
+.leaflet-control-zoom-in:hover {
+    background-color: #f4f4f4;
+}
+
+.leaflet-control-zoom-out:hover {
+    background-color: #f4f4f4;
+}
+
 /* Hide the ugly default border between buttons */
 .leaflet-bar a:first-child { border-bottom: none !important; }
+
+/* Position the search block below the zoom buttons */
+#search-wrapper {
+    position: fixed;
+    top: 60%; /* Adjust this so it sits just below the [-] zoom button */
+    left: 10px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.custom-map-btn {
+    width: 44px;
+    height: 44px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-map-btn:hover {
+    background-color: #f4f4f4;
+}
+
+#search-bar-container {
+    width: 0;
+    opacity: 0;
+    overflow: visible; /* Allows results to drop down */
+    transition: all 0.3s ease;
+}
+
+#search-wrapper.active #search-bar-container {
+    width: 220px;
+    opacity: 1;
+}
+
+#map-search {
+    width: 100%;
+    padding: 8px 15px;
+    border-radius: 20px; /* Nice round edges as before */
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    font-size: 20px;
+    outline: none;
+}
+
+#search-results {
+    position: absolute;
+    top: 40px; /* Drops down below the bar */
+    right: 0;
+    width: 220px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    max-height: 250px;
+    overflow-y: auto;
+    display: none;
+}
+
+.search-item {
+    padding: 10px;
+    font-size: 13px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
