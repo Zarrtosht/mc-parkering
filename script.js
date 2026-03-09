@@ -154,7 +154,7 @@ map.on('locationfound', (e) => {
     if (isFollowing) {
         // Use panTo instead of setView/flyTo. 
         // This keeps you centered but doesn't force a zoom level.
-        map.panTo(e.latlng, { animate: true, duration: 0.8 });
+        map.panTo(e.latlng, { animate: true, duration: 0.1 });
     }
 
     // --- Marker Updates ---
@@ -289,5 +289,6 @@ function renderResults(results) {
     });
 
 }
+
 
 
