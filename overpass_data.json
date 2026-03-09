@@ -7,6 +7,17 @@
     "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
   },
   "elements": [
+    	{
+      "type": "node",
+      "id": 123456789,
+      "lat": 57.83788874911343,
+      "lon": 12.294325047143593,
+      "tags": {
+        "amenity": "motorcycle_parking",
+        "covered": "no"
+      }
+    },
+    
     {
       "type": "node",
       "id": 971756743,
