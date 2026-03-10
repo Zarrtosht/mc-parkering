@@ -1,105 +1,88 @@
-body {
-margin:0;
-font-family:Arial;
+/* --- 1. GRUNDLÄGGANDE (Tar bort vit ram) --- */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
 }
 
 #map {
-height:100vh;
-width:100%;
+    height: 100vh;
+    width: 100%;
+    display: block;
 }
 
-.location-btn {
-  position:absolute;
-  top:10px;
-  left:50%;
-  transform:translateX(-50%);
-  background:white;
-  padding:10px 20px;
-  border: none;
-  border-radius:8px;
-  box-shadow:0 2px 6px rgba(0,0,0,0.2);
-  z-index:1000;
-  font-weight:bold;
-}
-
-.location-btn:hover {
-  background-color: #f4f4f4;
-}
-
-/* Target the zoom container specifically */
-.leaflet-control-zoom {
-    position: fixed !important;
-    left: 10px !important; /* Distance from right edge */
-    top: 50% !important;   /* Move to middle of screen */
-    transform: translateY(-50%); /* Perfectly center it */
-    margin: 0 !important;
-    border: none !important;
-    display: flex;
-    flex-direction: column;
-    gap: 8px; /* Adds space between + and - */
-}
-
-/* Style the individual + and - buttons */
+/* --- 2. GEMENSAM STIL FÖR ALLA KNAPPAR (44px) --- */
+.custom-map-btn, 
 .leaflet-control-zoom-in, 
 .leaflet-control-zoom-out {
-    width: 44px !important;  /* Bigger for easier tapping with gloves */
+    width: 44px !important;
     height: 44px !important;
     line-height: 44px !important;
-    background-color: white !important;
-    color: #333 !important;
-    border-radius: 50% !important; /* Makes them perfectly round like Google Maps */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2) !important;
+    background: white !important;
     border: none !important;
+    border-radius: 50% !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2) !important;
     font-size: 20px !important;
-    font-weight: bold !important;
+    cursor: pointer;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    color: #333 !important;
+    text-decoration: none !important;
 }
 
-.leaflet-control-zoom-in:hover {
-    background-color: #f4f4f4;
-}
-
-.leaflet-control-zoom-out:hover {
-    background-color: #f4f4f4;
-}
-
-/* Hide the ugly default border between buttons */
-.leaflet-bar a:first-child { border-bottom: none !important; }
-
-/* Position the search block below the zoom buttons */
-#search-wrapper {
+/* --- 3. VÄNSTERPANEL (ALLA KONTROLLER SAMLADE) --- */
+#map-controls-wrapper {
     position: fixed;
-    top: 60%; /* Adjust this so it sits just below the [-] zoom button */
+    top: 50%;
     left: 10px;
+    transform: translateY(-50%);
     z-index: 1000;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column;
     align-items: flex-start;
+    gap: 8px; /* EXAKT samma gap mellan alla block */
+}
+
+/* Ta bort eventuella gamla marginaler som förstör gapet */
+.leaflet-control-zoom, #search-wrapper, .custom-map-btn {
+    margin: 0 !important; 
+}
+
+#search-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+/* --- 4. ZOOM-KONTROLLER (FLYTER NU IN I WRAPPERN) --- */
+.leaflet-control-zoom {
+    position: relative !important; /* Inte längre fixed, så den följer wrappern */
+    left: 0 !important;
+    top: 0 !important;
+    margin: 0 !important;
+    display: flex;
+    flex-direction: column;
     gap: 8px;
 }
 
-.custom-map-btn {
-    width: 44px;
-    height: 44px;
-    background: white;
-    border: none;
-    border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    font-size: 20px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Ta bort Leaflets fula standard-boxar */
+.leaflet-bar {
+    border: none !important;
+    box-shadow: none !important;
 }
 
-.custom-map-btn:hover {
-    background-color: #f4f4f4;
-}
-
+/* --- 5. SÖKFÄLTET --- */
 #search-bar-container {
+    position: relative; /* Viktigt för att listan ska hamna rätt */
     width: 0;
     opacity: 0;
-    overflow: visible; /* Allows results to drop down */
     transition: all 0.3s ease;
+    /* Vi tar bort overflow: hidden härifrån för att inte klippa listan */
 }
 
 #search-wrapper.active #search-bar-container {
@@ -107,32 +90,56 @@ width:100%;
     opacity: 1;
 }
 
-#map-search {
-    width: 100%;
-    padding: 8px 15px;
-    border-radius: 20px; /* Nice round edges as before */
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    font-size: 20px;
-    outline: none;
-}
-
 #search-results {
     position: absolute;
-    top: 40px; /* Drops down below the bar */
-    right: 0;
-    width: 220px;
-    background: white;
+    top: 100%; /* Precis under sökfältet */
+    left: 0;
+    width: 100%;
+    background: white; /* Ingen mer genomskinlighet */
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    max-height: 250px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    margin-top: 5px;
+    max-height: 200px;
     overflow-y: auto;
-    display: none;
+    z-index: 1001; /* Se till att den ligger överst */
+    display: none; /* Visas via JS */
 }
 
 .search-item {
-    padding: 10px;
-    font-size: 13px;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #333;
     border-bottom: 1px solid #eee;
+    cursor: pointer;
+    background: white;
+}
+
+.search-item:hover {
+    background: #f0f0f0;
+}
+
+#map-search {
+    width: 100%;
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+    background: white;
+}
+
+/* --- 6. POSITIONERINGS-KNAPP (TOP CENTER) --- */
+.location-btn {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    font-weight: bold;
     cursor: pointer;
 }
