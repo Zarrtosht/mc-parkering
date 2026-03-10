@@ -23,9 +23,16 @@ var markers = L.markerClusterGroup();
 map.addLayer(markers);
 
 function createPopupContent(name, lat, lon, source) {
+    // Korrigerad URL för stabilare navigering på både iOS och Android
     const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}&travelmode=driving`;
-    const sourceText = source === 'gbg' ? 'Göteborg Stad' : 'OpenStreetMap';
-    const btnColor = source === 'gbg' ? '#4285F4' : '#34A853';
+    
+    // Bestäm text baserat på källa
+    let sourceText = 'OpenStreetMap';
+    if (source === 'gbg') sourceText = 'Göteborg Stad';
+    if (source === 'sthlm') sourceText = 'Stockholm Stad';
+
+    // Samma blå färg för både Gbg och Sthlm, annars grön
+    const btnColor = (source === 'gbg' || source === 'sthlm') ? '#4285F4' : '#34A853';
 
     return `
         <div style="text-align: center; min-width: 150px;">
@@ -50,41 +57,76 @@ function createPopupContent(name, lat, lon, source) {
 // Load Data
 Promise.all([
     fetch('goteborg_api.json').then(res => res.json()),
-    fetch('overpass_data.json').then(res => res.json())
+    fetch('overpass_data.json').then(res => res.json()),
+    fetch('stockholm_api.json').then(res => res.json()) // Inkluderar Stockholm
 ])
-.then(([gbgData, ovpData]) => {
-	gbgData.forEach(p => {
+.then(([gbgData, ovpData, sthlmData]) => {
+    
+    // 1. BEARBETA GÖTEBORG
+    gbgData.forEach(p => {
         if (p.Lat !== undefined && p.Long !== undefined) {
             const name = p.Name || "MC Parkering";
-            // 1. Create the marker and add a 'searchName' property to it
             const marker = L.marker([p.Lat, p.Long], { icon: mcIcon, searchName: name })
                 .bindPopup(createPopupContent(name, p.Lat, p.Long, 'gbg'));
-            
             marker.addTo(markers);
         }
     });
 
+    // 2. BEARBETA STOCKHOLM (GeoJSON LineStrings -> Points)
+    if (sthlmData && sthlmData.features) {
+        sthlmData.features.forEach(feature => {
+            const props = feature.properties;
+            const coords = feature.geometry.coordinates;
+
+            // Beräkna mittpunkt (Average)
+            let latSum = 0, lonSum = 0;
+            coords.forEach(c => {
+                lonSum += c[0];
+                latSum += c[1];
+            });
+            const avgLat = latSum / coords.length;
+            const avgLon = lonSum / coords.length;
+            const currentPos = L.latLng(avgLat, avgLon);
+
+            // Kolla dubletter mot Göteborg (och ev. tidigare Stockholm-punkter)
+            let isDuplicate = false;
+            markers.eachLayer(layer => {
+                if (layer instanceof L.Marker && currentPos.distanceTo(layer.getLatLng()) < 15) {
+                    isDuplicate = true;
+                }
+            });
+
+            if (!isDuplicate) {
+                const name = props.STREET_NAME ? `${props.ADDRESS || ''}` : "MC Parkering";
+                               
+                const marker = L.marker([avgLat, avgLon], { icon: mcIcon, searchName: name })
+                    .bindPopup(createPopupContent(name , avgLat, avgLon, 'sthlm')); // 'osm' eller 'sthlm' stil
+                
+                marker.addTo(markers);
+            }
+        });
+    }
+
+    // 3. BEARBETA OVERPASS (Samma logik som innan)
     const ovpLocations = ovpData.elements || ovpData;
     ovpLocations.forEach(p => {
         if (p.lat && p.lon) {
             const currentPos = L.latLng(p.lat, p.lon);
             let isDuplicate = false;
+            
             markers.eachLayer(layer => {
-                if (layer instanceof L.Marker) {
-                    const distance = currentPos.distanceTo(layer.getLatLng());
-                    if (distance < 15) { 
-                        isDuplicate = true;
-                    }
+                if (layer instanceof L.Marker && currentPos.distanceTo(layer.getLatLng()) < 15) {
+                    isDuplicate = true;
                 }
             });
 
-			if (!isDuplicate) {
-				const name = p.tags?.name || p.tags?.amenity || "MC Parkering";
-				const marker = L.marker([p.lat, p.lon], { icon: mcIcon, searchName: name })
-					.bindPopup(createPopupContent(name, p.lat, p.lon, 'osm'));
-				
-				marker.addTo(markers);
-			}
+            if (!isDuplicate) {
+                const name = p.tags?.name || p.tags?.amenity || "MC Parkering";
+                const marker = L.marker([p.lat, p.lon], { icon: mcIcon, searchName: name })
+                    .bindPopup(createPopupContent(name, p.lat, p.lon, 'osm'));
+                
+                marker.addTo(markers);
+            }
         }
     });
 })
