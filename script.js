@@ -23,26 +23,31 @@ var markers = L.markerClusterGroup();
 map.addLayer(markers);
 
 function createPopupContent(name, lat, lon, source) {
-    // Korrigerad URL för stabilare navigering på både iOS och Android
+    // URL för Google Maps Navigering
     const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}&travelmode=driving`;
+    
+    // URL för Google Street View (öppnar direkt i 360-vy)
+    const streetViewUrl = `https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${lat},${lon}`;
     
     // Bestäm text baserat på källa
     let sourceText = 'OpenStreetMap';
     if (source === 'gbg') sourceText = 'Göteborg Stad';
     if (source === 'sthlm') sourceText = 'Stockholm Stad';
 
-    // Samma blå färg för både Gbg och Sthlm, annars grön
+    // Blå för officiell data (Gbg/Sthlm), Grön för OSM
     const btnColor = (source === 'gbg' || source === 'sthlm') ? '#4285F4' : '#34A853';
 
     return `
-        <div style="text-align: center; min-width: 150px;">
+        <div style="text-align: center; min-width: 160px; font-family: sans-serif;">
             <strong style="font-size: 1.1em; display: block; margin-bottom: 4px;">${name}</strong>
             <span style="color: #666; font-size: 0.85em;">${lat.toFixed(5)}, ${lon.toFixed(5)}</span><br>
             <span style="font-size: 0.8em; color: #999;">Källa: ${sourceText}</span>
             <hr style="margin: 8px 0; border: 0; border-top: 1px solid #eee;">
+            
             <a href="${googleMapsUrl}" target="_blank" style="
-                display: inline-block;
-                padding: 10px 16px;
+                display: block;
+                padding: 10px;
+                margin-bottom: 6px;
                 background-color: ${btnColor};
                 color: white;
                 text-decoration: none;
@@ -50,6 +55,18 @@ function createPopupContent(name, lat, lon, source) {
                 font-weight: bold;
                 font-size: 0.9em;
             ">Starta navigering ↗</a>
+
+            <a href="${streetViewUrl}" target="_blank" style="
+                display: block;
+                padding: 8px;
+                background-color: #f1f3f4;
+                color: #3c4043;
+                text-decoration: none;
+                border-radius: 4px;
+                font-weight: normal;
+                font-size: 0.85em;
+                border: 1px solid #dadce0;
+            ">Se Street View 📷</a>
         </div>
     `;
 }
