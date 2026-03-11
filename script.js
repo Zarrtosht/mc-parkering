@@ -57,20 +57,83 @@ function createPopupContent(name, lat, lon, source) {
             </div>`;
 }
 
-// Ladda data
+// Load Data
 Promise.all([
-    fetch('goteborg_api.json').then(res => res.json()).catch(() => []),
-    fetch('overpass_data.json').then(res => res.json()).catch(() => []),
-    fetch('stockholm_api.json').then(res => res.json()).catch(() => [])
-]).then(([gbgData, ovpData, sthlmData]) => {
+    fetch('goteborg_api.json').then(res => res.json()),
+    fetch('overpass_data.json').then(res => res.json()),
+    fetch('stockholm_api.json').then(res => res.json()) // Inkluderar Stockholm
+])
+.then(([gbgData, ovpData, sthlmData]) => {
+    
+    // 1. BEARBETA GÖTEBORG
     gbgData.forEach(p => {
-        if (p.Lat && p.Long) {
-            L.marker([p.Lat, p.Long], { icon: mcIcon }).bindPopup(createPopupContent(p.Name || "MC Parkering", p.Lat, p.Long, 'gbg')).addTo(markers);
+        if (p.Lat !== undefined && p.Long !== undefined) {
+            const name = p.Name || "MC Parkering";
+            const marker = L.marker([p.Lat, p.Long], { icon: mcIcon, searchName: name })
+                .bindPopup(createPopupContent(name, p.Lat, p.Long, 'gbg'));
+            marker.addTo(markers);
         }
     });
-    // Stockholm & Overpass logik (förenklad här för plats, men behåll din gamla bearbetning om du vill)
-    // ... din befintliga loop för Stockholm och Overpass fungerar bra här ...
-});
+
+    // 2. BEARBETA STOCKHOLM (GeoJSON LineStrings -> Points)
+    if (sthlmData && sthlmData.features) {
+        sthlmData.features.forEach(feature => {
+            const props = feature.properties;
+            const coords = feature.geometry.coordinates;
+
+            // Beräkna mittpunkt (Average)
+            let latSum = 0, lonSum = 0;
+            coords.forEach(c => {
+                lonSum += c[0];
+                latSum += c[1];
+            });
+            const avgLat = latSum / coords.length;
+            const avgLon = lonSum / coords.length;
+            const currentPos = L.latLng(avgLat, avgLon);
+
+            // Kolla dubletter mot Göteborg (och ev. tidigare Stockholm-punkter)
+            let isDuplicate = false;
+            markers.eachLayer(layer => {
+                if (layer instanceof L.Marker && currentPos.distanceTo(layer.getLatLng()) < 15) {
+                    isDuplicate = true;
+                }
+            });
+
+            if (!isDuplicate) {
+                const name = props.STREET_NAME ? `${props.ADDRESS || ''}` : "MC Parkering";
+                               
+                const marker = L.marker([avgLat, avgLon], { icon: mcIcon, searchName: name })
+                    .bindPopup(createPopupContent(name , avgLat, avgLon, 'sthlm')); // 'osm' eller 'sthlm' stil
+                
+                marker.addTo(markers);
+            }
+        });
+    }
+
+    // 3. BEARBETA OVERPASS (Samma logik som innan)
+    const ovpLocations = ovpData.elements || ovpData;
+    ovpLocations.forEach(p => {
+        if (p.lat && p.lon) {
+            const currentPos = L.latLng(p.lat, p.lon);
+            let isDuplicate = false;
+            
+            markers.eachLayer(layer => {
+                if (layer instanceof L.Marker && currentPos.distanceTo(layer.getLatLng()) < 15) {
+                    isDuplicate = true;
+                }
+            });
+
+            if (!isDuplicate) {
+                const name = p.tags?.name || p.tags?.amenity || "MC Parkering";
+                const marker = L.marker([p.lat, p.lon], { icon: mcIcon, searchName: name })
+                    .bindPopup(createPopupContent(name, p.lat, p.lon, 'osm'));
+                
+                marker.addTo(markers);
+            }
+        }
+    });
+})
+.catch(err => console.error("Error merging data sources:", err));
 
 // 5. POSITIONERING (Locate Me)
 let isFollowing = false;
@@ -189,5 +252,4 @@ window.addEventListener('load', function() {
             }
         });
     }
-
 });
