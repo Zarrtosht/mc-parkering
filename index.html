@@ -12,12 +12,15 @@
 </head>
 
 <body>
-
+	
     <div id="map"></div>
+	<div id="map-crosshair"></div>
 
     <button id="locate-me" class="location-btn">
         <span>📍</span> Hitta min position
     </button>
+	
+
 
     <div id="map-controls-wrapper">
         
@@ -32,17 +35,25 @@
 				<input type="text" id="map-search" placeholder="Sök adress...">
 				<div id="search-results"></div>
 			</div>
+		
 		</div>
 
-        <button id="satellite-toggle-btn" class="custom-map-btn" style="margin-top: 8px;">
+		<button id="satellite-toggle-btn" class="custom-map-btn" style="margin-top: 8px;">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
                 <polyline points="2 17 12 22 22 17"></polyline>
                 <polyline points="2 12 12 17 22 12"></polyline>
             </svg>
         </button>
-    </div>
+		
 
+	</div>
+
+	<div id="bottom-controls-wrapper">
+		<button id="report-btn" class="custom-map-btn" title="Rapportera parkering"></button>
+	</div>
+
+	
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
     <script src="script.js"></script>

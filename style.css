@@ -143,3 +143,57 @@ html, body {
     font-weight: bold;
     cursor: pointer;
 }
+
+/* --- 7. INRAPPORTERING --- */
+
+/* Behållare för rapportknappen längst ner till vänster */
+#bottom-controls-wrapper {
+    position: fixed;
+    bottom: 25px; /* Avstånd från botten */
+    left: 10px;   /* Samma vänstermarginal som #map-controls-wrapper */
+    z-index: 2000 !important;
+}
+
+/* Säkerställ att huvud-wrappern (mitten) ligger rätt */
+#map-controls-wrapper {
+    z-index: 2000 !important;
+}
+
+/* Hårkorset mitt på skärmen */
+#map-crosshair {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+	transform: translate(-50%, -50%); /* Detta centrerar krysset perfekt */
+    width: 30px;
+    height: 30px;
+    margin-left: -15px;
+    margin-top: -15px;
+    z-index: 9999 !important;
+    pointer-events: none;
+    display: none;
+}
+
+#map-crosshair::before {
+    content: '';
+    position: absolute;
+    top: 50%; 
+    width: 100%; 
+    height: 2px;
+    background: red;
+}
+
+#map-crosshair::after {
+    content: '';
+    position: absolute;
+    left: 50%; 
+    height: 100%; 
+    width: 2px;
+    background: red;
+}
+
+/* Visuell feedback när knappen är aktiv */
+.report-active {
+    background-color: #ffcccc !important;
+    border: 2px solid red !important;
+}
