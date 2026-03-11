@@ -167,12 +167,11 @@ window.addEventListener('load', function() {
 				const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${lat},${lng}`;
 
 				// 2. Bygg ihop texten (body)
-				const mailBody = `Här är koordinaterna för en ny MC-parkering:
-
-				Latitud: ${lat}
+				const mailBody = 
+				`Latitud: ${lat}
 				Longitud: ${lng}
 
-				Google Maps: ${googleMapsUrl}`;
+				${googleMapsUrl}`;
 
 				// 3. Kodas för att fungera i Gmail-appen (Viktigt!)
 				const subject = "Inrapportering MC-parkering";
@@ -190,4 +189,5 @@ window.addEventListener('load', function() {
             }
         });
     }
+
 });
