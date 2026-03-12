@@ -29,7 +29,14 @@ const satelliteLayer2 = L.tileLayer('https://{s}.google.com/vt/lyrs=s,h&x={x}&y=
 const mapLayers = [streetLayer, satelliteLayer1, satelliteLayer2];
 let currentLayerIndex = 0;
 
-// 3. IKONER & MARKERS
+document.getElementById('satellite-toggle-btn').addEventListener('click', function() {
+    map.removeLayer(mapLayers[currentLayerIndex]);
+    currentLayerIndex = (currentLayerIndex + 1) % mapLayers.length;
+    mapLayers[currentLayerIndex].addTo(map);
+    this.style.backgroundColor = currentLayerIndex === 0 ? "white" : "#e3f2fd";
+});
+
+// 3. LADDA DATA OCH MARKERS
 var mcIcon = L.icon({
     iconUrl: 'pin-icon-wpt.png',
     iconSize: [22, 32],
@@ -40,7 +47,7 @@ var mcIcon = L.icon({
 var markers = L.markerClusterGroup();
 map.addLayer(markers);
 
-// 4. POPUP & DATA (Samma som förut)
+// POPUP & DATA (Samma som förut)
 function createPopupContent(name, lat, lon, source) {
     const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}&travelmode=driving`;
     const streetViewUrl = `https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${lat},${lon}`;
@@ -57,7 +64,6 @@ function createPopupContent(name, lat, lon, source) {
             </div>`;
 }
 
-// Load Data
 Promise.all([
     fetch('goteborg_api.json').then(res => res.json()),
     fetch('overpass_data.json').then(res => res.json()),
@@ -65,7 +71,7 @@ Promise.all([
 ])
 .then(([gbgData, ovpData, sthlmData]) => {
     
-    // 1. BEARBETA GÖTEBORG
+    // BEARBETA GÖTEBORG
     gbgData.forEach(p => {
         if (p.Lat !== undefined && p.Long !== undefined) {
             const name = p.Name || "MC Parkering";
@@ -75,7 +81,7 @@ Promise.all([
         }
     });
 
-    // 2. BEARBETA STOCKHOLM (GeoJSON LineStrings -> Points)
+    // BEARBETA STOCKHOLM (GeoJSON LineStrings -> Points)
     if (sthlmData && sthlmData.features) {
         sthlmData.features.forEach(feature => {
             const props = feature.properties;
@@ -110,7 +116,7 @@ Promise.all([
         });
     }
 
-    // 3. BEARBETA OVERPASS (Samma logik som innan)
+    // BEARBETA OVERPASS (Samma logik som innan)
     const ovpLocations = ovpData.elements || ovpData;
     ovpLocations.forEach(p => {
         if (p.lat && p.lon) {
@@ -135,7 +141,7 @@ Promise.all([
 })
 .catch(err => console.error("Error merging data sources:", err));
 
-// 5. POSITIONERING (Locate Me)
+// 4. POSITIONERING (Locate Me)
 let isFollowing = false;
 let userMarker, userCircle, wakeLock;
 
@@ -173,13 +179,152 @@ map.on('locationfound', (e) => {
 document.getElementById('locate-me').addEventListener('click', startFollowing);
 map.on('dragstart', stopFollowing);
 
-// 6. SATELLIT-VÄXLARE
-document.getElementById('satellite-toggle-btn').addEventListener('click', function() {
-    map.removeLayer(mapLayers[currentLayerIndex]);
-    currentLayerIndex = (currentLayerIndex + 1) % mapLayers.length;
-    mapLayers[currentLayerIndex].addTo(map);
-    this.style.backgroundColor = currentLayerIndex === 0 ? "white" : "#e3f2fd";
+// 6. SEARCH UI LOGIC
+const searchWrapper = document.getElementById('search-wrapper');
+const searchToggleBtn = document.getElementById('search-toggle-btn');
+const searchInput = document.getElementById('map-search');
+const searchResults = document.getElementById('search-results');
+let searchTimeout;
+let searchMarker;
+
+// Toggle search bar expansion
+searchToggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isActive = searchWrapper.classList.toggle('active');
+    if (isActive) {
+        searchInput.focus();
+    } else {
+        closeSearch();
+    }
 });
+
+// Close search when clicking anywhere on the map
+map.on('click', closeSearch);
+
+function closeSearch() {
+    searchWrapper.classList.remove('active');
+    searchResults.style.display = 'none';
+    searchInput.value = '';
+    searchInput.blur();
+}
+
+searchInput.addEventListener('input', function(e) {
+    const query = e.target.value.trim();
+    clearTimeout(searchTimeout);
+
+    if (query.length < 3) {
+        searchResults.style.display = 'none';
+        return;
+    }
+
+    searchTimeout = setTimeout(() => {
+        performUniversalSearch(query);
+    }, 300);
+});
+
+async function performUniversalSearch(query) {
+    let resultsFound = [];
+
+    // 1. Search Local Markers
+    markers.eachLayer(function(layer) {
+        const popupContent = layer.getPopup().getContent();
+        const nameMatch = popupContent.match(/<strong>(.*?)<\/strong>/);
+        const name = nameMatch ? nameMatch[1] : "MC Parkering";
+
+        if (name.toLowerCase().includes(query.toLowerCase())) {
+            resultsFound.push({ 
+                display_name: `🅿️ ${name}`, 
+                lat: layer.getLatLng().lat, 
+                lon: layer.getLatLng().lng,
+                isMarker: true,
+                layer: layer 
+            });
+        }
+    });
+
+    // 2. Global Nominatim Search
+    const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}&countrycodes=se&addressdetails=1&limit=6`;
+
+    try {
+        const response = await fetch(url, { headers: { 'Accept-Language': 'sv' } });
+        const osmData = await response.json();
+        
+        osmData.forEach(item => {
+            resultsFound.push({
+                display_name:`${item.display_name.split(',')[0]}`,
+                lat: parseFloat(item.lat),
+                lon: parseFloat(item.lon),
+                isMarker: false
+            });
+        });
+    } catch (err) {
+        console.error("Geocoding error:", err);
+    }
+
+    renderResults(resultsFound);
+}
+
+function renderResults(results) {
+    if (results.length === 0) {
+        searchResults.style.display = 'none';
+        return;
+    }
+
+    searchResults.innerHTML = '';
+    searchResults.style.display = 'block';
+
+    const seenAddresses = new Set();
+
+    results.forEach(result => {
+        const parts = result.display_name.split(',').map(p => p.trim());
+        
+        // 1. Ta de första två delarna (t.ex. "Sveavägen 44" och "Stockholm")
+        // Detta är det säkraste sättet att få med gatunummer oavsett ordning.
+        const firstPart = parts[0] || "";
+        const secondPart = parts[1] || "";
+        
+        // 2. Vi letar efter en "riktig" stad längre bak i listan (index 2 eller 3)
+        // för att sätta i parentesen, så vi ser skillnad på olika orter.
+        let city = "";
+        for (let i = 2; i < parts.length; i++) {
+            // Hoppa över postnummer (5 siffror)
+            if (/^\d{5}$|^\d{3}\s\d{2}$/.test(parts[i])) continue;
+            city = parts[i];
+            break;
+        }
+
+        // 3. Bygg namnet: "Sveavägen 44, Vasastan (Stockholm)"
+        // Vi kombinerar de två första delarna för att garantera gata + nr.
+        const mainAddress = secondPart ? `${firstPart}, ${secondPart}` : firstPart;
+        const friendlyText = city ? `${mainAddress} (${city})` : mainAddress;
+
+        // 4. Dubblettkontroll
+        if (seenAddresses.has(friendlyText.toLowerCase())) return;
+        seenAddresses.add(friendlyText.toLowerCase());
+
+        const div = document.createElement('div');
+        div.className = 'search-item';
+        div.innerText = friendlyText;
+        
+        div.onclick = function() {
+            stopFollowing();
+            const latlng = [result.lat, result.lon];
+            
+            if (searchMarker) map.removeLayer(searchMarker);
+
+            if (!result.isMarker) {
+                searchMarker = L.marker(latlng).addTo(map);
+                searchMarker.bindPopup(`${result.display_name}`).openPopup();
+                map.flyTo(latlng, 18);
+            } else {
+                map.flyTo(latlng, 16);
+                result.layer.openPopup();
+            }
+            closeSearch();
+        };
+        searchResults.appendChild(div);
+    });
+}
 
 // 7. INRAPPORTERING 
 window.addEventListener('load', function() {
