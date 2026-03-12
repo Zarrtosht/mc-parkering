@@ -376,8 +376,7 @@ window.addEventListener('load', function() {
 
 				// 2. Bygg ihop texten (body)
 				const mailBody = 
-				`Latitud: ${lat}
-				Longitud: ${lng}
+				`${lat}, ${lng}
 
 				${googleMapsUrl}`;
 
