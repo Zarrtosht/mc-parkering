@@ -71,10 +71,10 @@ function createPopupContent(name, lat, lon, source) {
 }
 
 Promise.all([
-    fetch('goteborg_api.json').then(res => res.json()),
-    fetch('overpass_data.json').then(res => res.json()),
-    fetch('stockholm_api.json').then(res => res.json()),
-    fetch('inrapporterad.json').then(res => res.json()),
+    fetch('goteborg_api.json?v=1').then(res => res.json()),
+    fetch('overpass_data.json?v=1').then(res => res.json()),
+    fetch('stockholm_api.json?v=1').then(res => res.json()),
+    fetch('inrapporterad.json?v=1').then(res => res.json()),
 ])
 .then(([gbgData, ovpData, sthlmData, inrappData]) => {
     
