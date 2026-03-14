@@ -49,17 +49,23 @@ map.addLayer(markers);
 
 // POPUP & DATA (Samma som förut)
 function createPopupContent(name, lat, lon, source) {
-    const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}&travelmode=driving`;
+    // const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}&travelmode=driving`;
+    // const streetViewUrl = `https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${lat},${lon}`;
+    // let sourceText = source === 'gbg' ? 'Göteborg Stad' : (source === 'sthlm' ? 'Stockholm Stad' : 'OpenStreetMap');
+    // const btnColor = (source === 'gbg' || source === 'sthlm') ? '#4285F4' : '#34A853';
+	
+	const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}&travelmode=driving`;
     const streetViewUrl = `https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${lat},${lon}`;
-    let sourceText = source === 'gbg' ? 'Göteborg Stad' : (source === 'sthlm' ? 'Stockholm Stad' : 'OpenStreetMap');
-    const btnColor = (source === 'gbg' || source === 'sthlm') ? '#4285F4' : '#34A853';
+    let sourceText = source === 'gbg' ? 'Göteborg Stad' : (source === 'sthlm' ? 'Stockholm Stad' : source === 'inrapp' ? 'Inrapporterad' : 'OpenStreetMap');
+    const btnColor = (source === 'gbg' || source === 'sthlm') ? '#4285F4' : (source === 'inrapp') ? '#f4cd42' : '#34A853';
+    const textColor = (source === 'gbg' || source === 'sthlm' || source === 'osm') ? 'white' : 'black';
 
     return `<div style="text-align: center; min-width: 160px; font-family: sans-serif;">
                 <strong style="font-size: 1.1em; display: block; margin-bottom: 4px;">${name}</strong>
                 <span style="color: #666; font-size: 0.85em;">${lat.toFixed(5)}, ${lon.toFixed(5)}</span><br>
                 <span style="font-size: 0.8em; color: #999;">Källa: ${sourceText}</span>
                 <hr style="margin: 8px 0; border: 0; border-top: 1px solid #eee;">
-                <a href="${googleMapsUrl}" target="_blank" style="display: block; padding: 10px; margin-bottom: 6px; background-color: ${btnColor}; color: white; text-decoration: none; border-radius: 4px; font-weight: bold; font-size: 0.9em;">Starta navigering ↗</a>
+                <a href="${googleMapsUrl}" target="_blank" style="display: block; padding: 10px; margin-bottom: 6px; background-color: ${btnColor}; color: ${textColor}; text-decoration: none; border-radius: 4px; font-weight: bold; font-size: 0.9em;">Starta navigering ↗</a>
                 <a href="${streetViewUrl}" target="_blank" style="display: block; padding: 8px; background-color: #f1f3f4; color: #3c4043; text-decoration: none; border-radius: 4px; font-weight: normal; font-size: 0.85em; border: 1px solid #dadce0;">Se Street View 📷</a>
             </div>`;
 }
@@ -67,9 +73,10 @@ function createPopupContent(name, lat, lon, source) {
 Promise.all([
     fetch('goteborg_api.json').then(res => res.json()),
     fetch('overpass_data.json').then(res => res.json()),
-    fetch('stockholm_api.json').then(res => res.json()) // Inkluderar Stockholm
+    fetch('stockholm_api.json').then(res => res.json()),
+    fetch('inrapporterad.json').then(res => res.json()),
 ])
-.then(([gbgData, ovpData, sthlmData]) => {
+.then(([gbgData, ovpData, sthlmData, inrappData]) => {
     
     // BEARBETA GÖTEBORG
     gbgData.forEach(p => {
@@ -138,6 +145,29 @@ Promise.all([
             }
         }
     });
+	
+    // BEARBETA INRAPPORTERAD (Samma logik som innan)
+    const inrappLocations = inrappData.elements || inrappData;
+    inrappLocations.forEach(p => {
+        if (p.lat && p.lon) {
+            const currentPos = L.latLng(p.lat, p.lon);
+            let isDuplicate = false;
+            
+            markers.eachLayer(layer => {
+                if (layer instanceof L.Marker && currentPos.distanceTo(layer.getLatLng()) < 15) {
+                    isDuplicate = true;
+                }
+            });
+
+            if (!isDuplicate) {
+                const name = p.tags?.name || p.tags?.amenity || "MC Parkering";
+                const marker = L.marker([p.lat, p.lon], { icon: mcIcon, searchName: name })
+                    .bindPopup(createPopupContent(name, p.lat, p.lon, 'inrapp'));
+                
+                marker.addTo(markers);
+            }
+        }
+    });	
 })
 .catch(err => console.error("Error merging data sources:", err));
 
