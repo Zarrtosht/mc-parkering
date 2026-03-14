@@ -13,7 +13,7 @@
       "lat": 56.7426957,
       "lon": 15.9076494,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no"
       }
     },
@@ -23,7 +23,7 @@
       "lat": 57.708808,
       "lon": 11.9671134,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "10",
         "covered": "no",
         "fee": "no",
@@ -39,7 +39,7 @@
       "lat": 57.7073583,
       "lon": 11.9734078,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
@@ -54,7 +54,7 @@
       "lat": 59.3713156,
       "lon": 16.512967,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "parking": "surface"
       }
     },
@@ -64,7 +64,7 @@
       "lat": 58.6645784,
       "lon": 16.3759548,
       "tags": {
-        "amenity": "motorcycle_parking"
+        "amenity": "MC-parkering"
       }
     },
     {
@@ -74,7 +74,7 @@
       "lon": 13.0323528,
       "tags": {
         "access": "destination",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "bicycle": "no",
         "covered": "no"
       }
@@ -86,7 +86,7 @@
       "lon": 15.4362686,
       "tags": {
         "access": "yes",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "2",
         "covered": "no",
         "fee": "yes",
@@ -99,7 +99,7 @@
       "lat": 57.7313633,
       "lon": 12.0115842,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "5",
         "covered": "no",
         "fee": "no",
@@ -113,7 +113,7 @@
       "lat": 57.6609531,
       "lon": 11.8432984,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "18",
         "covered": "no",
         "fee": "no",
@@ -126,7 +126,7 @@
       "lat": 57.7083568,
       "lon": 11.9914646,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "fee": "no",
         "parking": "surface"
@@ -138,7 +138,7 @@
       "lat": 57.7076101,
       "lon": 11.9444492,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "fee": "no",
         "parking": "surface"
@@ -150,7 +150,7 @@
       "lat": 56.0427136,
       "lon": 12.7444708,
       "tags": {
-        "amenity": "motorcycle_parking"
+        "amenity": "MC-parkering"
       }
     },
     {
@@ -159,7 +159,7 @@
       "lat": 57.7194404,
       "lon": 11.9512569,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
         "note": "Length: 6 m",
@@ -173,7 +173,7 @@
       "lat": 57.6486911,
       "lon": 11.9335756,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "fee": "no",
         "maxstay": "24 hours",
@@ -186,7 +186,7 @@
       "lat": 57.6822265,
       "lon": 11.9448134,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "fee": "no",
         "maxstay": "24 hours",
@@ -200,7 +200,7 @@
       "lat": 57.6834646,
       "lon": 11.950335,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "fee": "no",
         "maxstay": "24 hours",
@@ -213,7 +213,7 @@
       "lat": 57.6869694,
       "lon": 11.9140392,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
         "operator": "Göteborgs Stad",
@@ -226,7 +226,7 @@
       "lat": 57.6899005,
       "lon": 11.9474245,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
@@ -239,7 +239,7 @@
       "lat": 57.691636,
       "lon": 11.9501803,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "6",
         "covered": "no",
         "fee": "no",
@@ -255,7 +255,7 @@
       "lat": 57.6919522,
       "lon": 11.9279593,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "description:en": "Length: 5 m",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
@@ -269,7 +269,7 @@
       "lat": 57.6929462,
       "lon": 11.9417112,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "5",
         "covered": "no",
         "fee": "no",
@@ -286,7 +286,7 @@
       "lon": 11.9189521,
       "tags": {
         "access": "yes",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "4",
         "covered": "no",
         "fee": "no",
@@ -300,7 +300,7 @@
       "lat": 57.6969819,
       "lon": 11.9482008,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
@@ -314,7 +314,7 @@
       "lat": 57.6981269,
       "lon": 11.9496951,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "4",
         "covered": "no",
         "fee": "no",
@@ -330,7 +330,7 @@
       "lat": 57.6986937,
       "lon": 11.9433571,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "6",
         "covered": "no",
         "fee": "no",
@@ -346,7 +346,7 @@
       "lat": 57.6990703,
       "lon": 11.9313623,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
         "operator": "Göteborgs Stad",
@@ -359,7 +359,7 @@
       "lat": 57.6994394,
       "lon": 11.9342752,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
         "note": "Length: 6 m",
@@ -373,7 +373,7 @@
       "lat": 57.6994829,
       "lon": 11.953589,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
@@ -388,7 +388,7 @@
       "lat": 57.6995195,
       "lon": 11.9524055,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "4",
         "covered": "no",
         "fee": "no",
@@ -404,7 +404,7 @@
       "lat": 57.7016257,
       "lon": 11.9578306,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "2",
         "covered": "no",
         "fee": "no",
@@ -419,7 +419,7 @@
       "lat": 57.7016325,
       "lon": 11.95911,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "2",
         "covered": "no",
         "fee": "no",
@@ -434,7 +434,7 @@
       "lat": 57.7026746,
       "lon": 11.9655266,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
@@ -448,7 +448,7 @@
       "lat": 57.703117,
       "lon": 11.9693413,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
         "operator": "Göteborgs Stad",
@@ -461,7 +461,7 @@
       "lat": 57.704324,
       "lon": 11.969161,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
@@ -477,7 +477,7 @@
       "lon": 11.9572958,
       "tags": {
         "access": "yes",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "3",
         "covered": "no",
         "fee": "no",
@@ -492,7 +492,7 @@
       "lat": 57.7046871,
       "lon": 11.9645546,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
@@ -507,7 +507,7 @@
       "lat": 57.7048849,
       "lon": 11.9658779,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
@@ -523,7 +523,7 @@
       "lon": 11.9698151,
       "tags": {
         "access": "yes",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "6",
         "covered": "no",
         "fee": "no",
@@ -538,7 +538,7 @@
       "lat": 57.7061646,
       "lon": 11.9666014,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
@@ -553,7 +553,7 @@
       "lat": 57.707258,
       "lon": 11.9657226,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
@@ -567,7 +567,7 @@
       "lat": 57.7093982,
       "lon": 11.968058,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "yes",
         "level": "0",
         "operator": "Nordstan"
@@ -579,7 +579,7 @@
       "lat": 57.7102308,
       "lon": 11.9616753,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "10",
         "covered": "no",
         "fee": "no",
@@ -594,7 +594,7 @@
       "lat": 57.7135208,
       "lon": 11.9677546,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "8",
         "covered": "no",
         "fee": "no",
@@ -611,7 +611,7 @@
       "lon": 11.9764708,
       "tags": {
         "access:conditional": "no @ Sa-Su",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "fee": "no",
         "maxstay": "24 hours",
@@ -626,7 +626,7 @@
       "lat": 57.7004599,
       "lon": 11.9701126,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
@@ -641,7 +641,7 @@
       "lat": 57.7004853,
       "lon": 11.9733286,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
@@ -656,7 +656,7 @@
       "lat": 57.7011379,
       "lon": 11.9736944,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
@@ -671,7 +671,7 @@
       "lat": 57.7011566,
       "lon": 11.974031,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
@@ -686,7 +686,7 @@
       "lat": 57.7015218,
       "lon": 11.9731405,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "4",
         "covered": "no",
         "fee": "no",
@@ -702,7 +702,7 @@
       "lat": 57.7017087,
       "lon": 11.9838223,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "fee": "no",
         "maxstay": "2 hours",
         "note": "Length: 5 m",
@@ -718,7 +718,7 @@
       "lon": 11.9715024,
       "tags": {
         "access": "yes",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "10",
         "covered": "no",
         "fee": "no",
@@ -733,7 +733,7 @@
       "lat": 57.7045395,
       "lon": 11.9807832,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
         "operator": "Göteborgs Stad",
@@ -746,7 +746,7 @@
       "lat": 57.7076905,
       "lon": 11.9861343,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "4",
         "covered": "no",
         "fee": "no",
@@ -762,7 +762,7 @@
       "lat": 57.7100033,
       "lon": 11.9845813,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
@@ -776,7 +776,7 @@
       "lat": 57.6954626,
       "lon": 11.9970979,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
         "note": "Width: 5 m",
@@ -790,7 +790,7 @@
       "lat": 57.6962646,
       "lon": 11.9782976,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "3",
         "covered": "no",
         "fee": "no",
@@ -805,7 +805,7 @@
       "lat": 57.6969369,
       "lon": 11.9955435,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
         "note": "Under the bridge",
@@ -819,7 +819,7 @@
       "lat": 57.697599,
       "lon": 11.9916979,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "10",
         "covered": "no",
         "fee": "no",
@@ -835,7 +835,7 @@
       "lat": 57.6978252,
       "lon": 11.9931763,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
@@ -850,7 +850,7 @@
       "lat": 57.6978562,
       "lon": 11.9783905,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "4",
         "covered": "no",
         "fee": "no",
@@ -865,7 +865,7 @@
       "lat": 57.6984426,
       "lon": 11.9868082,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
@@ -880,7 +880,7 @@
       "lat": 57.6989102,
       "lon": 11.9768901,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "16",
         "covered": "no",
         "fee": "no",
@@ -897,7 +897,7 @@
       "lon": 11.9763228,
       "tags": {
         "access:conditional": "no @ Sa-Su",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "4",
         "covered": "no",
         "fee": "no",
@@ -913,7 +913,7 @@
       "lat": 57.7120197,
       "lon": 11.9901254,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
@@ -927,7 +927,7 @@
       "lat": 57.6914731,
       "lon": 12.0341391,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "description:en": "Length: 12 m",
         "fee": "no",
@@ -942,7 +942,7 @@
       "lat": 57.693793,
       "lon": 11.9680048,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
@@ -957,7 +957,7 @@
       "lat": 57.6940575,
       "lon": 11.97246,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
@@ -971,7 +971,7 @@
       "lat": 57.7005565,
       "lon": 11.9572797,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
@@ -985,7 +985,7 @@
       "lat": 57.7040946,
       "lon": 12.0347192,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "4",
         "covered": "no",
         "fee": "no",
@@ -1000,7 +1000,7 @@
       "lat": 57.7054743,
       "lon": 11.991785,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
@@ -1015,7 +1015,7 @@
       "lat": 57.7076895,
       "lon": 11.9970321,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
         "note": "Width: 3 m",
@@ -1030,7 +1030,7 @@
       "lon": 11.994115,
       "tags": {
         "access": "yes",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
@@ -1045,7 +1045,7 @@
       "lat": 57.7119036,
       "lon": 11.9986213,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
         "note": "Width: 13 m",
@@ -1059,7 +1059,7 @@
       "lat": 57.7136211,
       "lon": 12.00462,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
@@ -1074,7 +1074,7 @@
       "lat": 57.7185827,
       "lon": 12.0257347,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
@@ -1089,7 +1089,7 @@
       "lat": 57.6995702,
       "lon": 11.9677072,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
@@ -1104,7 +1104,7 @@
       "lat": 57.6922465,
       "lon": 11.9523706,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
@@ -1120,7 +1120,7 @@
       "lon": 11.9557294,
       "tags": {
         "access": "yes",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
@@ -1134,7 +1134,7 @@
       "lat": 57.6948934,
       "lon": 11.9496391,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
         "operator": "Göteborgs Stad",
@@ -1147,7 +1147,7 @@
       "lat": 57.6950726,
       "lon": 11.9517835,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
@@ -1162,7 +1162,7 @@
       "lat": 57.6959931,
       "lon": 11.9584615,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
@@ -1177,7 +1177,7 @@
       "lat": 57.6964936,
       "lon": 11.9519666,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "4",
         "covered": "no",
         "fee": "no",
@@ -1193,7 +1193,7 @@
       "lat": 57.698302,
       "lon": 11.9627541,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "2",
         "covered": "no",
         "fee": "no",
@@ -1208,7 +1208,7 @@
       "lat": 57.6988282,
       "lon": 11.966873,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
         "note": "Width: 5 m",
@@ -1222,7 +1222,7 @@
       "lat": 57.6991283,
       "lon": 11.9632315,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
@@ -1238,7 +1238,7 @@
       "lon": 11.9286614,
       "tags": {
         "access": "yes",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
@@ -1253,7 +1253,7 @@
       "lat": 57.7280796,
       "lon": 11.7520612,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
         "operator": "Göteborgs Stad",
@@ -1266,7 +1266,7 @@
       "lat": 57.7375647,
       "lon": 11.7992753,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
         "operator": "Göteborgs Stad",
@@ -1279,7 +1279,7 @@
       "lat": 57.7440523,
       "lon": 11.7576691,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
         "parking": "surface"
@@ -1291,7 +1291,7 @@
       "lat": 57.7213633,
       "lon": 11.944417,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "fee": "no",
         "maxstay": "2 hours",
         "note": "Width: 5 m",
@@ -1305,7 +1305,7 @@
       "lat": 59.3417568,
       "lon": 18.0626196,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "10",
         "covered": "no"
       }
@@ -1316,7 +1316,7 @@
       "lat": 56.2675898,
       "lon": 15.7816116,
       "tags": {
-        "amenity": "motorcycle_parking"
+        "amenity": "MC-parkering"
       }
     },
     {
@@ -1325,7 +1325,7 @@
       "lat": 55.6559195,
       "lon": 14.2680152,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no"
       }
     },
@@ -1335,7 +1335,7 @@
       "lat": 59.3123911,
       "lon": 18.1057435,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "4",
         "covered": "no"
       }
@@ -1347,7 +1347,7 @@
       "lon": 12.0129812,
       "tags": {
         "access": "yes",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "8",
         "covered": "no",
         "fee": "no"
@@ -1359,7 +1359,7 @@
       "lat": 59.3486749,
       "lon": 18.1092775,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "3",
         "parking": "surface",
         "ref": "Hangövägen, Stockholm"
@@ -1371,7 +1371,7 @@
       "lat": 59.348599,
       "lon": 18.1132539,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "3",
         "parking": "surface",
         "ref": "Hangövägen 35, Stockholm"
@@ -1383,7 +1383,7 @@
       "lat": 59.3485074,
       "lon": 18.1118149,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "parking": "surface",
         "ref": "Hangövägen 20, Stockholm"
       }
@@ -1394,7 +1394,7 @@
       "lat": 59.3485423,
       "lon": 18.1106333,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "parking": "surface",
         "ref": "Hangövägen 18, Stockholm"
       }
@@ -1405,7 +1405,7 @@
       "lat": 59.3362188,
       "lon": 18.0616254,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "10",
         "check_date": "2020-08-17",
         "covered": "no",
@@ -1419,7 +1419,7 @@
       "lat": 59.3153037,
       "lon": 18.0335842,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "parking": "surface",
         "ref": "Hornsgatan, Stockholm"
@@ -1431,7 +1431,7 @@
       "lat": 59.3263348,
       "lon": 18.0745925,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "10",
         "covered": "no",
         "parking": "surface",
@@ -1444,7 +1444,7 @@
       "lat": 59.3294556,
       "lon": 18.0653587,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "10",
         "covered": "no",
         "parking": "surface",
@@ -1457,7 +1457,7 @@
       "lat": 57.8534756,
       "lon": 11.7011192,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no"
       }
     },
@@ -1467,7 +1467,7 @@
       "lat": 59.3471812,
       "lon": 18.1155226,
       "tags": {
-        "amenity": "motorcycle_parking"
+        "amenity": "MC-parkering"
       }
     },
     {
@@ -1476,7 +1476,7 @@
       "lat": 59.3476356,
       "lon": 18.1147815,
       "tags": {
-        "amenity": "motorcycle_parking"
+        "amenity": "MC-parkering"
       }
     },
     {
@@ -1485,7 +1485,7 @@
       "lat": 59.3490373,
       "lon": 18.1143727,
       "tags": {
-        "amenity": "motorcycle_parking"
+        "amenity": "MC-parkering"
       }
     },
     {
@@ -1494,7 +1494,7 @@
       "lat": 59.3026613,
       "lon": 18.0885361,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "5",
         "covered": "no"
       }
@@ -1505,7 +1505,7 @@
       "lat": 63.1764307,
       "lon": 14.6393826,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no"
       }
     },
@@ -1515,7 +1515,7 @@
       "lat": 63.1775294,
       "lon": 14.6391128,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "4",
         "covered": "no"
       }
@@ -1526,7 +1526,7 @@
       "lat": 63.8246595,
       "lon": 20.2655893,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "20",
         "covered": "no",
         "moped": "yes"
@@ -1538,7 +1538,7 @@
       "lat": 59.1082689,
       "lon": 17.3792557,
       "tags": {
-        "amenity": "motorcycle_parking"
+        "amenity": "MC-parkering"
       }
     },
     {
@@ -1547,7 +1547,7 @@
       "lat": 57.875181,
       "lon": 11.9787184,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "opening_hours": "24/7"
       }
     },
@@ -1557,7 +1557,7 @@
       "lat": 60.6072633,
       "lon": 15.6276554,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "2",
         "check_date:capacity": "2024-03-28",
         "covered": "no"
@@ -1569,7 +1569,7 @@
       "lat": 57.6914939,
       "lon": 11.9629805,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "1",
         "covered": "no"
       }
@@ -1581,7 +1581,7 @@
       "lon": 15.6328537,
       "tags": {
         "access": "yes",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "5",
         "check_date:capacity": "2024-09-06",
         "covered": "no",
@@ -1594,7 +1594,7 @@
       "lat": 58.672152,
       "lon": 16.3281203,
       "tags": {
-        "amenity": "motorcycle_parking"
+        "amenity": "MC-parkering"
       }
     },
     {
@@ -1603,7 +1603,7 @@
       "lat": 60.6054744,
       "lon": 15.6286269,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "2",
         "check_date:capacity": "2025-09-13",
         "covered": "no"
@@ -1615,7 +1615,7 @@
       "lat": 59.3722587,
       "lon": 16.5118326,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no"
       }
     },
@@ -1625,7 +1625,7 @@
       "lat": 57.6700802,
       "lon": 12.010446,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no"
       }
     },
@@ -1635,7 +1635,7 @@
       "lat": 57.6700378,
       "lon": 12.0071924,
       "tags": {
-        "amenity": "motorcycle_parking"
+        "amenity": "MC-parkering"
       }
     },
     {
@@ -1644,7 +1644,7 @@
       "lat": 57.6708784,
       "lon": 12.0095558,
       "tags": {
-        "amenity": "motorcycle_parking"
+        "amenity": "MC-parkering"
       }
     },
     {
@@ -1653,7 +1653,7 @@
       "lat": 57.6708606,
       "lon": 12.0077264,
       "tags": {
-        "amenity": "motorcycle_parking"
+        "amenity": "MC-parkering"
       }
     },
     {
@@ -1663,7 +1663,7 @@
       "lon": 18.1116517,
       "tags": {
         "access": "private",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "10",
         "covered": "yes",
         "operator": "Aggressive Motorcycle Club"
@@ -1676,7 +1676,7 @@
       "lon": 18.0553267,
       "tags": {
         "access": "yes",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "3",
         "covered": "no"
       }
@@ -1688,7 +1688,7 @@
       "lon": 18.0551027,
       "tags": {
         "access": "yes",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "12",
         "covered": "no"
       }
@@ -1700,7 +1700,7 @@
       "lon": 14.0531312,
       "tags": {
         "access": "yes",
-        "amenity": "motorcycle_parking"
+        "amenity": "MC-parkering"
       }
     },
     {
@@ -1709,7 +1709,7 @@
       "lat": 58.3880229,
       "lon": 13.8392385,
       "tags": {
-        "amenity": "motorcycle_parking"
+        "amenity": "MC-parkering"
       }
     },
     {
@@ -1718,7 +1718,7 @@
       "lat": 57.6091724,
       "lon": 12.0440975,
       "tags": {
-        "amenity": "motorcycle_parking"
+        "amenity": "MC-parkering"
       }
     },
     {
@@ -1727,7 +1727,7 @@
       "lat": 58.0381255,
       "lon": 12.797712,
       "tags": {
-        "amenity": "motorcycle_parking"
+        "amenity": "MC-parkering"
       }
     },
     {
@@ -1736,7 +1736,7 @@
       "lat": 63.8169285,
       "lon": 20.3034915,
       "tags": {
-        "amenity": "motorcycle_parking"
+        "amenity": "MC-parkering"
       }
     },
     {
@@ -1745,7 +1745,7 @@
       "lat": 59.3078358,
       "lon": 18.0852876,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "fee:conditional": "yes @ (Mo-Fr 07:00-19:00; Sa,PH -1 day 11:00-17:00)",
         "fee:zone": "Taxa 14",
@@ -1760,7 +1760,7 @@
       "lat": 59.307049,
       "lon": 18.0821409,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no"
       }
     },
@@ -1771,7 +1771,7 @@
       "lon": 18.0033262,
       "tags": {
         "access": "yes",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "8",
         "covered": "no"
       }
@@ -1782,7 +1782,7 @@
       "lat": 59.3669648,
       "lon": 17.9848781,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no"
       }
     },
@@ -1793,7 +1793,7 @@
       "lon": 17.9917715,
       "tags": {
         "access": "yes",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "4",
         "covered": "no"
       }
@@ -1804,7 +1804,7 @@
       "lat": 59.3386801,
       "lon": 18.0069421,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no"
       }
     },
@@ -1814,7 +1814,7 @@
       "lat": 59.3328213,
       "lon": 18.0170874,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "5",
         "covered": "no"
       }
@@ -1825,7 +1825,7 @@
       "lat": 59.3395348,
       "lon": 18.0137269,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "5",
         "covered": "no"
       }
@@ -1836,7 +1836,7 @@
       "lat": 59.3389878,
       "lon": 18.0107627,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "5",
         "covered": "no"
       }
@@ -1847,7 +1847,7 @@
       "lat": 59.3393173,
       "lon": 18.0047226,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no"
       }
     },
@@ -1857,7 +1857,7 @@
       "lat": 59.3325107,
       "lon": 18.0186603,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no"
       }
     },
@@ -1867,7 +1867,7 @@
       "lat": 59.334862,
       "lon": 18.0135101,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no"
       }
     },
@@ -1877,7 +1877,7 @@
       "lat": 57.6974303,
       "lon": 11.9834677,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no"
       }
     },
@@ -1887,7 +1887,7 @@
       "lat": 59.3381257,
       "lon": 18.0125298,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "5",
         "covered": "no"
       }
@@ -1898,7 +1898,7 @@
       "lat": 59.4115272,
       "lon": 17.8370643,
       "tags": {
-        "amenity": "motorcycle_parking"
+        "amenity": "MC-parkering"
       }
     },
     {
@@ -1907,7 +1907,7 @@
       "lat": 59.3716217,
       "lon": 18.0146034,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "6",
         "covered": "no"
       }
@@ -1918,7 +1918,7 @@
       "lat": 59.3357692,
       "lon": 18.0311596,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "7",
         "covered": "no"
       }
@@ -1929,7 +1929,7 @@
       "lat": 59.3349629,
       "lon": 18.0139171,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no"
       }
     },
@@ -1939,7 +1939,7 @@
       "lat": 60.6090491,
       "lon": 15.6447405,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "yes"
       }
     },
@@ -1949,7 +1949,7 @@
       "lat": 59.8806299,
       "lon": 12.2882445,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "parking": "surface"
       }
     },
@@ -1959,7 +1959,7 @@
       "lat": 59.3665754,
       "lon": 17.9885248,
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no"
       }
     },
@@ -1970,7 +1970,7 @@
       "lon": 17.9658095,
       "tags": {
         "access": "yes",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "2",
         "covered": "yes",
         "fee": "no"
@@ -1991,7 +1991,7 @@
         2070743731
       ],
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "5",
         "covered": "no"
       }
@@ -2012,7 +2012,7 @@
       ],
       "tags": {
         "access": "no",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "motorcycle": "yes",
         "name": "Esplanaden",
         "parking": "surface"
@@ -2034,7 +2034,7 @@
       ],
       "tags": {
         "access": "private",
-        "amenity": "motorcycle_parking"
+        "amenity": "MC-parkering"
       }
     },
     {
@@ -2053,7 +2053,7 @@
       ],
       "tags": {
         "access": "yes",
-        "amenity": "motorcycle_parking"
+        "amenity": "MC-parkering"
       }
     },
     {
@@ -2072,7 +2072,7 @@
       ],
       "tags": {
         "access": "yes",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "20",
         "parking": "surface"
       }
@@ -2092,7 +2092,7 @@
         4124588607
       ],
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
@@ -2116,7 +2116,7 @@
         4126852176
       ],
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
@@ -2156,7 +2156,7 @@
       ],
       "tags": {
         "access": "customers",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "fee": "no"
       }
     },
@@ -2177,7 +2177,7 @@
       ],
       "tags": {
         "access": "private",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no"
       }
     },
@@ -2196,7 +2196,7 @@
         4095740428
       ],
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "4",
         "covered": "no"
       }
@@ -2216,7 +2216,7 @@
         5072502706
       ],
       "tags": {
-        "amenity": "motorcycle_parking"
+        "amenity": "MC-parkering"
       }
     },
     {
@@ -2234,7 +2234,7 @@
         5072503223
       ],
       "tags": {
-        "amenity": "motorcycle_parking"
+        "amenity": "MC-parkering"
       }
     },
     {
@@ -2253,7 +2253,7 @@
       ],
       "tags": {
         "access": "yes",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "yes",
         "fee": "no"
       }
@@ -2274,7 +2274,7 @@
       ],
       "tags": {
         "access": "private",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "parking": "surface"
       }
     },
@@ -2295,7 +2295,7 @@
         6605274426
       ],
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "2",
         "parking": "surface"
       }
@@ -2316,7 +2316,7 @@
         6797097260
       ],
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "16"
       }
     },
@@ -2343,7 +2343,7 @@
         6878977601
       ],
       "tags": {
-        "amenity": "motorcycle_parking"
+        "amenity": "MC-parkering"
       }
     },
     {
@@ -2369,7 +2369,7 @@
         6878977731
       ],
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "6",
         "covered": "no"
       }
@@ -2389,7 +2389,7 @@
         7096077468
       ],
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "parking": "surface"
       }
     },
@@ -2409,7 +2409,7 @@
       ],
       "tags": {
         "access": "customers",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "yes",
         "operator": "Ede Skola"
       }
@@ -2429,7 +2429,7 @@
         7835854213
       ],
       "tags": {
-        "amenity": "motorcycle_parking"
+        "amenity": "MC-parkering"
       }
     },
     {
@@ -2447,7 +2447,7 @@
         7997670921
       ],
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "3",
         "covered": "no"
       }
@@ -2468,7 +2468,7 @@
       ],
       "tags": {
         "access": "yes",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "1",
         "covered": "no"
       }
@@ -2488,7 +2488,7 @@
         12250687153
       ],
       "tags": {
-        "amenity": "motorcycle_parking"
+        "amenity": "MC-parkering"
       }
     },
     {
@@ -2506,7 +2506,7 @@
         8303455768
       ],
       "tags": {
-        "amenity": "motorcycle_parking"
+        "amenity": "MC-parkering"
       }
     },
     {
@@ -2524,7 +2524,7 @@
         8376725676
       ],
       "tags": {
-        "amenity": "motorcycle_parking"
+        "amenity": "MC-parkering"
       }
     },
     {
@@ -2543,7 +2543,7 @@
       ],
       "tags": {
         "access": "permit",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "1",
         "covered": "no",
         "operator": "Q-Park AB"
@@ -2565,7 +2565,7 @@
       ],
       "tags": {
         "access": "permit",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "1",
         "covered": "no",
         "operator": "Q-Park AB"
@@ -2587,7 +2587,7 @@
       ],
       "tags": {
         "access": "permit",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "1",
         "covered": "no",
         "operator": "Q-Park AB"
@@ -2609,7 +2609,7 @@
       ],
       "tags": {
         "access": "permit",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "1",
         "covered": "no",
         "operator": "Q-Park AB"
@@ -2632,7 +2632,7 @@
         12621574253
       ],
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "parking": "surface"
       }
     },
@@ -2651,7 +2651,7 @@
         8665478391
       ],
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no"
       }
     },
@@ -2670,7 +2670,7 @@
         8665478395
       ],
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no"
       }
     },
@@ -2689,7 +2689,7 @@
         8840974310
       ],
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no"
       }
     },
@@ -2708,7 +2708,7 @@
         8854792476
       ],
       "tags": {
-        "amenity": "motorcycle_parking"
+        "amenity": "MC-parkering"
       }
     },
     {
@@ -2732,7 +2732,7 @@
         8902338772
       ],
       "tags": {
-        "amenity": "motorcycle_parking"
+        "amenity": "MC-parkering"
       }
     },
     {
@@ -2750,7 +2750,7 @@
         8910057641
       ],
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "parking": "surface",
         "surface": "asphalt"
       }
@@ -2770,7 +2770,7 @@
         8947249746
       ],
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no"
       }
     },
@@ -2789,7 +2789,7 @@
       ],
       "tags": {
         "access": "yes",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no"
       }
     },
@@ -2810,7 +2810,7 @@
       ],
       "tags": {
         "access": "customers",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no"
       }
     },
@@ -2829,7 +2829,7 @@
         9074828378
       ],
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "5"
       }
     },
@@ -2848,7 +2848,7 @@
         9204548962
       ],
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no"
       }
     },
@@ -2867,7 +2867,7 @@
         9211233891
       ],
       "tags": {
-        "amenity": "motorcycle_parking"
+        "amenity": "MC-parkering"
       }
     },
     {
@@ -2885,7 +2885,7 @@
         9293644530
       ],
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "surface": "asphalt"
       }
     },
@@ -2905,7 +2905,7 @@
       ],
       "tags": {
         "access": "private",
-        "amenity": "motorcycle_parking"
+        "amenity": "MC-parkering"
       }
     },
     {
@@ -2924,7 +2924,7 @@
       ],
       "tags": {
         "access": "private",
-        "amenity": "motorcycle_parking"
+        "amenity": "MC-parkering"
       }
     },
     {
@@ -2942,7 +2942,7 @@
         9476472476
       ],
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "parking": "surface"
       }
     },
@@ -2961,7 +2961,7 @@
         1657604633
       ],
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "5",
         "covered": "yes"
       }
@@ -2981,7 +2981,7 @@
         1657604659
       ],
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "5",
         "covered": "yes"
       }
@@ -3002,7 +3002,7 @@
       ],
       "tags": {
         "access": "yes",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "fee": "no",
         "parking": "surface",
@@ -3025,7 +3025,7 @@
       ],
       "tags": {
         "access": "yes",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "fee": "no",
         "parking": "street_side",
         "smoothness": "excellent",
@@ -3047,7 +3047,7 @@
         9952596960
       ],
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no"
       }
     },
@@ -3066,7 +3066,7 @@
         9955446582
       ],
       "tags": {
-        "amenity": "motorcycle_parking"
+        "amenity": "MC-parkering"
       }
     },
     {
@@ -3084,7 +3084,7 @@
         10077470520
       ],
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "parking": "surface"
       }
     },
@@ -3104,7 +3104,7 @@
       ],
       "tags": {
         "access": "yes",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "parking": "surface"
       }
     },
@@ -3123,7 +3123,7 @@
         10825282879
       ],
       "tags": {
-        "amenity": "motorcycle_parking"
+        "amenity": "MC-parkering"
       }
     },
     {
@@ -3141,7 +3141,7 @@
         10825282883
       ],
       "tags": {
-        "amenity": "motorcycle_parking"
+        "amenity": "MC-parkering"
       }
     },
     {
@@ -3160,7 +3160,7 @@
       ],
       "tags": {
         "access": "yes",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "6",
         "covered": "no"
       }
@@ -3180,7 +3180,7 @@
         11049471960
       ],
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no"
       }
     },
@@ -3200,7 +3200,7 @@
       ],
       "tags": {
         "access": "yes",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "2",
         "covered": "no",
         "parking": "surface"
@@ -3222,7 +3222,7 @@
       ],
       "tags": {
         "access": "yes",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "parking": "surface"
       }
     },
@@ -3241,7 +3241,7 @@
         11278673009
       ],
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no"
       }
     },
@@ -3260,7 +3260,7 @@
         11288529489
       ],
       "tags": {
-        "amenity": "motorcycle_parking"
+        "amenity": "MC-parkering"
       }
     },
     {
@@ -3279,9 +3279,9 @@
         11468826250
       ],
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "motorcycle": "designated",
-        "motorcycle_parking": "street_side"
+        "MC-parkering": "street_side"
       }
     },
     {
@@ -3300,7 +3300,7 @@
       ],
       "tags": {
         "access": "private",
-        "amenity": "motorcycle_parking"
+        "amenity": "MC-parkering"
       }
     },
     {
@@ -3318,7 +3318,7 @@
         11870095564
       ],
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "source": "survey"
       }
@@ -3338,7 +3338,7 @@
         11906760717
       ],
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "2",
         "covered": "no",
         "parking": "street_side"
@@ -3359,7 +3359,7 @@
         11945688884
       ],
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
@@ -3383,7 +3383,7 @@
         4143397597
       ],
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "fee": "no",
         "maxstay:conditional": "24 hours @ Mo-Fr",
@@ -3406,7 +3406,7 @@
         10178630220
       ],
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "6",
         "covered": "no",
         "parking": "on_kerb",
@@ -3429,7 +3429,7 @@
       ],
       "tags": {
         "access": "yes",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "15",
         "covered": "no",
         "parking": "surface"
@@ -3450,7 +3450,7 @@
         12450431557
       ],
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no"
       }
     },
@@ -3469,7 +3469,7 @@
         12477168108
       ],
       "tags": {
-        "amenity": "motorcycle_parking"
+        "amenity": "MC-parkering"
       }
     },
     {
@@ -3487,7 +3487,7 @@
         12482383250
       ],
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "operator": "Biltema"
       }
@@ -3507,7 +3507,7 @@
         12492472891
       ],
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "yes"
       }
     },
@@ -3527,7 +3527,7 @@
       ],
       "tags": {
         "access": "customers",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "6",
         "covered": "no"
       }
@@ -3548,7 +3548,7 @@
       ],
       "tags": {
         "access": "yes",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "5",
         "covered": "no",
         "fee": "no",
@@ -3577,7 +3577,7 @@
       ],
       "tags": {
         "access": "private",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no"
       }
     },
@@ -3600,7 +3600,7 @@
         12757134329
       ],
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "36",
         "covered": "no"
       }
@@ -3620,7 +3620,7 @@
         12810166316
       ],
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "capacity": "8",
         "covered": "no"
       }
@@ -3640,7 +3640,7 @@
         12899350132
       ],
       "tags": {
-        "amenity": "motorcycle_parking"
+        "amenity": "MC-parkering"
       }
     },
     {
@@ -3658,7 +3658,7 @@
         12905835506
       ],
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no"
       }
     },
@@ -3677,7 +3677,7 @@
         13023029224
       ],
       "tags": {
-        "amenity": "motorcycle_parking"
+        "amenity": "MC-parkering"
       }
     },
     {
@@ -3696,7 +3696,7 @@
       ],
       "tags": {
         "access": "yes",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no",
         "fixme": "Osäker på om taggarna används rätt. Detta är en mopedparkering.",
         "motorcycle:conditional": "no @ (displacement < 50 cc)"
@@ -3718,7 +3718,7 @@
       ],
       "tags": {
         "access": "yes",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "yes"
       }
     },
@@ -3738,7 +3738,7 @@
       ],
       "tags": {
         "access": "yes",
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "yes"
       }
     },
@@ -3757,7 +3757,7 @@
         13448258841
       ],
       "tags": {
-        "amenity": "motorcycle_parking",
+        "amenity": "MC-parkering",
         "covered": "no"
       }
     }

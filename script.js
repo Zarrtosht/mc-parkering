@@ -2,7 +2,7 @@
 var map = L.map('map', {
     zoomControl: false,
     maxZoom: 20
-}).setView([57.696396, 11.965227], 14);
+}).setView([60, 14.5], 5);
 
 const zoomControl = L.control.zoom({ position: 'topleft' }).addTo(map);
 document.getElementById('map-controls-wrapper').appendChild(zoomControl.getContainer());
@@ -44,7 +44,11 @@ var mcIcon = L.icon({
     popupAnchor: [0, -32]
 });
 
-var markers = L.markerClusterGroup();
+var markers = L.markerClusterGroup({
+    disableClusteringAtZoom: 14, // Vid denna zoomnivå (och högre) visas alla ikoner individuellt
+    maxClusterRadius: 50,        // (Valfritt) Hur tätt ikonerna måste ligga för att klustras
+    spiderfyOnMaxZoom: false      // Om flera punkter ligger på EXAKT samma koordinat sprids de ut som "ben"
+});
 map.addLayer(markers);
 
 // POPUP & DATA (Samma som förut)
@@ -358,72 +362,53 @@ function renderResults(results) {
 
 // 7. INRAPPORTERING 
 window.addEventListener('load', function() {
-    const reportBtn = document.getElementById('report-btn');
+    const reportWrapper = document.getElementById('report-wrapper');
+    const reportToggleBtn = document.getElementById('report-toggle-btn');
+    const sendReportBtn = document.getElementById('send-report-btn');
     const crosshair = document.getElementById('map-crosshair');
-    let reportMode = false;
 
-    // Funktion för att sätta start-ikonen (Brev med pil)
-    function setStartIcon() {
-        reportBtn.innerHTML = `
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                <polyline points="22,6 12,13 2,6"></polyline>
-            </svg>`;
-    }
-
-    if (reportBtn) {
-        // Initiera start-ikonen direkt
-        setStartIcon();
-
-        L.DomEvent.on(reportBtn, 'click', function(e) {
-            L.DomEvent.stop(e); 
+    if (reportToggleBtn && sendReportBtn) {
+        
+        // 1. Öppna/Stäng inrapporteringsläge
+        L.DomEvent.on(reportToggleBtn, 'click', function(e) {
+            L.DomEvent.stop(e);
+            map.invalidateSize();
+			const isActive = reportWrapper.classList.toggle('active');
             
-            if (!reportMode) {
-                // STEG 1: Aktivera sikte
-                reportMode = true;
+            if (isActive) {
                 crosshair.style.display = 'block';
-                reportBtn.style.backgroundColor = '#ffcccc'; 
-                
-                // NY IKON: Skicka-symbol (Pappersflygplan)
-                reportBtn.innerHTML = `
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="22" y1="2" x2="11" y2="13"></line>
-                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                    </svg>`;
-                
-                console.log("Rapportläge aktiverat");
+                console.log("Sikte aktiverat");
             } else {
-				// Tvinga kartan att uppdatera sin interna storleksberäkning innan vi läser av mitten
-				map.invalidateSize();
-				
-                // STEG 2: Skicka mail
-                const center = map.getCenter();
-                const lat = center.lat.toFixed(7);
-                const lng = center.lng.toFixed(7);
-                
-				// 1. Skapa de två länkarna först
-				const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${lat},${lng}`;
-
-				// 2. Bygg ihop texten (body)
-				const mailBody = 
-				`${lat}, ${lng}
-
-				${googleMapsUrl}`;
-
-				// 3. Kodas för att fungera i Gmail-appen (Viktigt!)
-				const subject = "Inrapportering MC-parkering";
-				const mailtoLink = `mailto:poja.hakimi@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(mailBody)}`;
-                
-				window.location.href = mailtoLink;
-                
-                // Återställ
-                reportMode = false;
-                crosshair.style.display = 'none';
-                reportBtn.style.backgroundColor = 'white';
-                setStartIcon(); // Tillbaka till brev-ikonen
-                
-                console.log("Mail skapat för:", lat, lng);
+                closeReportUI();
             }
         });
+
+        // 2. Skicka-funktionen (Flygplanet)
+        L.DomEvent.on(sendReportBtn, 'click', function(e) {
+            L.DomEvent.stop(e);
+            
+            // Exakt precisionsmätning för mobiler
+			map.invalidateSize();
+			setTimeout(() => {
+				const center = map.getCenter(); // Nu när storleken är korrekt, hämta mitten
+				const lat = center.lat.toFixed(7);
+				const lng = center.lng.toFixed(7);
+				
+				const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${lat},${lng}`;
+				const mailBody = `${lat}, ${lng}\n\n${googleMapsUrl}`;
+				const mailtoLink = `mailto:poja.hakimi@gmail.com?subject=Inrapportering&body=${encodeURIComponent(mailBody)}`;
+				
+				window.location.href = mailtoLink;
+				closeReportUI();
+			}, 10);
+        });
+
+        // Stäng om man klickar på kartan
+        map.on('click', closeReportUI);
+    }
+
+    function closeReportUI() {
+        if (reportWrapper) reportWrapper.classList.remove('active');
+        if (crosshair) crosshair.style.display = 'none';
     }
 });

@@ -13,8 +13,9 @@
 
 <body>
 	
-    <div id="map"></div>
-	<div id="map-crosshair"></div>
+    <div id="map">
+		<div id="map-crosshair"></div>
+	</div>
 
     <button id="locate-me" class="location-btn">
         <span>📍</span> Hitta min position
@@ -50,13 +51,27 @@
 	</div>
 
 	<div id="bottom-controls-wrapper">
-		<button id="report-btn" class="custom-map-btn" title="Rapportera parkering"></button>
+		<div id="report-wrapper" class="bottom-control-container">
+			<button id="send-report-btn" class="custom-map-btn secondary-btn" title="Skicka inrapportering">
+				<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke=#ff0000 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+					<line x1="22" y1="2" x2="11" y2="13"></line>
+					<polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+				</svg>
+			</button>
+
+			<button id="report-toggle-btn" class="custom-map-btn" title="Rapportera parkering">
+				<svg id="report-icon-mail" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+					<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+					<polyline points="22,6 12,13 2,6"></polyline>
+				</svg>
+			</button>
+		</div>
 	</div>
 
 	
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
-    <script src="script.js?v=20260314_1"></script>
+    <script src="script.js?v=20260314_2"></script>
 
 </body>
 </html>

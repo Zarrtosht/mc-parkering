@@ -9,8 +9,9 @@ html, body {
 }
 
 #map {
-    height: 100vh;
+    height: 100dvh;
     width: 100%;
+    position: relative;
     display: block;
 }
 
@@ -145,20 +146,6 @@ html, body {
 }
 
 /* --- 7. INRAPPORTERING --- */
-
-/* Behållare för rapportknappen längst ner till vänster */
-#bottom-controls-wrapper {
-    position: fixed;
-    bottom: 25px; /* Avstånd från botten */
-    left: 10px;   /* Samma vänstermarginal som #map-controls-wrapper */
-    z-index: 2000 !important;
-}
-
-/* Säkerställ att huvud-wrappern (mitten) ligger rätt */
-#map-controls-wrapper {
-    z-index: 2000 !important;
-}
-
 /* Hårkorset mitt på skärmen */
 #map-crosshair {
     position: fixed;
@@ -167,8 +154,6 @@ html, body {
 	transform: translate(-50%, -50%); /* Detta centrerar krysset perfekt */
     width: 30px;
     height: 30px;
-    margin-left: -15px;
-    margin-top: -15px;
     z-index: 9999 !important;
     pointer-events: none;
     display: none;
@@ -192,8 +177,44 @@ html, body {
     background: red;
 }
 
-/* Visuell feedback när knappen är aktiv */
-.report-active {
-    background-color: #ffcccc !important;
-    border: 2px solid red !important;
+/* Den yttre behållaren som håller allt på plats */
+#bottom-controls-wrapper {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    z-index: 2000;
+}
+
+/* Inre behållare för inrapportering */
+#report-wrapper {
+    display: flex;
+    flex-direction: row-reverse; /* Staplar flygplanet ovanpå brevet */
+    gap: 10px;
+    align-items: center;
+}
+
+/* Skicka-knappen (Flygplanet) - Dold som standard */
+#send-report-btn {
+    opacity: 0;
+    transform: scale(0) translateY(40px); /* Startar lite lägre och osynlig */
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-color: white;
+    border: 10px solid #ff0000;
+    display: flex; /* För att centrera SVG:n */
+    align-items: center;
+    justify-content: center;
+}
+
+/* När vi lägger till .active via JS */
+#report-wrapper.active #send-report-btn {
+    opacity: 1;
+    transform: scale(1) translateY(0); /* Poppar upp till sin plats */
+    pointer-events: auto;
+}
+
+/* Visuell feedback på brevknappen när den är i "avbryt-läge" */
+#report-wrapper.active #report-toggle-btn {
+    background-color: #ffcccc;
+    border-color: #ff4444;
 }
