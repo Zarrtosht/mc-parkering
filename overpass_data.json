@@ -11,8 +11,8 @@
 {
       "type": "node",
       "id": 123456789,
-      "lat": 58.285552,
-      "lon": 12.289383,
+      "lat": 57.699983,
+      "lon": 11.9889629,
       "tags": {
         "amenity": "Inrapporterad av Johan Thorsen",
         "covered": "no"
