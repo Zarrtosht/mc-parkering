@@ -183,6 +183,11 @@ html, body {
     bottom: 10px;
     left: 10px;
     z-index: 2000;
+	display: flex;
+    flex-direction: column; 
+    gap: 8px;
+	pointer-events: none;
+	width: fit-content;
 }
 
 /* Inre behållare för inrapportering */
@@ -217,4 +222,24 @@ html, body {
 #report-wrapper.active #report-toggle-btn {
     background-color: #ffcccc;
     border-color: #ff4444;
+}
+
+/* Aktivera klick igen för de faktiska knapp-behållarna och knapparna */
+.bottom-control-container, 
+.custom-map-btn {
+    pointer-events: auto;
+}
+
+/* Justering för väder-ikonen så den inte ser gigantisk ut */
+#weather-toggle-btn svg {
+    width: 33px;
+    height: 33px;
+    /* Om termometern ser konstig ut, justera viewBox i HTML eller här */
+}
+
+#weather-toggle-btn.active {
+    background-color: #e3f2fd;
+    border: 2px solid #2196F3;
+    stroke: #f3b021;
+	stroke-width: 0.85;
 }

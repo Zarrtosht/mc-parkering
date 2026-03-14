@@ -51,7 +51,6 @@ var markers = L.markerClusterGroup({
 });
 map.addLayer(markers);
 
-// POPUP & DATA (Samma som förut)
 function createPopupContent(name, lat, lon, source) {
     // const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}&travelmode=driving`;
     // const streetViewUrl = `https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${lat},${lon}`;
@@ -412,3 +411,118 @@ window.addEventListener('load', function() {
         if (crosshair) crosshair.style.display = 'none';
     }
 });
+
+// 8. VÄDERSTATIONER
+const weatherBtn = document.getElementById('weather-toggle-btn');
+const weatherLayer = L.layerGroup().addTo(map);
+let isWeatherOn = false;
+
+if (weatherBtn) {
+    L.DomEvent.on(weatherBtn, 'click', function(e) {
+        L.DomEvent.stop(e);
+        isWeatherOn = !isWeatherOn;
+        weatherBtn.classList.toggle('active');
+
+        if (isWeatherOn) {
+            fetchWeather(); // Detta hämtar datan och ritar ut den i weatherLayer
+        } else {
+            weatherLayer.clearLayers(); // Detta tar bort BARA vädret från kartan
+        }
+    });
+}
+
+function addWeatherMarker(lat, lng, name, temp, roadTemp) {
+    const weatherIcon = L.divIcon({
+        className: 'weather-icon',
+        // Jag har snyggat till CSS:en lite så den matchar dina andra knappar bättre
+        html: `<div style="background: white; border-radius: 50%; width: 30px; height: 30px; border: 2px solid #007bff; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 11px; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">${Math.round(temp)}°</div>`,
+        iconSize: [30, 30]
+    });
+
+    const marker = L.marker([lat, lng], { icon: weatherIcon });
+
+    const popupContent = `
+        <div class="custom-popup">
+            <h3 style="margin: 0 0 5px 0; font-size: 14px;">${name}</h3>
+            <hr style="border: 0; border-top: 1px solid #eee; margin: 5px 0;">
+            <p style="margin: 5px 0;"><strong>Luft:</strong> ${temp}°C</p>
+            <p style="margin: 5px 0;"><strong>Väg:</strong> ${roadTemp}°C</p>
+            <div style="font-size: 10px; color: #666; margin-top: 8px;">Trafikverket Realtid</div>
+        </div>
+    `;
+
+    marker.bindPopup(popupContent);
+    
+    // ÄNDRING HÄR: Lägg till i weatherLayer istället för map
+    marker.addTo(weatherLayer);
+}
+
+async function fetchWeather() {
+    if (!isWeatherOn) return;
+    
+    console.log("Hämtar väderdata...");
+    weatherLayer.clearLayers();
+    
+    const API_KEY = "a3a189dbba3a4895bf59300b229167c8";
+    
+    // Vi använder ett RADIUS-filter istället för CountyNo. 
+    // Det hämtar stationer inom 50km från där kartan är centrerad.
+    const center = map.getCenter();
+    const xmlQuery = `
+    <REQUEST>
+        <LOGIN authenticationkey='${API_KEY}' />
+        <QUERY objecttype='WeatherMeasurepoint' schemaversion='1'>
+            <FILTER>
+                <WITHIN name='Geometry.WGS84' shape='center' radius='50000m' value='${center.lng} ${center.lat}' />
+            </FILTER>
+        </QUERY>
+    </REQUEST>`;
+
+    try {
+        const response = await fetch("https://api.trafikinfo.trafikverket.se/v2.0/data.json", {
+            method: "POST",
+            body: xmlQuery,
+            headers: { "Content-Type": "text/xml" }
+        });
+
+        const result = await response.json();
+        const points = result.RESPONSE.RESULT[0].WeatherMeasurepoint;
+
+        if (!points) {
+            console.log("Inga mätpunkter hittades i detta område.");
+            return;
+        }
+
+		points.forEach(point => {
+			const pos = point.Geometry?.WGS84;
+			const observation = point.Observation;
+			
+			if (pos && observation) {
+				const coords = pos.split('(')[1].split(')')[0].split(' ');
+				const lng = parseFloat(coords[0]);
+				const lat = parseFloat(coords[1]);
+				
+				const stationName = point.Name || "Mätstation";
+				const airTemp = observation.Air?.Temperature?.Value;
+
+				// Vi letar efter vägtemperatur på de två vanligaste ställena
+				// 1. I Aggregated.Road (standard)
+				// 2. Direkt i Surface.Temperature (vissa stationer)
+				let roadTemp = observation.Aggregated?.Road?.Temperature?.Value 
+							|| observation.Surface?.Temperature?.Value 
+							|| "N/A";
+
+				// Om vi fick en siffra, runda den för snyggare presentation
+				if (roadTemp !== "N/A") {
+					roadTemp = Math.round(roadTemp * 10) / 10; // Ger en decimal, ex 4.2
+				}
+
+				if (airTemp !== undefined) {
+					addWeatherMarker(lat, lng, stationName, airTemp, roadTemp);
+				}
+			}
+		});
+    } catch (error) {
+        console.error("Nätverksfel:", error);
+    }
+}
