@@ -1,5 +1,26 @@
 {
   "elements": [
+    
+    {
+      "type": "node",
+      "id": 123456789,
+      "lat": 60.4795116,
+      "lon": 15.4154941,
+      "tags": {
+        "amenity": "Inrapporterad av Uffe N",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 123456789,
+      "lat": 60.4811563,
+      "lon": 15.4178316,
+      "tags": {
+        "amenity": "Inrapporterad av Uffe N",
+        "covered": "no"
+      }
+    },
     {
       "type": "node",
       "id": 123456789,
