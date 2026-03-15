@@ -1,6 +1,15 @@
 {
   "elements": [
-    
+  
+    {
+      "type": "node",
+      "id": 123456789,
+      "lat": 57.7050884,
+      "lon": 11.9838903,
+      "tags": {
+        "amenity": "Inrapporterad av Poja",
+        "covered": "no"
+    }
     {
       "type": "node",
       "id": 123456789,
