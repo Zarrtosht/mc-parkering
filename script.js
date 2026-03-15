@@ -257,25 +257,27 @@ searchInput.addEventListener('input', function(e) {
 
 async function performUniversalSearch(query) {
     let resultsFound = [];
+    const lowerQuery = query.toLowerCase();
 
-    // 1. Search Local Markers
+    // 1. Sök i lokala markörer (Använder searchName istället för att läsa HTML)
     markers.eachLayer(function(layer) {
-        const popupContent = layer.getPopup().getContent();
-        const nameMatch = popupContent.match(/<strong>(.*?)<\/strong>/);
-        const name = nameMatch ? nameMatch[1] : "MC Parkering";
-
-        if (name.toLowerCase().includes(query.toLowerCase())) {
-            resultsFound.push({ 
-                display_name: `🅿️ ${name}`, 
-                lat: layer.getLatLng().lat, 
-                lon: layer.getLatLng().lng,
-                isMarker: true,
-                layer: layer 
-            });
+        if (layer instanceof L.Marker) {
+            // Vi kollar efter searchName, annars faller vi tillbaka på popup-innehållet
+            const name = layer.options.searchName || "";
+            
+            if (name.toLowerCase().includes(lowerQuery)) {
+                resultsFound.push({ 
+                    display_name: `🅿️ ${name}`, 
+                    lat: layer.getLatLng().lat, 
+                    lon: layer.getLatLng().lng,
+                    isMarker: true,
+                    layer: layer 
+                });
+            }
         }
     });
 
-    // 2. Global Nominatim Search
+    // 2. Global Nominatim Search (Behålls som den är)
     const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}&countrycodes=se&addressdetails=1&limit=6`;
 
     try {
@@ -284,7 +286,8 @@ async function performUniversalSearch(query) {
         
         osmData.forEach(item => {
             resultsFound.push({
-                display_name:`${item.display_name.split(',')[0]}`,
+                // Vi sparar hela display_name här för popupen, men renderResults sköter förkortningen
+                display_name: item.display_name,
                 lat: parseFloat(item.lat),
                 lon: parseFloat(item.lon),
                 isMarker: false
