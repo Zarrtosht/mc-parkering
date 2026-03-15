@@ -438,7 +438,7 @@ function addWeatherMarker(lat, lng, name, temp, roadTemp) {
     const weatherIcon = L.divIcon({
         className: 'weather-icon',
         // Jag har snyggat till CSS:en lite så den matchar dina andra knappar bättre
-        html: `<div style="background: white; border-radius: 50%; width: 30px; height: 30px; border: 2px solid #007bff; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 11px; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">${Math.round(temp)}°</div>`,
+        html: `<div style="background: white; border-radius: 50%; width: 30px; height: 30px; border: 2px solid #007bff; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 11px; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">${Math.round(roadTemp)}°</div>`,
         iconSize: [30, 30]
     });
 
