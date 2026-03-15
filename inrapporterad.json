@@ -103,10 +103,20 @@
     {
       "type": "node",
       "id": 123456789,
+      "lat": 58.3513935,
+      "lon": 11.8917078,
+      "tags": {
+        "amenity": "Inrapporterad av Kristian S (No.2)",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 123456789,
       "lat": 58.3562308,
       "lon": 11.9511804,
       "tags": {
-        "amenity": "Inrapporterad av Kristian S",
+        "amenity": "Inrapporterad av Kristian S (No.1)",
         "covered": "no"
       }
     },
