@@ -1,6 +1,26 @@
 {
   "elements": [
-    {
+{
+      "type": "node",
+      "id": 123456789,
+      "lat": 58.4126428,
+      "lon": 15.6211334,
+      "tags": {
+        "amenity": "Inrapporterad av Roger B (No.2)",
+        "covered": "no"
+      }
+    }, 
+{
+      "type": "node",
+      "id": 123456789,
+      "lat": 58.4106393,
+      "lon": 15.6301761,
+      "tags": {
+        "amenity": "Inrapporterad av Roger B (No.1)",
+        "covered": "no"
+      }
+    }, 
+   {
       "type": "node",
       "id": 123456789,
       "lat": 57.7213634,
