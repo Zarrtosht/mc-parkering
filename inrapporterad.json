@@ -1,6 +1,46 @@
 {
   "elements": [
-    {
+{
+      "type": "node",
+      "id": 123456789,
+      "lat": 57,7213634,
+      "lon": 12,9385766,
+      "tags": {
+        "amenity": "Inrapporterad av Araz F (No.4)",
+        "covered": "no"
+      }
+    },
+{
+      "type": "node",
+      "id": 123456789,
+      "lat": 57,7197276,
+      "lon": 12,9312207,
+      "tags": {
+        "amenity": "Inrapporterad av Araz F (No.3)",
+        "covered": "no"
+      }
+    },
+{
+      "type": "node",
+      "id": 123456789,
+      "lat": 57,7160907,
+      "lon": 12,9436004,
+      "tags": {
+        "amenity": "Inrapporterad av Araz F (No.2)",
+        "covered": "no"
+      }
+    },
+ {
+      "type": "node",
+      "id": 123456789,
+      "lat": 57.7240064,
+      "lon": 12.9390836,
+      "tags": {
+        "amenity": "Inrapporterad av Araz F (No.1)",
+        "covered": "no"
+      }
+    }, 
+   {
       "type": "node",
       "id": 123456789,
       "lat": 59.3663250,
