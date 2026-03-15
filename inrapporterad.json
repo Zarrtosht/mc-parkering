@@ -1,6 +1,145 @@
 {
   "elements": [
-    
+    {
+      "type": "node",
+      "id": 123456789,
+      "lat": 60.6744651,
+      "lon": 17.1451798 ,
+      "tags": {
+        "amenity": "Inrapporterad av Robban L",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 123456789,
+      "lat": 61.7282363,
+      "lon": 17.1024036 ,
+      "tags": {
+        "amenity": "Inrapporterad av Daniel P",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 123456789,
+      "lat": 57.9364530,
+      "lon": 11.5775289 ,
+      "tags": {
+        "amenity": "Inrapporterad av Björn J",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 123456789,
+      "lat": 57.7209416,
+      "lon": 12.9390420,
+      "tags": {
+        "amenity": "Inrapporterad av Magnus W",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 123456789,
+      "lat": 57.7202762,
+      "lon": 12.9354304,
+      "tags": {
+        "amenity": "Inrapporterad av Magnus W",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 123456789,
+      "lat": 57.7214304,
+      "lon": 12.9453868,
+      "tags": {
+        "amenity": "Inrapporterad av Magnus W",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 123456789,
+      "lat": 57.7242929,
+      "lon": 12.9608041,
+      "tags": {
+        "amenity": "Inrapporterad av Magnus W",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 123456789,
+      "lat": 58.6889652,
+      "lon": 11.2568195,
+      "tags": {
+        "amenity": "Inrapporterad av Anton S",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 123456789,
+      "lat": 59.3693253,
+      "lon": 16.5156220,
+      "tags": {
+        "amenity": "Inrapporterad av Martin L",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 123456789,
+      "lat": 58.3562308,
+      "lon": 11.9511804,
+      "tags": {
+        "amenity": "Inrapporterad av Kristian S",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 123456789,
+      "lat": 57.2658310,
+      "lon": 16.4474862,
+      "tags": {
+        "amenity": "Inrapporterad av Devi J",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 123456789,
+      "lat": 57.7846238,
+      "lon": 14.1614878,
+      "tags": {
+        "amenity": "Inrapporterad av Elin R",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 123456789,
+      "lat": 57.7839968,
+      "lon": 14.1648692,
+      "tags": {
+        "amenity": "Inrapporterad av Elin R",
+        "covered": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 123456789,
+      "lat": 57.7833822,
+      "lon": 14.1692993,
+      "tags": {
+        "amenity": "Inrapporterad av Elin R",
+        "covered": "no"
+      }
+    },
     {
       "type": "node",
       "id": 123456789,
