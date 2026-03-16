@@ -397,7 +397,16 @@ window.addEventListener('load', function() {
 				const lng = center.lng.toFixed(7);
 				
 				const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${lat},${lng}`;
-				const mailBody = `${lat}, ${lng}\n\n${googleMapsUrl}`;
+				const mailBody = `${lat}, ${lng}\n\n${googleMapsUrl}\n\n----------------------\n{
+      "type": "node",
+      "id": 123456789,
+      "lat": ${lat},
+      "lon": ${lng},
+      "tags": {
+        "amenity": "Inrapporterad av Namn",
+        "covered": "no"
+      }
+    }, `;
 				const mailtoLink = `mailto:poja.hakimi@gmail.com?subject=Inrapportering&body=${encodeURIComponent(mailBody)}`;
 				
 				window.location.href = mailtoLink;
