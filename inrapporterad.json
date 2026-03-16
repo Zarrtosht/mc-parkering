@@ -3,6 +3,16 @@
 {
       "type": "node",
       "id": 123456789,
+      "lat": 56.0573365,
+      "lon": 12.6827194,
+      "tags": {
+        "amenity": "Inrapporterad av Visar H (No.3)",
+        "covered": "no"
+      }
+    }, 
+{
+      "type": "node",
+      "id": 123456789,
       "lat": 56.0489581,
       "lon": 12.6886900,
       "tags": {
