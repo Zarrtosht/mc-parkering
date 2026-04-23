@@ -2,7 +2,7 @@
   "elements": [
 {
 "type": "node",
-"id": RLS-T700-V,
+"id": 123456788,
 "lat": 59.3581502,
 "lon": 17.9815272,
 "tags": {
@@ -276,7 +276,7 @@
       "lat": 57.7050884,
       "lon": 11.9838903,
       "tags": {
-        "amenity": "Inrapporterad av Poja",
+        "amenity": "Inrapporterad av Poja RLS-T700-V ",
         "covered": "no"
       }
     },
